@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: "#05022B",
+              primary: "#147860",
               secondary: "#7B79FF",
               tetiary: "#B7B6FF",
             },
@@ -24,6 +24,7 @@
         },
       };
     </script>
+
     <title>Pixel: Dashboard</title>
   </head>
   <body>
@@ -68,20 +69,16 @@
                 </svg>
                 <span class="sr-only">Toggle sidebar</span>
               </button>
-              <a
-                href="https://flowbite.com"
-                class="flex items-center justify-between mr-4"
+
+              <img
+                src="/images/logo-pnl.png"
+                class="mr-3 h-8 lg:h-10"
+                alt="loading"
+              />
+              <span
+                class="-ms-2 self-center text-2xl font-semibold whitespace-nowrap text-primary"
+                >PNL</span
               >
-                <img
-                  src="https://flowbite.s3.amazonaws.com/logo.svg"
-                  class="mr-3 h-8"
-                  alt="Flowbite Logo"
-                />
-                <span
-                  class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                  >PNL</span
-                >
-              </a>
               <form action="#" method="GET" class="hidden md:block md:pl-2">
                 <label for="topbar-search" class="sr-only">Search</label>
                 <div class="relative md:w-64 md:w-96">
@@ -1453,59 +1450,151 @@
           </div>
         </aside>
 
-        <main class="p-4 md:ml-64 h-auto pt-20">
+        <main class="p-4 md:ml-64 hh-auto pt-20">
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4"
           >
             <div
-              class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"
-            ></div>
+              class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6"
+            >
+              <div class="flex justify-between mb-3">
+                <div class="flex justify-center items-center">
+                  <h5
+                    class="text-xl font-bold leading-none text-gray-900 dark:text-white pe-1"
+                  >
+                    Total Recharge
+                  </h5>
+                </div>
+              </div>
+
+              <!-- Donut Chart -->
+              <div class="py-6" id="donut-chart"></div>
+            </div>
           </div>
           <div
-            class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"
-          ></div>
-          <div class="grid grid-cols-2 gap-4 mb-4">
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4"
+          >
             <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
+              class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6 flex items-center gap-6"
+            >
+              <div class="flex justify-between">
+                <div class="flex flex-col gap-3">
+                  <p
+                    class="text-md lg:text-xl font-semibold text-gray-500 dark:text-gray-400"
+                  >
+                    Users
+                  </p>
+                  <h5
+                    class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2"
+                  >
+                    3,000
+                  </h5>
+                  <div
+                    class="flex items-center text-base font-semibold text-green-500 dark:text-green-500 text-center"
+                  >
+                    12%
+                    <svg
+                      class="w-3 h-3 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13V1m0 0L1 5m4-4 4 4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div id="area-chart-users"></div>
+            </div>
             <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
+              class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6 flex items-center gap-6"
+            >
+              <div class="flex justify-between">
+                <div class="flex flex-col gap-3">
+                  <p
+                    class="text-md lg:text-xl font-semibold text-gray-500 dark:text-gray-400"
+                  >
+                    Active Users
+                  </p>
+                  <h5
+                    class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2"
+                  >
+                    30
+                  </h5>
+                  <div
+                    class="flex items-center text-base font-semibold text-green-500 dark:text-green-500 text-center"
+                  >
+                    10%
+                    <svg
+                      class="w-3 h-3 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13V1m0 0L1 5m4-4 4 4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div id="area-chart-activeUsers"></div>
+            </div>
             <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
-          </div>
-          <div
-            class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"
-          ></div>
-          <div class="grid grid-cols-2 gap-4">
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
-            <div
-              class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-            ></div>
+              class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6 flex items-center gap-6"
+            >
+              <div class="flex justify-between">
+                <div class="flex flex-col gap-3">
+                  <p
+                    class="text-md lg:text-xl font-semibold text-gray-500 dark:text-gray-400"
+                  >
+                    Offline Users
+                  </p>
+                  <h5
+                    class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2"
+                  >
+                    25
+                  </h5>
+                  <div
+                    class="flex items-center text-base font-semibold text-red-500 dark:text-red-500 text-center"
+                  >
+                    10%
+                    <svg
+                      class="w-3 h-3 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13V1m0 0L1 5m4-4 4 4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div id="area-chart-offlineUsers"></div>
+            </div>
           </div>
         </main>
       </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
