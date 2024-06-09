@@ -220,6 +220,80 @@ const phoneOTP = [
   },
 ];
 
+const userLogs = [
+  {
+      name: "John Doe",
+      lastLogin: "19/4/2024, 5:10:12pm",
+      role: "Admin",
+      access: "Full",
+      remark: "Active user"
+  },
+  {
+      name: "Jane Smith",
+      lastLogin: "20/4/2024, 10:15:32am",
+      role: "User",
+      access: "Limited",
+      remark: "Needs profile update"
+  },
+  {
+      name: "Michael Johnson",
+      lastLogin: "21/4/2024, 2:30:45pm",
+      role: "Moderator",
+      access: "Moderate",
+      remark: "Recently promoted"
+  },
+  {
+      name: "Emily Davis",
+      lastLogin: "22/4/2024, 11:50:10am",
+      role: "Admin",
+      access: "Full",
+      remark: "Active user"
+  },
+  {
+      name: "David Martinez",
+      lastLogin: "23/4/2024, 8:25:22pm",
+      role: "User",
+      access: "Limited",
+      remark: "Inactive for a week"
+  },
+  {
+      name: "Sophia Garcia",
+      lastLogin: "24/4/2024, 7:15:34pm",
+      role: "Admin",
+      access: "Full",
+      remark: "Regular contributor"
+  },
+  {
+      name: "Chris Brown",
+      lastLogin: "25/4/2024, 4:45:55pm",
+      role: "User",
+      access: "Limited",
+      remark: "Pending verification"
+  },
+  {
+      name: "Lisa Wilson",
+      lastLogin: "26/4/2024, 6:30:48am",
+      role: "Moderator",
+      access: "Moderate",
+      remark: "Highly active"
+  },
+  {
+      name: "Mark Lee",
+      lastLogin: "27/4/2024, 12:10:15pm",
+      role: "Admin",
+      access: "Full",
+      remark: "Recently joined"
+  },
+  {
+      name: "Karen Walker",
+      lastLogin: "28/4/2024, 1:20:25pm",
+      role: "User",
+      access: "Limited",
+      remark: "Needs password reset"
+  }
+];
+
+
 const table = document.getElementById("tbody");
 const tableHTML = rechargeLog
   .map(
@@ -299,3 +373,27 @@ const tableOTPHTML = phoneOTP
   )
   .join("");
 tableOTP.innerHTML = tableOTPHTML;
+
+const tableUserSetting = document.getElementById("tbodyUserSetting");
+const tableUserSettingHTML = userLogs
+  .map(
+    (log, index) => `
+          <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${log.name}
+          </th>
+          <td class="px-6 py-4">${log.lastLogin}</td>
+          <td class="px-6 py-4">${log.role}</td>
+          <td class="px-6 py-4">${log.access}</td>
+          <td class="px-6 py-4">${log.remark}</td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableUserSetting.innerHTML = tableUserSettingHTML;
