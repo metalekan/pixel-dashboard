@@ -332,13 +332,13 @@ const tableRechargeHTML = rechargeLog
             scope="row"
             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
           >
-           ${log.id}
+           ${log.amount}
           </th>
-          <td class="px-6 py-4">${log.amount}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
-          </td>
+          <td class="px-6 py-4">${log.status}</td>
           <td class="px-6 py-4">${log.date}</td>
-          <td class="px-6 py-4">${log.channel}</td>
+          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.channel} </span>
+          </td>
+          <td class="px-6 py-4">${log.id}</td>
           <td class="px-6 py-4">${log.txID}</td>
           <td class="px-6 py-4">${log.receipt}</td>
         </tr>
