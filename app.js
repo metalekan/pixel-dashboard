@@ -86,7 +86,7 @@ const options = {
     enabled: false,
   },
   stroke: {
-    width: 6,
+    width: 2,
   },
   grid: {
     show: false,
@@ -328,7 +328,115 @@ if (
 
 // Graph
 
-const optionsDtatistics = {
+const optionsOverview = {
+  // set the labels option to true to show the labels on the X and Y axis
+  xaxis: {
+    show: true,
+    categories: [
+      "10/04/2024",
+      "11/04/2024",
+      "12/04/2024",
+      "13/04/2024",
+      "14/04/2024",
+      "15/04/2024",
+      "16/04/2024",
+    
+    ],
+    labels: {
+      show: true,
+      style: {
+        fontFamily: "Inter, sans-serif",
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: true,
+    labels: {
+      show: true,
+      style: {
+        fontFamily: "Inter, sans-serif",
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
+      formatter: function (value) {
+        return value;
+      },
+    },
+  },
+  series: [
+    {
+      name: "Developer Edition",
+      data: [2500000, 1000000, 3500000, 4000000, 2500000, 3000000],
+      color: "#dc2626",
+    },
+    {
+      name: "Designer Edition",
+      data: [5000000, 3400000, 2100000, 2800000, 3500000, 6200000],
+      color: "#166534",
+    },
+  ],
+  chart: {
+    sparkline: {
+      enabled: false,
+    },
+    height: "100%",
+    width: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#dc2626",
+      gradientToColors: ["#1C64F2"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 2,
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    show: false,
+  },
+};
+
+if (
+  document.getElementById("labels-chart") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("labels-chart"),
+    optionsOverview
+  );
+  chart.render();
+}
+
+const optionsOverall = {
   // set the labels option to true to show the labels on the X and Y axis
   xaxis: {
     show: true,
@@ -369,20 +477,20 @@ const optionsDtatistics = {
         cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
       },
       formatter: function (value) {
-        return "$" + value;
+        return value;
       },
     },
   },
   series: [
     {
       name: "Developer Edition",
-      data: [150, 141, 145, 152, 135, 125],
-      color: "#1A56DB",
+      data: [250, 100, 250, 400, 250, 300, 500, 340, 100, 280, 650, 620],
+      color: "#dc2626",
     },
     {
       name: "Designer Edition",
-      data: [43, 13, 65, 12, 42, 73],
-      color: "#7E3BF2",
+      data: [500, 340, 100, 280, 650, 620, 250, 100, 250, 400, 250, 300],
+      color: "#166534",
     },
   ],
   chart: {
@@ -401,7 +509,7 @@ const optionsDtatistics = {
     },
   },
   tooltip: {
-    enabled: true,
+    enabled: false,
     x: {
       show: false,
     },
@@ -411,7 +519,7 @@ const optionsDtatistics = {
     gradient: {
       opacityFrom: 0.55,
       opacityTo: 0,
-      shade: "#1C64F2",
+      shade: "#dc2626",
       gradientToColors: ["#1C64F2"],
     },
   },
@@ -419,27 +527,32 @@ const optionsDtatistics = {
     enabled: false,
   },
   stroke: {
-    width: 6,
+    width: 2,
   },
   legend: {
     show: false,
   },
-  grid: {
-    show: false,
+grid: {
+  show: true,
+  strokeDashArray: 1,
+  padding: {
+    left: 2,
+    right: 2,
+    top: -46,
   },
+},
 };
 
 if (
-  document.getElementById("labels-chart") &&
+  document.getElementById("labels-chart-dashboard") &&
   typeof ApexCharts !== "undefined"
 ) {
   const chart = new ApexCharts(
-    document.getElementById("labels-chart"),
-    options
+    document.getElementById("labels-chart-dashboard"),
+    optionsOverall
   );
   chart.render();
 }
-
 
 
 
