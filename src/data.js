@@ -563,7 +563,7 @@ const fishGames = [
   },
   {
       gameId: "SG98010",
-      userId: "user_321, user_123, user_321",
+      userId: "user_321",
       winner: "user_789",
       betAmount: 80,
       winAmount: 160,
@@ -656,7 +656,7 @@ const spinGames = [
   },
   {
       gameId: "SG98010",
-      userId: "user_321, user_123, user_321",
+      userId: "user_321",
       winner: "user_789",
       betAmount: 80,
       winAmount: 160,
