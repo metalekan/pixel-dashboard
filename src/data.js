@@ -293,6 +293,191 @@ const userLogs = [
   }
 ];
 
+const ludoGames = [
+  {
+      gameId: "game_001",
+      userId: "user_123",
+      winner: "user_123",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T12:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_002",
+      userId: "user_456",
+      winner: "user_789",
+      betAmount: 75,
+      winAmount: 150,
+      dateTime: "2024-06-15T12:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_003",
+      userId: "user_789",
+      winner: "user_123",
+      betAmount: 100,
+      winAmount: 200,
+      dateTime: "2024-06-15T13:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_004",
+      userId: "user_321",
+      winner: "user_456",
+      betAmount: 20,
+      winAmount: 40,
+      dateTime: "2024-06-15T13:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_005",
+      userId: "user_654",
+      winner: "user_321",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T14:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_006",
+      userId: "user_987",
+      winner: "user_654",
+      betAmount: 30,
+      winAmount: 60,
+      dateTime: "2024-06-15T14:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_007",
+      userId: "user_123",
+      winner: "user_987",
+      betAmount: 40,
+      winAmount: 80,
+      dateTime: "2024-06-15T15:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_008",
+      userId: "user_456",
+      winner: "user_123",
+      betAmount: 25,
+      winAmount: 50,
+      dateTime: "2024-06-15T15:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_009",
+      userId: "user_789",
+      winner: "user_456",
+      betAmount: 60,
+      winAmount: 120,
+      dateTime: "2024-06-15T16:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "game_010",
+      userId: "user_321",
+      winner: "user_789",
+      betAmount: 80,
+      winAmount: 160,
+      dateTime: "2024-06-15T16:30:00Z",
+      status: "paid"
+  }
+];
+
+const SoccerGames = [
+  {
+      gameId: "SG98001",
+      userId: "user_123",
+      winner: "user_123",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T12:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98002",
+      userId: "user_456",
+      winner: "user_789",
+      betAmount: 75,
+      winAmount: 150,
+      dateTime: "2024-06-15T12:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98003",
+      userId: "user_789",
+      winner: "user_123",
+      betAmount: 100,
+      winAmount: 200,
+      dateTime: "2024-06-15T13:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98004",
+      userId: "user_321",
+      winner: "user_456",
+      betAmount: 20,
+      winAmount: 40,
+      dateTime: "2024-06-15T13:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98005",
+      userId: "user_654",
+      winner: "user_321",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T14:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98006",
+      userId: "user_987",
+      winner: "user_654",
+      betAmount: 30,
+      winAmount: 60,
+      dateTime: "2024-06-15T14:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98007",
+      userId: "user_123",
+      winner: "user_987",
+      betAmount: 40,
+      winAmount: 80,
+      dateTime: "2024-06-15T15:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98008",
+      userId: "user_456",
+      winner: "user_123",
+      betAmount: 25,
+      winAmount: 50,
+      dateTime: "2024-06-15T15:30:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98009",
+      userId: "user_789",
+      winner: "user_456",
+      betAmount: 60,
+      winAmount: 120,
+      dateTime: "2024-06-15T16:00:00Z",
+      status: "paid"
+  },
+  {
+      gameId: "SG98010",
+      userId: "user_321, user_123, user_321",
+      winner: "user_789",
+      betAmount: 80,
+      winAmount: 160,
+      dateTime: "2024-06-15T16:30:00Z",
+      status: "paid"
+  }
+];
 
 
 
@@ -399,3 +584,57 @@ const tableUserSettingHTML = userLogs
   )
   .join("");
 tableUserSetting.innerHTML = tableUserSettingHTML;
+
+const tableLudo = document.getElementById("tbodyLudo");
+const tableLudoHTML = ludoGames
+  .map(
+    (game, index) => `
+          <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${game.gameId}
+          </th>
+          <td class="px-6 py-4">${game.userId}</td>
+          <td class="px-6 py-4">${game.winner}</td>
+          <td class="px-6 py-4">${game.betAmount}</td>
+          <td class="px-6 py-4">${game.winAmount}</td>
+          <td class="px-6 py-4">${game.dateTime}</td>
+          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+          </td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableLudo.innerHTML = tableLudoHTML;
+
+const tableSoccer = document.getElementById("tbodySoccer");
+const tableSoccerHTML = SoccerGames
+  .map(
+    (game, index) => `
+          <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${game.gameId}
+          </th>
+          <td class="px-6 py-4">${game.userId}</td>
+          <td class="px-6 py-4">${game.winner}</td>
+          <td class="px-6 py-4">${game.betAmount}</td>
+          <td class="px-6 py-4">${game.winAmount}</td>
+          <td class="px-6 py-4">${game.dateTime}</td>
+          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+          </td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableSoccer.innerHTML = tableSoccerHTML;

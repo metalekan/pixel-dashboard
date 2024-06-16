@@ -1,65 +1,9 @@
-// // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-// if (
-//   localStorage.getItem("color-theme") === "dark" ||
-//   (!("color-theme" in localStorage) &&
-//     window.matchMedia("(prefers-color-scheme: dark)").matches)
-// ) {
-//   document.documentElement.classList.add("dark");
-//   console.log("first");
-// } else {
-//   document.documentElement.classList.remove("dark");
-// }
 
-// var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-// var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-
-// // Change the icons inside the button based on previous settings
-// if (
-//   localStorage.getItem("color-theme") === "dark" ||
-//   (!("color-theme" in localStorage) &&
-//     window.matchMedia("(prefers-color-scheme: dark)").matches)
-// ) {
-//   themeToggleLightIcon.classList.remove("hidden");
-// } else {
-//   themeToggleDarkIcon.classList.remove("hidden");
-// }
-
-// var themeToggleBtn = document.getElementById("theme-toggle");
-
-// themeToggleBtn.addEventListener("click", function () {
-//   // toggle icons inside button
-//   themeToggleDarkIcon.classList.toggle("hidden");
-//   themeToggleLightIcon.classList.toggle("hidden");
-
-//   // if set via local storage previously
-//   if (localStorage.getItem("color-theme")) {
-//     if (localStorage.getItem("color-theme") === "light") {
-//       document.documentElement.classList.add("dark");
-//       localStorage.setItem("color-theme", "dark");
-//     } else {
-//       document.documentElement.classList.remove("dark");
-//       localStorage.setItem("color-theme", "light");
-//     }
-
-//     // if NOT set via local storage previously
-//   } else {
-//     if (document.documentElement.classList.contains("dark")) {
-//       document.documentElement.classList.remove("dark");
-//       localStorage.setItem("color-theme", "light");
-//     } else {
-//       document.documentElement.classList.add("dark");
-//       localStorage.setItem("color-theme", "dark");
-//     }
-//   }
-// });
-
-// The Dashboard line chart
 const options = {
   chart: {
     height: "100%",
     maxWidth: "100%",
     type: "area",
-    fontFamily: "Inter, sans-serif",
     dropShadow: {
       enabled: false,
     },
@@ -90,7 +34,7 @@ const options = {
   },
   grid: {
     show: false,
-    strokeDashArray: 4,
+    strokeDashArray: 2,
     padding: {
       left: 2,
       right: 2,
@@ -129,82 +73,244 @@ const options = {
   },
 };
 
-if (
-  document.getElementById("area-chart-totalRecharge") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("area-chart-totalRecharge"),
-    options
-  );
-  chart.render();
-}
+const optionsRegistered = {
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#581c87",
+      gradientToColors: ["#581c87"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 2,
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: 0,
+    },
+  },
+  series: [
+    {
+      name: "New users",
+      data: [6500, 6418, 6456, 6526, 6356, 6456],
+      color: "#581c87",
+    },
+  ],
+  xaxis: {
+    categories: [
+      "01 February",
+      "02 February",
+      "03 February",
+      "04 February",
+      "05 February",
+      "06 February",
+      "07 February",
+    ],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
+};
 
-if (
-  document.getElementById("area-chart-totalRegistered") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("area-chart-totalRegistered"),
-    options
-  );
-  chart.render();
-}
+const optionsOfflineUsers = {
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#991b1b",
+      gradientToColors: ["#991b1b"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 2,
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: 0,
+    },
+  },
+  series: [
+    {
+      name: "New users",
+      data: [6500, 5418, 4456, 3526, 4356, 1456],
+      color: "#991b1b",
+    },
+  ],
+  xaxis: {
+    categories: [
+      "01 February",
+      "02 February",
+      "03 February",
+      "04 February",
+      "05 February",
+      "06 February",
+      "07 February",
+    ],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
+};
 
-if (
-  document.getElementById("area-chart-totalProjects") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("area-chart-totalProjects"),
-    options
-  );
-  chart.render();
-}
 
-if (
-  document.getElementById("area-chart-users") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("area-chart-users"),
-    options
-  );
-  chart.render();
+const optionsBettingAmount = {
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "line",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 1,
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 2,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26
+    },
+  },
+  series: [
+    {
+      name: "Betting Amount",
+      data: [1500, 2418, 3456, 4526, 5356, 6456, 7500, 8418, 9456, 11526, 12356, 13456],
+      color: "#a16207",
+    }
+  ],
+  legend: {
+    show: false
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    labels: {
+      show: true,
+      style: {
+        cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+      }
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
 }
-
-if (
-  document.getElementById("area-chart-activeUsers") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("area-chart-activeUsers"),
-    options
-  );
-  chart.render();
-}
-
-if (
-  document.getElementById("area-chart-offlineUsers") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("area-chart-offlineUsers"),
-    options
-  );
-  chart.render();
-}
-
-// The Donut Chart
 
 const getChartOptions = () => {
   return {
-    series: [35.1, 23.5, 2.4, 5.4],
-    colors: ["#1C64F2", "#16BDCA", "#FDBA8C", "#E74694"],
+    series: [60, 40],
+    labels: ["Direct", "Winnings",],
+    colors: ["#eff6ff", "#78350f"],
     chart: {
-      height: 320,
+      height: "100%",
       width: "100%",
       type: "donut",
+      borderRadius: '35px',
     },
     stroke: {
       colors: ["transparent"],
@@ -217,31 +323,28 @@ const getChartOptions = () => {
             show: true,
             name: {
               show: true,
-              fontFamily: "Inter, sans-serif",
               offsetY: 20,
             },
             total: {
               showAlways: true,
               show: true,
-              label: "Unique visitors",
-              fontFamily: "Inter, sans-serif",
+              label: "Wins",
               formatter: function (w) {
                 const sum = w.globals.seriesTotals.reduce((a, b) => {
-                  return a + b;
+                  return b;
                 }, 0);
-                return "$" + sum + "k";
+                return sum + "%";
               },
             },
             value: {
               show: true,
-              fontFamily: "Inter, sans-serif",
               offsetY: -20,
               formatter: function (value) {
                 return value + "k";
               },
             },
           },
-          size: "80%",
+          size: "85%",
         },
       },
     },
@@ -250,83 +353,35 @@ const getChartOptions = () => {
         top: -2,
       },
     },
-    labels: ["Direct", "Sponsor", "Affiliate", "Email marketing"],
     dataLabels: {
       enabled: false,
     },
     legend: {
       position: "bottom",
-      fontFamily: "Inter, sans-serif",
     },
-    yaxis: {
-      labels: {
-        formatter: function (value) {
-          return value + "k";
-        },
-      },
-    },
-    xaxis: {
-      labels: {
-        formatter: function (value) {
-          return value + "k";
-        },
-      },
-      axisTicks: {
-        show: false,
-      },
-      axisBorder: {
-        show: false,
-      },
-    },
+    // yaxis: {
+    //   labels: {
+    //     formatter: function (value) {
+    //       return value + "k";
+    //     },
+    //   },
+    // },
+    // xaxis: {
+    //   labels: {
+    //     formatter: function (value) {
+    //       return value + "k";
+    //     },
+    //   },
+    //   axisTicks: {
+    //     show: false,
+    //   },
+    //   axisBorder: {
+    //     show: true,
+    //   },
+    // },
   };
+  
 };
-
-if (
-  document.getElementById("donut-chart") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("donut-chart"),
-    getChartOptions()
-  );
-  chart.render();
-
-  // Get all the checkboxes by their class name
-  const checkboxes = document.querySelectorAll(
-    '#devices input[type="checkbox"]'
-  );
-
-  // Function to handle the checkbox change event
-  function handleCheckboxChange(event, chart) {
-    const checkbox = event.target;
-    if (checkbox.checked) {
-      switch (checkbox.value) {
-        case "desktop":
-          chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
-          break;
-        case "tablet":
-          chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
-          break;
-        case "mobile":
-          chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
-          break;
-        default:
-          chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
-      }
-    } else {
-      chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
-    }
-  }
-
-  // Attach the event listener to each checkbox
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", (event) =>
-      handleCheckboxChange(event, chart)
-    );
-  });
-}
-
-// Graph
 
 const optionsOverview = {
   // set the labels option to true to show the labels on the X and Y axis
@@ -345,7 +400,6 @@ const optionsOverview = {
     labels: {
       show: true,
       style: {
-        fontFamily: "Inter, sans-serif",
         cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
       },
     },
@@ -361,7 +415,6 @@ const optionsOverview = {
     labels: {
       show: true,
       style: {
-        fontFamily: "Inter, sans-serif",
         cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
       },
       formatter: function (value) {
@@ -388,7 +441,6 @@ const optionsOverview = {
     height: "100%",
     width: "100%",
     type: "area",
-    fontFamily: "Inter, sans-serif",
     dropShadow: {
       enabled: false,
     },
@@ -425,17 +477,6 @@ const optionsOverview = {
   },
 };
 
-if (
-  document.getElementById("labels-chart") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("labels-chart"),
-    optionsOverview
-  );
-  chart.render();
-}
-
 const optionsOverall = {
   // set the labels option to true to show the labels on the X and Y axis
   xaxis: {
@@ -457,7 +498,6 @@ const optionsOverall = {
     labels: {
       show: true,
       style: {
-        fontFamily: "Inter, sans-serif",
         cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
       },
     },
@@ -473,7 +513,6 @@ const optionsOverall = {
     labels: {
       show: true,
       style: {
-        fontFamily: "Inter, sans-serif",
         cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
       },
       formatter: function (value) {
@@ -500,7 +539,6 @@ const optionsOverall = {
     height: "100%",
     width: "100%",
     type: "area",
-    fontFamily: "Inter, sans-serif",
     dropShadow: {
       enabled: false,
     },
@@ -542,6 +580,359 @@ grid: {
   },
 },
 };
+
+
+// Line Chart
+if (document.getElementById("line-chart-ludo") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("line-chart-ludo"), optionsBettingAmount);
+  chart.render();
+}
+
+if (document.getElementById("line-chart-soccer") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("line-chart-soccer"), optionsBettingAmount);
+  chart.render();
+}
+
+if (document.getElementById("line-chart-spin") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("line-chart-spin"), optionsBettingAmount);
+  chart.render();
+}
+
+if (document.getElementById("line-chart-fish") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("line-chart-fish"), optionsBettingAmount);
+  chart.render();
+}
+
+
+// Area Chart
+if (
+  document.getElementById("area-chart-totalRecharge") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-totalRecharge"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-totalRegistered") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-totalRegistered"),
+    optionsRegistered
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-totalProjects") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-totalProjects"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-totalProjectsLudo") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-totalProjectsLudo"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-totalProjectsSoccer") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-totalProjectsSoccer"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-users") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-users"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-activeUsers") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-activeUsers"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-activeUsersLudo") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-activeUsersLudo"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-activeUsersSoccer") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-activeUsersSoccer"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-activeUsersSpin") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-activeUsersSpin"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-activeUsersFish") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-activeUsersFish"),
+    options
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-offlineUsers") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-offlineUsers"),
+    optionsOfflineUsers
+  );
+  chart.render();
+}
+
+// The Donut Chart
+
+if (
+  document.getElementById("donut-chartLudo") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("donut-chartLudo"),
+    getChartOptions(),
+  );
+  chart.render();
+
+  // Get all the checkboxes by their class name
+  const checkboxes = document.querySelectorAll(
+    '#devices input[type="checkbox"]'
+  );
+
+  // Function to handle the checkbox change event
+  function handleCheckboxChange(event, chart) {
+    const checkbox = event.target;
+    if (checkbox.checked) {
+      switch (checkbox.value) {
+        case "desktop":
+          chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
+          break;
+        case "tablet":
+          chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
+          break;
+        case "mobile":
+          chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
+          break;
+        default:
+          chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
+      }
+    } else {
+      chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
+    }
+  }
+
+  // Attach the event listener to each checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", (event) =>
+      handleCheckboxChange(event, chart)
+    );
+  });
+}
+
+if (
+  document.getElementById("donut-chartSoccer") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("donut-chartSoccer"),
+    getChartOptions(),
+  );
+  chart.render();
+
+  // Get all the checkboxes by their class name
+  const checkboxes = document.querySelectorAll(
+    '#devices input[type="checkbox"]'
+  );
+
+  // Function to handle the checkbox change event
+  function handleCheckboxChange(event, chart) {
+    const checkbox = event.target;
+    if (checkbox.checked) {
+      switch (checkbox.value) {
+        case "desktop":
+          chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
+          break;
+        case "tablet":
+          chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
+          break;
+        case "mobile":
+          chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
+          break;
+        default:
+          chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
+      }
+    } else {
+      chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
+    }
+  }
+
+  // Attach the event listener to each checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", (event) =>
+      handleCheckboxChange(event, chart)
+    );
+  });
+}
+
+if (
+  document.getElementById("donut-chartSpin") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("donut-chartSpin"),
+    getChartOptions(),
+  );
+  chart.render();
+
+  // Get all the checkboxes by their class name
+  const checkboxes = document.querySelectorAll(
+    '#devices input[type="checkbox"]'
+  );
+
+  // Function to handle the checkbox change event
+  function handleCheckboxChange(event, chart) {
+    const checkbox = event.target;
+    if (checkbox.checked) {
+      switch (checkbox.value) {
+        case "desktop":
+          chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
+          break;
+        case "tablet":
+          chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
+          break;
+        case "mobile":
+          chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
+          break;
+        default:
+          chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
+      }
+    } else {
+      chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
+    }
+  }
+
+  // Attach the event listener to each checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", (event) =>
+      handleCheckboxChange(event, chart)
+    );
+  });
+}
+
+if (
+  document.getElementById("donut-chartFish") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("donut-chartFish"),
+    getChartOptions(),
+  );
+  chart.render();
+
+  // Get all the checkboxes by their class name
+  const checkboxes = document.querySelectorAll(
+    '#devices input[type="checkbox"]'
+  );
+
+  // Function to handle the checkbox change event
+  function handleCheckboxChange(event, chart) {
+    const checkbox = event.target;
+    if (checkbox.checked) {
+      switch (checkbox.value) {
+        case "desktop":
+          chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
+          break;
+        case "tablet":
+          chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
+          break;
+        case "mobile":
+          chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
+          break;
+        default:
+          chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
+      }
+    } else {
+      chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
+    }
+  }
+
+  // Attach the event listener to each checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", (event) =>
+      handleCheckboxChange(event, chart)
+    );
+  });
+}
+
+
+// Graph
+
+if (
+  document.getElementById("labels-chart") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("labels-chart"),
+    optionsOverview
+  );
+  chart.render();
+}
+
 
 if (
   document.getElementById("labels-chart-dashboard") &&
@@ -612,7 +1003,6 @@ const optionsColumnChart = {
     labels: {
       show: true,
       style: {
-        fontFamily: "Inter, sans-serif",
         cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
       },
       formatter: function(value) {
@@ -631,7 +1021,6 @@ const optionsColumnChart = {
     labels: {
       show: true,
       style: {
-        fontFamily: "Inter, sans-serif",
         cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
       }
     }
