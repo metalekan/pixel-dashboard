@@ -665,6 +665,154 @@ const spinGames = [
   }
 ];
 
+const promoData = [
+  {
+      promoCode: "SAVE20",
+      users: ["user_123", "user_456", "user_789"],
+      totalUsers: 3,
+      totalReviewsGotten: 15,
+      reviewsGenerated: 10
+  },
+  {
+      promoCode: "WELCOME50",
+      users: ["user_321", "user_654", "user_987", "user_001"],
+      totalUsers: 4,
+      totalReviewsGotten: 20,
+      reviewsGenerated: 15
+  },
+  {
+      promoCode: "FREESHIP",
+      users: ["user_432", "user_543"],
+      totalUsers: 2,
+      totalReviewsGotten: 5,
+      reviewsGenerated: 3
+  },
+  {
+      promoCode: "HOLIDAY30",
+      users: ["user_213", "user_324", "user_435", "user_546", "user_657"],
+      totalUsers: 5,
+      totalReviewsGotten: 25,
+      reviewsGenerated: 20
+  },
+  {
+      promoCode: "SPRINGSALE",
+      users: ["user_768", "user_879", "user_980", "user_091"],
+      totalUsers: 4,
+      totalReviewsGotten: 18,
+      reviewsGenerated: 14
+  },
+  {
+      promoCode: "SUMMERFUN",
+      users: ["user_132", "user_243", "user_354", "user_465", "user_576", "user_687"],
+      totalUsers: 6,
+      totalReviewsGotten: 30,
+      reviewsGenerated: 25
+  },
+  {
+      promoCode: "WINTERWARM",
+      users: ["user_798", "user_809", "user_910"],
+      totalUsers: 3,
+      totalReviewsGotten: 10,
+      reviewsGenerated: 8
+  },
+  {
+      promoCode: "FALL50",
+      users: ["user_021", "user_132", "user_243"],
+      totalUsers: 3,
+      totalReviewsGotten: 12,
+      reviewsGenerated: 9
+  },
+  {
+      promoCode: "NEWYEAR2024",
+      users: ["user_354", "user_465", "user_576", "user_687", "user_798"],
+      totalUsers: 5,
+      totalReviewsGotten: 22,
+      reviewsGenerated: 18
+  },
+  {
+      promoCode: "FLASHSALE",
+      users: ["user_809", "user_910", "user_101"],
+      totalUsers: 3,
+      totalReviewsGotten: 8,
+      reviewsGenerated: 5
+  }
+];
+
+const fraudReports = [
+  {
+      userId: "user_001",
+      amount: 1500.00,
+      dateTime: "2024-06-01T10:30:00Z",
+      reason: "Multiple failed login attempts",
+      actions: "Account locked, investigate activity"
+  },
+  {
+      userId: "user_002",
+      amount: 200.00,
+      dateTime: "2024-06-02T14:20:00Z",
+      reason: "Unusual transaction pattern",
+      actions: "Transaction flagged, monitor account"
+  },
+  {
+      userId: "user_003",
+      amount: 750.00,
+      dateTime: "2024-06-03T09:15:00Z",
+      reason: "Chargeback issued",
+      actions: "Contact user, review transaction"
+  },
+  {
+      userId: "user_004",
+      amount: 5000.00,
+      dateTime: "2024-06-04T18:45:00Z",
+      reason: "Large withdrawal attempt",
+      actions: "Withdrawal blocked, verify identity"
+  },
+  {
+      userId: "user_005",
+      amount: 300.00,
+      dateTime: "2024-06-05T11:00:00Z",
+      reason: "Suspicious IP address",
+      actions: "Session terminated, reset password"
+  },
+  {
+      userId: "user_006",
+      amount: 1200.00,
+      dateTime: "2024-06-06T13:50:00Z",
+      reason: "Unusual login location",
+      actions: "Account locked, verify user"
+  },
+  {
+      userId: "user_007",
+      amount: 400.00,
+      dateTime: "2024-06-07T16:35:00Z",
+      reason: "High number of transactions",
+      actions: "Transactions flagged, review activity"
+  },
+  {
+      userId: "user_008",
+      amount: 2300.00,
+      dateTime: "2024-06-08T08:25:00Z",
+      reason: "Stolen credit card",
+      actions: "Transaction reversed, contact issuer"
+  },
+  {
+      userId: "user_009",
+      amount: 600.00,
+      dateTime: "2024-06-09T20:10:00Z",
+      reason: "Account takeover attempt",
+      actions: "Account locked, user notified"
+  },
+  {
+      userId: "user_010",
+      amount: 950.00,
+      dateTime: "2024-06-10T07:40:00Z",
+      reason: "Multiple accounts linked",
+      actions: "Accounts reviewed, consolidate"
+  }
+];
+
+
+
 
 
 
@@ -876,3 +1024,90 @@ const tableSpinHTML = spinGames
   )
   .join("");
 tableSpin.innerHTML = tableSpinHTML;
+
+const tableAgentModel = document.getElementById("tbodyAgentModel");
+const tableAgentModelHTML = promoData
+  .map(
+    (user, index) => `
+         <tr
+                    class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
+                  >
+                    <th scope="row" class="px-6 py-4">
+                     ${user.promoCode}
+                    </th>
+                    <td class="px-6 py-4">
+                    ${user.users}
+                    </td>
+                    <td class="px-6 py-4">
+                    ${user.totalUsers}
+                    </td><td class="px-6 py-4">
+                    ${user.totalReviewsGotten}
+                    </td><td class="px-6 py-4">
+                    ${user.reviewsGenerated}
+                    </td>
+                    <td class="px-6 py-4">
+                      <!-- Modal toggle -->
+                        <a
+                          href="#"
+                          type="button"
+                          data-modal-target="removeAgentModal"
+                          data-modal-show="removeAgentModal"
+                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-primary"
+                          >Remove Agent</a
+                        >
+                    </td>
+                  </tr>
+
+      `
+  )
+  .join("");
+tableAgentModel.innerHTML = tableAgentModelHTML;
+
+const fraudModel = document.getElementById("tbodyFraud");
+const tableFraudHTML = fraudReports
+  .map(
+    (user, index) => `
+        <tr
+                    class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
+                  >
+                    <th scope="row" class="px-6 py-4">${user.userId}</th>
+                    <td class="px-6 py-4">${user.amount}</td>
+                    <td class="px-6 py-4">${user.dateTime}</td>
+                    <td class="px-6 py-4">
+                    ${user.reason}
+                    </td>
+                    <td class="px-6 py-4">
+                      <!-- Modal toggle -->
+                      <div class="flex items-center flex-wrap gap-3 lg:gap-6">
+                        <a
+                          href="#"
+                          type="button"
+                          data-modal-target="deductAmount-modal"
+                          data-modal-show="deductAmount-modal"
+                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
+                          >Deduct Amount</a
+                        >
+                        <a
+                          href="#"
+                          type="button"
+                          data-modal-target="banUser-modal"
+                          data-modal-show="banUser-modal"
+                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
+                          >Ban User</a
+                        >
+                        <a
+                          href="#"
+                          type="button"
+                          data-modal-target="deleteUser-modal"
+                          data-modal-show="deleteUser-modal"
+                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
+                          >Delete User</a
+                        >
+                      </div>
+                    </td>
+                  </tr>
+
+      `
+  )
+  .join("");
+tableFraud.innerHTML = tableFraudHTML;

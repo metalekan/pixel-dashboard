@@ -23,7 +23,7 @@
     <script defer src="src/dark-mode.js"></script>
     <script>
       tailwind.config = {
-        darkMode: 'class', // Enable dark mode using the class strategy
+        darkMode: "class", // Enable dark mode using the class strategy
         theme: {
           extend: {
             colors: {
@@ -841,7 +841,9 @@
           aria-label="Sidenav"
           id="drawer-navigation"
         >
-          <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark300">
+          <div
+            class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark300"
+          >
             <form action="#" method="GET" class="md:hidden mb-2">
               <label for="sidebar-search" class="sr-only">Search</label>
               <div class="relative">
@@ -1327,6 +1329,277 @@
           </div>
         </aside>
 
+        <!-- Agent Model Page -->
+        <main class="p-4 md:ml-64 min-h-screen pt-20">
+          <div
+            class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen"
+          >
+            <h1
+              class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10"
+            >
+              Agent Model
+            </h1>
+            <div
+              class="flex items-center justify-between flex-wrap gap-2 lg:gap-0"
+            >
+              <form class="max-w-sm w-full">
+                <label
+                  for="default-search"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only"
+                  >Search</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary"
+                    placeholder="Enter promo code..."
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-primary focus:outline-none font-medium rounded-lg text-sm px-4 py-2"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+
+              <div class="flex items-center gap-3">
+                <span class="text-gray-500 dark:text-gray-400"
+                  >Total number of Agent: 250</span
+                >
+                <button
+                  type="button"
+                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                >
+                  Check
+                </button>
+              </div>
+
+              <button
+                type="button"
+                data-modal-target="addAgentModal"
+                data-modal-show="addAgentModal"
+                class="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 w-fit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-3.5 h-3.5 me-2"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M14 4c-3.854 0-7 3.146-7 7c0 2.41 1.23 4.552 3.094 5.813C6.527 18.343 4 21.88 4 26h2c0-4.43 3.57-8 8-8c1.376 0 2.654.358 3.78.97A7.993 7.993 0 0 0 16 24c0 4.406 3.594 8 8 8c4.406 0 8-3.594 8-8c0-4.406-3.594-8-8-8a7.98 7.98 0 0 0-4.688 1.53c-.442-.277-.92-.51-1.406-.718A7.018 7.018 0 0 0 21 11c0-3.854-3.146-7-7-7m0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5m10 12c3.326 0 6 2.674 6 6s-2.674 6-6 6s-6-2.674-6-6s2.674-6 6-6m-1 2v3h-3v2h3v3h2v-3h3v-2h-3v-3z"
+                  />
+                </svg>
+                Add agent
+              </button>
+            </div>
+
+            <div
+              class="relative overflow-x-auto shadow rounded-lg mt-6 lg:mt-10"
+            >
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-sm text-primary uppercase bg-gray-50 dark:bg-dark300"
+                >
+                  <tr>
+                    <th scope="col" class="px-6 py-3">Promo code</th>
+                    <th scope="col" class="px-6 py-3">List of users</th>
+                    <th scope="col" class="px-6 py-3">Total No of users</th>
+                    <th scope="col" class="px-6 py-3">Total review gotten</th>
+                    <th scope="col" class="px-6 py-3">
+                      Total review Generated
+                    </th>
+                    <th scope="col" class="px-6 py-3">Remove Agent</th>
+                  </tr>
+                </thead>
+                <tbody id="tbodyAgentModel"></tbody>
+              </table>
+
+              <!-- Add agent modal -->
+              <div
+                id="addAgentModal"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+              >
+                <div class="relative p-4 w-full max-w-md max-h-full">
+                  <!-- Modal content -->
+                  <div
+                    class="relative bg-white rounded-lg shadow dark:bg-dark200"
+                  >
+                    <!-- Modal header -->
+                    <div
+                      class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                    >
+                      <h3
+                        class="text-xl font-semibold text-gray-900 dark:text-white"
+                      >
+                        Add agent
+                      </h3>
+                      <button
+                        type="button"
+                        class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="addAgentModal"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                          />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5">
+                      <form
+                        class="w-full flex flex-col items-center"
+                        action="#"
+                      >
+                        <div
+                          class="grid gap-4 lg:gap-8 mb-4 grid-cols-2 w-full"
+                        >
+                          <div
+                            class="col-span-2 flex flex-col lg:flex-row justify-between gap-0 lg:gap-20"
+                          >
+                            <label
+                              for="name"
+                              class="basis-1/4 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              >Add Agent:</label
+                            >
+                            <input
+                              type="text"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                              placeholder="PG11010"
+                              required=""
+                            />
+                          </div>
+                          <div
+                            class="col-span-2 flex flex-col lg:flex-row justify-between gap-0 lg:gap-20"
+                          >
+                            <label
+                              for="name"
+                              class="basis-1/4 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              >Promo Code:</label
+                            >
+                            <input
+                              type="text"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                              placeholder="promo code"
+                              required=""
+                            />
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center my-10 w-full"
+                        >
+                          Create User Acccount
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Remove agent modal -->
+
+              <div
+                id="removeAgentModal"
+                tabindex="-1"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+              >
+                <div class="relative p-4 w-full max-w-md max-h-full">
+                  <div
+                    class="relative bg-white rounded-lg shadow dark:bg-dark300"
+                  >
+                    <button
+                      type="button"
+                      class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
+                      data-modal-hide="removeAgentModal"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                        />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                    <div class="p-4 md:p-5 text-center">
+                      <svg
+                        class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                      <h3
+                        class="mb-3 text-lg font-semibold text-gray-700 dark:text-white"
+                      >
+                        Remove Agent
+                      </h3>
+                      <p class="text-gray-700 dark:text-white">
+                        This agent has been removed
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
         <!-- Fraud Page -->
         <main class="p-4 md:ml-64 min-h-screen pt-20">
           <div
@@ -1354,47 +1627,8 @@
                     <th scope="col" class="px-6 py-3">Actions</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
-                  >
-                    <th scope="row" class="px-6 py-4">PG11001</th>
-                    <td class="px-6 py-4">20,000</td>
-                    <td class="px-6 py-4">20/04/2024, 2:50:00am</td>
-                    <td class="px-6 py-4">
-                      Maliciously creating multiple accounts to earn money using
-                      one device.
-                    </td>
-                    <td class="px-6 py-4">
-                      <!-- Modal toggle -->
-                      <div class="flex items-center flex-wrap gap-3 lg:gap-6">
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="deductAmount-modal"
-                          data-modal-show="deductAmount-modal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
-                          >Deduct Amount</a
-                        >
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="banUser-modal"
-                          data-modal-show="banUser-modal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
-                          >Ban User</a
-                        >
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="deleteUser-modal"
-                          data-modal-show="deleteUser-modal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
-                          >Delete User</a
-                        >
-                      </div>
-                    </td>
-                  </tr>
+                <tbody id="tableFraud">
+                  
                 </tbody>
               </table>
 
@@ -1619,6 +1853,38 @@
                 </div>
               </div>
             </div>
+            <div
+                class="flex items-center flex-wrap justify-between mt-6 lg:mt-10"
+              >
+                <!-- Previous Button -->
+                <div class="flex">
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    Previous
+                  </a>
+
+                  <!-- Next Button -->
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    Next
+                  </a>
+                </div>
+
+                <span class="text-sm text-gray-700 dark:text-gray-400">
+                  Page
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >1</span
+                  >
+                  of
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >10</span
+                  >
+                </span>
+              </div>
           </div>
         </main>
 
@@ -3635,6 +3901,8 @@
             <div class="flex flex-col">
               <button
                 type="button"
+                data-modal-target="addUser"
+                data-modal-show="addUser"
                 class="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 w-fit mb-10"
               >
                 <svg
@@ -3703,6 +3971,102 @@
                 </span>
               </div>
             </div>
+
+             <!-- Add agent modal -->
+             <div
+             id="addUser"
+             tabindex="-1"
+             aria-hidden="true"
+             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+           >
+             <div class="relative p-4 w-full max-w-md max-h-full">
+               <!-- Modal content -->
+               <div
+                 class="relative bg-white rounded-lg shadow dark:bg-dark200"
+               >
+                 <!-- Modal header -->
+                 <div
+                   class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                 >
+                   <h3
+                     class="text-xl font-semibold text-gray-900 dark:text-white"
+                   >
+                     Add agent
+                   </h3>
+                   <button
+                     type="button"
+                     class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                     data-modal-hide="addUser"
+                   >
+                     <svg
+                       class="w-3 h-3"
+                       aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg"
+                       fill="none"
+                       viewBox="0 0 14 14"
+                     >
+                       <path
+                         stroke="currentColor"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         stroke-width="2"
+                         d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                       />
+                     </svg>
+                     <span class="sr-only">Close modal</span>
+                   </button>
+                 </div>
+                 <!-- Modal body -->
+                 <div class="p-4 md:p-5">
+                   <form
+                     class="w-full flex flex-col items-center"
+                     action="#"
+                   >
+                     <div
+                       class="grid gap-4 lg:gap-8 mb-4 grid-cols-2 w-full"
+                     >
+                       <div
+                         class="col-span-2 flex flex-col lg:flex-row justify-between gap-0 lg:gap-20"
+                       >
+                         <label
+                           for="name"
+                           class="basis-1/4 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                           >Add Agent:</label
+                         >
+                         <input
+                           type="text"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                           placeholder="PG11010"
+                           required=""
+                         />
+                       </div>
+                       <div
+                         class="col-span-2 flex flex-col lg:flex-row justify-between gap-0 lg:gap-20"
+                       >
+                         <label
+                           for="name"
+                           class="basis-1/4 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                           >Promo Code:</label
+                         >
+                         <input
+                           type="text"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                           placeholder="promo code"
+                           required=""
+                         />
+                       </div>
+                     </div>
+                     <button
+                       type="submit"
+                       class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center my-10 w-full"
+                     >
+                       Create User Acccount
+                     </button>
+                   </form>
+                 </div>
+               </div>
+             </div>
+           </div>
           </div>
         </main>
 
@@ -3718,15 +4082,13 @@
             </h1>
 
             <div class="flex flex-col">
-              <form
-                class="max-w-lg mb-4 flex items-center gap-2 lg:gap-3 flex-wrap"
-              >
+              <form class="mb-4 flex items-center gap-2 lg:gap-3 flex-wrap">
                 <label
                   for="default-search"
                   class="mb-2 text-sm font-medium text-gray-900 sr-only"
                   >Search</label
                 >
-                <div class="relative">
+                <div class="relative w-full max-w-sm">
                   <div
                     class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
                   >
