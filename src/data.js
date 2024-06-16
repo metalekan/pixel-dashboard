@@ -1111,3 +1111,25 @@ const tableFraudHTML = fraudReports
   )
   .join("");
 tableFraud.innerHTML = tableFraudHTML;
+
+const tableCheck = document.getElementById("tableCheck");
+const tableCheckHTML = spinGames
+  .map(
+    (user, index) => `
+        <tr
+                    class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
+                  >
+                    <th scope="row" class="px-6 py-4">${index}</th>
+                    <td class="px-6 py-4">${user.userId}</td>
+                    <td class="px-6 py-4">${user.betAmount}</td>
+                    <td class="px-6 py-4">${user.winAmount}</td>
+                    <td class="px-6 py-4">${user.winAmount}</td>
+                    <td class="px-6 py-4">
+                    200,000
+                    </td>
+                  </tr>
+
+      `
+  )
+  .join("");
+tableCheck.innerHTML = tableCheckHTML;

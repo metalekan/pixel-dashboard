@@ -1329,6 +1329,72 @@
           </div>
         </aside>
 
+         <!-- Check Page -->
+         <main class="p-4 md:ml-64 min-h-screen pt-20">
+          <div
+            class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen"
+          >
+            <h1
+              class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10"
+            >
+              Check
+            </h1>
+            <div
+              class="relative overflow-x-auto shadow rounded-lg mt-6 lg:mt-10"
+            >
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-sm text-primary uppercase bg-gray-50 dark:bg-dark300"
+                >
+                  <tr>
+                    <th scope="col" class="px-6 py-3">S/N</th>
+                    <th scope="col" class="px-6 py-3">User ID</th>
+                    <th scope="col" class="px-6 py-3">Promo Code</th>
+                    <th scope="col" class="px-6 py-3">No. of Users</th>
+                    <th scope="col" class="px-6 py-3">Agent Recharge</th>
+                    <th scope="col" class="px-6 py-3">Agent Withdraw</th>
+                  </tr>
+                </thead>
+                <tbody id="tableCheck"></tbody>
+              </table>
+            </div>
+            <div
+                class="flex items-center flex-wrap justify-between mt-6 lg:mt-10"
+              >
+                <!-- Previous Button -->
+                <div class="flex">
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    Previous
+                  </a>
+
+                  <!-- Next Button -->
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    Next
+                  </a>
+                </div>
+
+                <span class="text-sm text-gray-700 dark:text-gray-400">
+                  Page
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >1</span
+                  >
+                  of
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >10</span
+                  >
+                </span>
+              </div>
+          </div>
+        </main>
+
         <!-- Agent Model Page -->
         <main class="p-4 md:ml-64 min-h-screen pt-20">
           <div
@@ -1493,7 +1559,7 @@
                           class="grid gap-4 lg:gap-8 mb-4 grid-cols-2 w-full"
                         >
                           <div
-                            class="col-span-2 flex flex-col lg:flex-row justify-between gap-0 lg:gap-20"
+                            class="col-span-2 flex flex-col justify-between"
                           >
                             <label
                               for="name"
@@ -1508,7 +1574,7 @@
                             />
                           </div>
                           <div
-                            class="col-span-2 flex flex-col lg:flex-row justify-between gap-0 lg:gap-20"
+                            class="col-span-2 flex flex-col justify-between"
                           >
                             <label
                               for="name"
