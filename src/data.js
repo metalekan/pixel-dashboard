@@ -674,7 +674,7 @@ const tableHTML = rechargeLog
   .map(
     (log, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -701,7 +701,7 @@ const tableRechargeHTML = rechargeLog
   .map(
     (log, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -728,7 +728,7 @@ const tableOTPHTML = phoneOTP
   .map(
     (log, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -754,7 +754,7 @@ const tableUserSettingHTML = userLogs
   .map(
     (log, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -778,7 +778,7 @@ const tableLudoHTML = ludoGames
   .map(
     (game, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -805,7 +805,7 @@ const tableSoccerHTML = soccerGames
   .map(
     (game, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -832,7 +832,7 @@ const tableFishHTML = fishGames
   .map(
     (game, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
@@ -857,7 +857,7 @@ const tableSpinHTML = spinGames
   .map(
     (game, index) => `
           <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
         >
           <th
             scope="row"
