@@ -386,7 +386,7 @@ const ludoGames = [
   }
 ];
 
-const SoccerGames = [
+const soccerGames = [
   {
       gameId: "SG98001",
       userId: "user_123",
@@ -478,6 +478,194 @@ const SoccerGames = [
       status: "paid"
   }
 ];
+
+const fishGames = [
+  {
+      gameId: "SG98001",
+      userId: "user_123",
+      winner: "user_123",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T12:00:00Z",
+      remark: "Payment processed"
+  },
+  {
+      gameId: "SG98002",
+      userId: "user_456",
+      winner: "user_789",
+      betAmount: 75,
+      winAmount: 150,
+      dateTime: "2024-06-15T12:30:00Z",
+      remark: "Bet settled"
+  },
+  {
+      gameId: "SG98003",
+      userId: "user_789",
+      winner: "user_123",
+      betAmount: 100,
+      winAmount: 200,
+      dateTime: "2024-06-15T13:00:00Z",
+      remark: "Winner paid"
+  },
+  {
+      gameId: "SG98004",
+      userId: "user_321",
+      winner: "user_456",
+      betAmount: 20,
+      winAmount: 40,
+      dateTime: "2024-06-15T13:30:00Z",
+      remark: "Funds transferred"
+  },
+  {
+      gameId: "SG98005",
+      userId: "user_654",
+      winner: "user_321",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T14:00:00Z",
+      remark: "Bet cleared"
+  },
+  {
+      gameId: "SG98006",
+      userId: "user_987",
+      winner: "user_654",
+      betAmount: 30,
+      winAmount: 60,
+      dateTime: "2024-06-15T14:30:00Z",
+      remark: "Winnings paid"
+  },
+  {
+      gameId: "SG98007",
+      userId: "user_123",
+      winner: "user_987",
+      betAmount: 40,
+      winAmount: 80,
+      dateTime: "2024-06-15T15:00:00Z",
+      remark: "Payment complete"
+  },
+  {
+      gameId: "SG98008",
+      userId: "user_456",
+      winner: "user_123",
+      betAmount: 25,
+      winAmount: 50,
+      dateTime: "2024-06-15T15:30:00Z",
+      remark: "Bet paid"
+  },
+  {
+      gameId: "SG98009",
+      userId: "user_789",
+      winner: "user_456",
+      betAmount: 60,
+      winAmount: 120,
+      dateTime: "2024-06-15T16:00:00Z",
+      remark: "Funds settled"
+  },
+  {
+      gameId: "SG98010",
+      userId: "user_321, user_123, user_321",
+      winner: "user_789",
+      betAmount: 80,
+      winAmount: 160,
+      dateTime: "2024-06-15T16:30:00Z",
+      remark: "Payment processed"
+  }
+];
+
+const spinGames = [
+  {
+      gameId: "SG98001",
+      userId: "user_123",
+      winner: "user_123",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T12:00:00Z",
+      remark: "Payment processed"
+  },
+  {
+      gameId: "SG98002",
+      userId: "user_456",
+      winner: "user_789",
+      betAmount: 75,
+      winAmount: 150,
+      dateTime: "2024-06-15T12:30:00Z",
+      remark: "Bet settled"
+  },
+  {
+      gameId: "SG98003",
+      userId: "user_789",
+      winner: "user_123",
+      betAmount: 100,
+      winAmount: 200,
+      dateTime: "2024-06-15T13:00:00Z",
+      remark: "Winner paid"
+  },
+  {
+      gameId: "SG98004",
+      userId: "user_321",
+      winner: "user_456",
+      betAmount: 20,
+      winAmount: 40,
+      dateTime: "2024-06-15T13:30:00Z",
+      remark: "Funds transferred"
+  },
+  {
+      gameId: "SG98005",
+      userId: "user_654",
+      winner: "user_321",
+      betAmount: 50,
+      winAmount: 100,
+      dateTime: "2024-06-15T14:00:00Z",
+      remark: "Bet cleared"
+  },
+  {
+      gameId: "SG98006",
+      userId: "user_987",
+      winner: "user_654",
+      betAmount: 30,
+      winAmount: 60,
+      dateTime: "2024-06-15T14:30:00Z",
+      remark: "Winnings paid"
+  },
+  {
+      gameId: "SG98007",
+      userId: "user_123",
+      winner: "user_987",
+      betAmount: 40,
+      winAmount: 80,
+      dateTime: "2024-06-15T15:00:00Z",
+      remark: "Payment complete"
+  },
+  {
+      gameId: "SG98008",
+      userId: "user_456",
+      winner: "user_123",
+      betAmount: 25,
+      winAmount: 50,
+      dateTime: "2024-06-15T15:30:00Z",
+      remark: "Bet paid"
+  },
+  {
+      gameId: "SG98009",
+      userId: "user_789",
+      winner: "user_456",
+      betAmount: 60,
+      winAmount: 120,
+      dateTime: "2024-06-15T16:00:00Z",
+      remark: "Funds settled"
+  },
+  {
+      gameId: "SG98010",
+      userId: "user_321, user_123, user_321",
+      winner: "user_789",
+      betAmount: 80,
+      winAmount: 160,
+      dateTime: "2024-06-15T16:30:00Z",
+      remark: "Payment processed"
+  }
+];
+
+
 
 
 
@@ -613,7 +801,7 @@ const tableLudoHTML = ludoGames
 tableLudo.innerHTML = tableLudoHTML;
 
 const tableSoccer = document.getElementById("tbodySoccer");
-const tableSoccerHTML = SoccerGames
+const tableSoccerHTML = soccerGames
   .map(
     (game, index) => `
           <tr
@@ -638,3 +826,53 @@ const tableSoccerHTML = SoccerGames
   )
   .join("");
 tableSoccer.innerHTML = tableSoccerHTML;
+
+const tableFish = document.getElementById("tbodyFish");
+const tableFishHTML = fishGames
+  .map(
+    (game, index) => `
+          <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${game.userId}
+          </th>
+          <td class="px-6 py-4">${game.gameId}</td>
+          <td class="px-6 py-4">${game.betAmount}</td>
+          <td class="px-6 py-4">${game.winAmount}</td>
+          <td class="px-6 py-4">${game.dateTime}</td>
+          <td class="px-6 py-4">${game.remark}</td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableFish.innerHTML = tableFishHTML;
+
+const tableSpin = document.getElementById("tbodySpin");
+const tableSpinHTML = spinGames
+  .map(
+    (game, index) => `
+          <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${game.userId}
+          </th>
+          <td class="px-6 py-4">${game.gameId}</td>
+          <td class="px-6 py-4">${game.betAmount}</td>
+          <td class="px-6 py-4">${game.winAmount}</td>
+          <td class="px-6 py-4">${game.dateTime}</td>
+          <td class="px-6 py-4">${game.remark}</td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableSpin.innerHTML = tableSpinHTML;
