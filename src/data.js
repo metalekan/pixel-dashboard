@@ -102,8 +102,6 @@ const phoneOTP = [
     receipt: "pending",
     phone: "08168478017",
     otp: 4589,
-    
-
   },
   {
     id: 2,
@@ -113,10 +111,8 @@ const phoneOTP = [
     channel: "Stripe",
     txID: "TX11121JKLMN",
     receipt: "verified",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 3,
@@ -126,10 +122,8 @@ const phoneOTP = [
     channel: "PayPal",
     txID: "TX31415OPQRS",
     receipt: "check",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 4,
@@ -139,10 +133,8 @@ const phoneOTP = [
     channel: "Kuda",
     txID: "TX16171TUVWX",
     receipt: "verified",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 5,
@@ -152,10 +144,8 @@ const phoneOTP = [
     channel: "Square",
     txID: "TX18282YZABC",
     receipt: "pending",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 6,
@@ -165,10 +155,8 @@ const phoneOTP = [
     channel: "Kuda",
     txID: "TX19393DEFGH",
     receipt: "verified",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 7,
@@ -178,10 +166,8 @@ const phoneOTP = [
     channel: "Paystack",
     txID: "TX20404IJKLMN",
     receipt: "check",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 8,
@@ -191,10 +177,8 @@ const phoneOTP = [
     channel: "Flutterwave",
     txID: "TX21515OPQRS",
     receipt: "verified",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 9,
@@ -204,10 +188,8 @@ const phoneOTP = [
     channel: "Stripe",
     txID: "TX22626TUVWX",
     receipt: "pending",
-        phone: "08168478017",
-        otp: 4589,
-        
-
+    phone: "08168478017",
+    otp: 4589,
   },
   {
     id: 10,
@@ -222,600 +204,601 @@ const phoneOTP = [
 
 const userLogs = [
   {
-      name: "John Doe",
-      lastLogin: "19/4/2024, 5:10:12pm",
-      role: "Admin",
-      access: "Full",
-      remark: "Active user"
+    name: "John Doe",
+    lastLogin: "19/4/2024, 5:10:12pm",
+    role: "Admin",
+    access: "Full",
+    remark: "Active user",
   },
   {
-      name: "Jane Smith",
-      lastLogin: "20/4/2024, 10:15:32am",
-      role: "User",
-      access: "Limited",
-      remark: "Needs profile update"
+    name: "Jane Smith",
+    lastLogin: "20/4/2024, 10:15:32am",
+    role: "User",
+    access: "Limited",
+    remark: "Needs profile update",
   },
   {
-      name: "Michael Johnson",
-      lastLogin: "21/4/2024, 2:30:45pm",
-      role: "Moderator",
-      access: "Moderate",
-      remark: "Recently promoted"
+    name: "Michael Johnson",
+    lastLogin: "21/4/2024, 2:30:45pm",
+    role: "Moderator",
+    access: "Moderate",
+    remark: "Recently promoted",
   },
   {
-      name: "Emily Davis",
-      lastLogin: "22/4/2024, 11:50:10am",
-      role: "Admin",
-      access: "Full",
-      remark: "Active user"
+    name: "Emily Davis",
+    lastLogin: "22/4/2024, 11:50:10am",
+    role: "Admin",
+    access: "Full",
+    remark: "Active user",
   },
   {
-      name: "David Martinez",
-      lastLogin: "23/4/2024, 8:25:22pm",
-      role: "User",
-      access: "Limited",
-      remark: "Inactive for a week"
+    name: "David Martinez",
+    lastLogin: "23/4/2024, 8:25:22pm",
+    role: "User",
+    access: "Limited",
+    remark: "Inactive for a week",
   },
   {
-      name: "Sophia Garcia",
-      lastLogin: "24/4/2024, 7:15:34pm",
-      role: "Admin",
-      access: "Full",
-      remark: "Regular contributor"
+    name: "Sophia Garcia",
+    lastLogin: "24/4/2024, 7:15:34pm",
+    role: "Admin",
+    access: "Full",
+    remark: "Regular contributor",
   },
   {
-      name: "Chris Brown",
-      lastLogin: "25/4/2024, 4:45:55pm",
-      role: "User",
-      access: "Limited",
-      remark: "Pending verification"
+    name: "Chris Brown",
+    lastLogin: "25/4/2024, 4:45:55pm",
+    role: "User",
+    access: "Limited",
+    remark: "Pending verification",
   },
   {
-      name: "Lisa Wilson",
-      lastLogin: "26/4/2024, 6:30:48am",
-      role: "Moderator",
-      access: "Moderate",
-      remark: "Highly active"
+    name: "Lisa Wilson",
+    lastLogin: "26/4/2024, 6:30:48am",
+    role: "Moderator",
+    access: "Moderate",
+    remark: "Highly active",
   },
   {
-      name: "Mark Lee",
-      lastLogin: "27/4/2024, 12:10:15pm",
-      role: "Admin",
-      access: "Full",
-      remark: "Recently joined"
+    name: "Mark Lee",
+    lastLogin: "27/4/2024, 12:10:15pm",
+    role: "Admin",
+    access: "Full",
+    remark: "Recently joined",
   },
   {
-      name: "Karen Walker",
-      lastLogin: "28/4/2024, 1:20:25pm",
-      role: "User",
-      access: "Limited",
-      remark: "Needs password reset"
-  }
+    name: "Karen Walker",
+    lastLogin: "28/4/2024, 1:20:25pm",
+    role: "User",
+    access: "Limited",
+    remark: "Needs password reset",
+  },
 ];
 
 const ludoGames = [
   {
-      gameId: "game_001",
-      userId: "user_123",
-      winner: "user_123",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T12:00:00Z",
-      status: "paid"
+    gameId: "game_001",
+    userId: "user_123",
+    winner: "user_123",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T12:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_002",
-      userId: "user_456",
-      winner: "user_789",
-      betAmount: 75,
-      winAmount: 150,
-      dateTime: "2024-06-15T12:30:00Z",
-      status: "paid"
+    gameId: "game_002",
+    userId: "user_456",
+    winner: "user_789",
+    betAmount: 75,
+    winAmount: 150,
+    dateTime: "2024-06-15T12:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_003",
-      userId: "user_789",
-      winner: "user_123",
-      betAmount: 100,
-      winAmount: 200,
-      dateTime: "2024-06-15T13:00:00Z",
-      status: "paid"
+    gameId: "game_003",
+    userId: "user_789",
+    winner: "user_123",
+    betAmount: 100,
+    winAmount: 200,
+    dateTime: "2024-06-15T13:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_004",
-      userId: "user_321",
-      winner: "user_456",
-      betAmount: 20,
-      winAmount: 40,
-      dateTime: "2024-06-15T13:30:00Z",
-      status: "paid"
+    gameId: "game_004",
+    userId: "user_321",
+    winner: "user_456",
+    betAmount: 20,
+    winAmount: 40,
+    dateTime: "2024-06-15T13:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_005",
-      userId: "user_654",
-      winner: "user_321",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T14:00:00Z",
-      status: "paid"
+    gameId: "game_005",
+    userId: "user_654",
+    winner: "user_321",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T14:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_006",
-      userId: "user_987",
-      winner: "user_654",
-      betAmount: 30,
-      winAmount: 60,
-      dateTime: "2024-06-15T14:30:00Z",
-      status: "paid"
+    gameId: "game_006",
+    userId: "user_987",
+    winner: "user_654",
+    betAmount: 30,
+    winAmount: 60,
+    dateTime: "2024-06-15T14:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_007",
-      userId: "user_123",
-      winner: "user_987",
-      betAmount: 40,
-      winAmount: 80,
-      dateTime: "2024-06-15T15:00:00Z",
-      status: "paid"
+    gameId: "game_007",
+    userId: "user_123",
+    winner: "user_987",
+    betAmount: 40,
+    winAmount: 80,
+    dateTime: "2024-06-15T15:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_008",
-      userId: "user_456",
-      winner: "user_123",
-      betAmount: 25,
-      winAmount: 50,
-      dateTime: "2024-06-15T15:30:00Z",
-      status: "paid"
+    gameId: "game_008",
+    userId: "user_456",
+    winner: "user_123",
+    betAmount: 25,
+    winAmount: 50,
+    dateTime: "2024-06-15T15:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_009",
-      userId: "user_789",
-      winner: "user_456",
-      betAmount: 60,
-      winAmount: 120,
-      dateTime: "2024-06-15T16:00:00Z",
-      status: "paid"
+    gameId: "game_009",
+    userId: "user_789",
+    winner: "user_456",
+    betAmount: 60,
+    winAmount: 120,
+    dateTime: "2024-06-15T16:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "game_010",
-      userId: "user_321",
-      winner: "user_789",
-      betAmount: 80,
-      winAmount: 160,
-      dateTime: "2024-06-15T16:30:00Z",
-      status: "paid"
-  }
+    gameId: "game_010",
+    userId: "user_321",
+    winner: "user_789",
+    betAmount: 80,
+    winAmount: 160,
+    dateTime: "2024-06-15T16:30:00Z",
+    status: "paid",
+  },
 ];
 
 const soccerGames = [
   {
-      gameId: "SG98001",
-      userId: "user_123",
-      winner: "user_123",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T12:00:00Z",
-      status: "paid"
+    gameId: "SG98001",
+    userId: "user_123",
+    winner: "user_123",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T12:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98002",
-      userId: "user_456",
-      winner: "user_789",
-      betAmount: 75,
-      winAmount: 150,
-      dateTime: "2024-06-15T12:30:00Z",
-      status: "paid"
+    gameId: "SG98002",
+    userId: "user_456",
+    winner: "user_789",
+    betAmount: 75,
+    winAmount: 150,
+    dateTime: "2024-06-15T12:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98003",
-      userId: "user_789",
-      winner: "user_123",
-      betAmount: 100,
-      winAmount: 200,
-      dateTime: "2024-06-15T13:00:00Z",
-      status: "paid"
+    gameId: "SG98003",
+    userId: "user_789",
+    winner: "user_123",
+    betAmount: 100,
+    winAmount: 200,
+    dateTime: "2024-06-15T13:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98004",
-      userId: "user_321",
-      winner: "user_456",
-      betAmount: 20,
-      winAmount: 40,
-      dateTime: "2024-06-15T13:30:00Z",
-      status: "paid"
+    gameId: "SG98004",
+    userId: "user_321",
+    winner: "user_456",
+    betAmount: 20,
+    winAmount: 40,
+    dateTime: "2024-06-15T13:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98005",
-      userId: "user_654",
-      winner: "user_321",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T14:00:00Z",
-      status: "paid"
+    gameId: "SG98005",
+    userId: "user_654",
+    winner: "user_321",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T14:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98006",
-      userId: "user_987",
-      winner: "user_654",
-      betAmount: 30,
-      winAmount: 60,
-      dateTime: "2024-06-15T14:30:00Z",
-      status: "paid"
+    gameId: "SG98006",
+    userId: "user_987",
+    winner: "user_654",
+    betAmount: 30,
+    winAmount: 60,
+    dateTime: "2024-06-15T14:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98007",
-      userId: "user_123",
-      winner: "user_987",
-      betAmount: 40,
-      winAmount: 80,
-      dateTime: "2024-06-15T15:00:00Z",
-      status: "paid"
+    gameId: "SG98007",
+    userId: "user_123",
+    winner: "user_987",
+    betAmount: 40,
+    winAmount: 80,
+    dateTime: "2024-06-15T15:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98008",
-      userId: "user_456",
-      winner: "user_123",
-      betAmount: 25,
-      winAmount: 50,
-      dateTime: "2024-06-15T15:30:00Z",
-      status: "paid"
+    gameId: "SG98008",
+    userId: "user_456",
+    winner: "user_123",
+    betAmount: 25,
+    winAmount: 50,
+    dateTime: "2024-06-15T15:30:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98009",
-      userId: "user_789",
-      winner: "user_456",
-      betAmount: 60,
-      winAmount: 120,
-      dateTime: "2024-06-15T16:00:00Z",
-      status: "paid"
+    gameId: "SG98009",
+    userId: "user_789",
+    winner: "user_456",
+    betAmount: 60,
+    winAmount: 120,
+    dateTime: "2024-06-15T16:00:00Z",
+    status: "paid",
   },
   {
-      gameId: "SG98010",
-      userId: "user_321, user_123, user_321",
-      winner: "user_789",
-      betAmount: 80,
-      winAmount: 160,
-      dateTime: "2024-06-15T16:30:00Z",
-      status: "paid"
-  }
+    gameId: "SG98010",
+    userId: "user_321, user_123, user_321",
+    winner: "user_789",
+    betAmount: 80,
+    winAmount: 160,
+    dateTime: "2024-06-15T16:30:00Z",
+    status: "paid",
+  },
 ];
 
 const fishGames = [
   {
-      gameId: "SG98001",
-      userId: "user_123",
-      winner: "user_123",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T12:00:00Z",
-      remark: "Payment processed"
+    gameId: "SG98001",
+    userId: "user_123",
+    winner: "user_123",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T12:00:00Z",
+    remark: "Payment processed",
   },
   {
-      gameId: "SG98002",
-      userId: "user_456",
-      winner: "user_789",
-      betAmount: 75,
-      winAmount: 150,
-      dateTime: "2024-06-15T12:30:00Z",
-      remark: "Bet settled"
+    gameId: "SG98002",
+    userId: "user_456",
+    winner: "user_789",
+    betAmount: 75,
+    winAmount: 150,
+    dateTime: "2024-06-15T12:30:00Z",
+    remark: "Bet settled",
   },
   {
-      gameId: "SG98003",
-      userId: "user_789",
-      winner: "user_123",
-      betAmount: 100,
-      winAmount: 200,
-      dateTime: "2024-06-15T13:00:00Z",
-      remark: "Winner paid"
+    gameId: "SG98003",
+    userId: "user_789",
+    winner: "user_123",
+    betAmount: 100,
+    winAmount: 200,
+    dateTime: "2024-06-15T13:00:00Z",
+    remark: "Winner paid",
   },
   {
-      gameId: "SG98004",
-      userId: "user_321",
-      winner: "user_456",
-      betAmount: 20,
-      winAmount: 40,
-      dateTime: "2024-06-15T13:30:00Z",
-      remark: "Funds transferred"
+    gameId: "SG98004",
+    userId: "user_321",
+    winner: "user_456",
+    betAmount: 20,
+    winAmount: 40,
+    dateTime: "2024-06-15T13:30:00Z",
+    remark: "Funds transferred",
   },
   {
-      gameId: "SG98005",
-      userId: "user_654",
-      winner: "user_321",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T14:00:00Z",
-      remark: "Bet cleared"
+    gameId: "SG98005",
+    userId: "user_654",
+    winner: "user_321",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T14:00:00Z",
+    remark: "Bet cleared",
   },
   {
-      gameId: "SG98006",
-      userId: "user_987",
-      winner: "user_654",
-      betAmount: 30,
-      winAmount: 60,
-      dateTime: "2024-06-15T14:30:00Z",
-      remark: "Winnings paid"
+    gameId: "SG98006",
+    userId: "user_987",
+    winner: "user_654",
+    betAmount: 30,
+    winAmount: 60,
+    dateTime: "2024-06-15T14:30:00Z",
+    remark: "Winnings paid",
   },
   {
-      gameId: "SG98007",
-      userId: "user_123",
-      winner: "user_987",
-      betAmount: 40,
-      winAmount: 80,
-      dateTime: "2024-06-15T15:00:00Z",
-      remark: "Payment complete"
+    gameId: "SG98007",
+    userId: "user_123",
+    winner: "user_987",
+    betAmount: 40,
+    winAmount: 80,
+    dateTime: "2024-06-15T15:00:00Z",
+    remark: "Payment complete",
   },
   {
-      gameId: "SG98008",
-      userId: "user_456",
-      winner: "user_123",
-      betAmount: 25,
-      winAmount: 50,
-      dateTime: "2024-06-15T15:30:00Z",
-      remark: "Bet paid"
+    gameId: "SG98008",
+    userId: "user_456",
+    winner: "user_123",
+    betAmount: 25,
+    winAmount: 50,
+    dateTime: "2024-06-15T15:30:00Z",
+    remark: "Bet paid",
   },
   {
-      gameId: "SG98009",
-      userId: "user_789",
-      winner: "user_456",
-      betAmount: 60,
-      winAmount: 120,
-      dateTime: "2024-06-15T16:00:00Z",
-      remark: "Funds settled"
+    gameId: "SG98009",
+    userId: "user_789",
+    winner: "user_456",
+    betAmount: 60,
+    winAmount: 120,
+    dateTime: "2024-06-15T16:00:00Z",
+    remark: "Funds settled",
   },
   {
-      gameId: "SG98010",
-      userId: "user_321",
-      winner: "user_789",
-      betAmount: 80,
-      winAmount: 160,
-      dateTime: "2024-06-15T16:30:00Z",
-      remark: "Payment processed"
-  }
+    gameId: "SG98010",
+    userId: "user_321",
+    winner: "user_789",
+    betAmount: 80,
+    winAmount: 160,
+    dateTime: "2024-06-15T16:30:00Z",
+    remark: "Payment processed",
+  },
 ];
 
 const spinGames = [
   {
-      gameId: "SG98001",
-      userId: "user_123",
-      winner: "user_123",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T12:00:00Z",
-      remark: "Payment processed"
+    gameId: "SG98001",
+    userId: "user_123",
+    winner: "user_123",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T12:00:00Z",
+    remark: "Payment processed",
   },
   {
-      gameId: "SG98002",
-      userId: "user_456",
-      winner: "user_789",
-      betAmount: 75,
-      winAmount: 150,
-      dateTime: "2024-06-15T12:30:00Z",
-      remark: "Bet settled"
+    gameId: "SG98002",
+    userId: "user_456",
+    winner: "user_789",
+    betAmount: 75,
+    winAmount: 150,
+    dateTime: "2024-06-15T12:30:00Z",
+    remark: "Bet settled",
   },
   {
-      gameId: "SG98003",
-      userId: "user_789",
-      winner: "user_123",
-      betAmount: 100,
-      winAmount: 200,
-      dateTime: "2024-06-15T13:00:00Z",
-      remark: "Winner paid"
+    gameId: "SG98003",
+    userId: "user_789",
+    winner: "user_123",
+    betAmount: 100,
+    winAmount: 200,
+    dateTime: "2024-06-15T13:00:00Z",
+    remark: "Winner paid",
   },
   {
-      gameId: "SG98004",
-      userId: "user_321",
-      winner: "user_456",
-      betAmount: 20,
-      winAmount: 40,
-      dateTime: "2024-06-15T13:30:00Z",
-      remark: "Funds transferred"
+    gameId: "SG98004",
+    userId: "user_321",
+    winner: "user_456",
+    betAmount: 20,
+    winAmount: 40,
+    dateTime: "2024-06-15T13:30:00Z",
+    remark: "Funds transferred",
   },
   {
-      gameId: "SG98005",
-      userId: "user_654",
-      winner: "user_321",
-      betAmount: 50,
-      winAmount: 100,
-      dateTime: "2024-06-15T14:00:00Z",
-      remark: "Bet cleared"
+    gameId: "SG98005",
+    userId: "user_654",
+    winner: "user_321",
+    betAmount: 50,
+    winAmount: 100,
+    dateTime: "2024-06-15T14:00:00Z",
+    remark: "Bet cleared",
   },
   {
-      gameId: "SG98006",
-      userId: "user_987",
-      winner: "user_654",
-      betAmount: 30,
-      winAmount: 60,
-      dateTime: "2024-06-15T14:30:00Z",
-      remark: "Winnings paid"
+    gameId: "SG98006",
+    userId: "user_987",
+    winner: "user_654",
+    betAmount: 30,
+    winAmount: 60,
+    dateTime: "2024-06-15T14:30:00Z",
+    remark: "Winnings paid",
   },
   {
-      gameId: "SG98007",
-      userId: "user_123",
-      winner: "user_987",
-      betAmount: 40,
-      winAmount: 80,
-      dateTime: "2024-06-15T15:00:00Z",
-      remark: "Payment complete"
+    gameId: "SG98007",
+    userId: "user_123",
+    winner: "user_987",
+    betAmount: 40,
+    winAmount: 80,
+    dateTime: "2024-06-15T15:00:00Z",
+    remark: "Payment complete",
   },
   {
-      gameId: "SG98008",
-      userId: "user_456",
-      winner: "user_123",
-      betAmount: 25,
-      winAmount: 50,
-      dateTime: "2024-06-15T15:30:00Z",
-      remark: "Bet paid"
+    gameId: "SG98008",
+    userId: "user_456",
+    winner: "user_123",
+    betAmount: 25,
+    winAmount: 50,
+    dateTime: "2024-06-15T15:30:00Z",
+    remark: "Bet paid",
   },
   {
-      gameId: "SG98009",
-      userId: "user_789",
-      winner: "user_456",
-      betAmount: 60,
-      winAmount: 120,
-      dateTime: "2024-06-15T16:00:00Z",
-      remark: "Funds settled"
+    gameId: "SG98009",
+    userId: "user_789",
+    winner: "user_456",
+    betAmount: 60,
+    winAmount: 120,
+    dateTime: "2024-06-15T16:00:00Z",
+    remark: "Funds settled",
   },
   {
-      gameId: "SG98010",
-      userId: "user_321",
-      winner: "user_789",
-      betAmount: 80,
-      winAmount: 160,
-      dateTime: "2024-06-15T16:30:00Z",
-      remark: "Payment processed"
-  }
+    gameId: "SG98010",
+    userId: "user_321",
+    winner: "user_789",
+    betAmount: 80,
+    winAmount: 160,
+    dateTime: "2024-06-15T16:30:00Z",
+    remark: "Payment processed",
+  },
 ];
 
 const promoData = [
   {
-      promoCode: "SAVE20",
-      users: ["user_123", "user_456", "user_789"],
-      totalUsers: 3,
-      totalReviewsGotten: 15,
-      reviewsGenerated: 10
+    promoCode: "SAVE20",
+    users: ["user_123"],
+    totalUsers: 3,
+    totalReviewsGotten: 15,
+    reviewsGenerated: 10,
   },
   {
-      promoCode: "WELCOME50",
-      users: ["user_321", "user_654", "user_987", "user_001"],
-      totalUsers: 4,
-      totalReviewsGotten: 20,
-      reviewsGenerated: 15
+    promoCode: "WELCOME50",
+    users: ["user_321", "user_654", "user_987", "user_001"],
+    totalUsers: 4,
+    totalReviewsGotten: 20,
+    reviewsGenerated: 15,
   },
   {
-      promoCode: "FREESHIP",
-      users: ["user_432", "user_543"],
-      totalUsers: 2,
-      totalReviewsGotten: 5,
-      reviewsGenerated: 3
+    promoCode: "FREESHIP",
+    users: ["user_432", "user_543"],
+    totalUsers: 2,
+    totalReviewsGotten: 5,
+    reviewsGenerated: 3,
   },
   {
-      promoCode: "HOLIDAY30",
-      users: ["user_213", "user_324", "user_435", "user_546", "user_657"],
-      totalUsers: 5,
-      totalReviewsGotten: 25,
-      reviewsGenerated: 20
+    promoCode: "HOLIDAY30",
+    users: ["user_213", "user_324", "user_435", "user_546", "user_657"],
+    totalUsers: 5,
+    totalReviewsGotten: 25,
+    reviewsGenerated: 20,
   },
   {
-      promoCode: "SPRINGSALE",
-      users: ["user_768", "user_879", "user_980", "user_091"],
-      totalUsers: 4,
-      totalReviewsGotten: 18,
-      reviewsGenerated: 14
+    promoCode: "SPRINGSALE",
+    users: ["user_768", "user_879", "user_980", "user_091"],
+    totalUsers: 4,
+    totalReviewsGotten: 18,
+    reviewsGenerated: 14,
   },
   {
-      promoCode: "SUMMERFUN",
-      users: ["user_132", "user_243", "user_354", "user_465", "user_576", "user_687"],
-      totalUsers: 6,
-      totalReviewsGotten: 30,
-      reviewsGenerated: 25
+    promoCode: "SUMMERFUN",
+    users: [
+      "user_132",
+      "user_243",
+      "user_354",
+      "user_465",
+      "user_576",
+      "user_687",
+    ],
+    totalUsers: 6,
+    totalReviewsGotten: 30,
+    reviewsGenerated: 25,
   },
   {
-      promoCode: "WINTERWARM",
-      users: ["user_798", "user_809", "user_910"],
-      totalUsers: 3,
-      totalReviewsGotten: 10,
-      reviewsGenerated: 8
+    promoCode: "WINTERWARM",
+    users: ["user_798", "user_809", "user_910"],
+    totalUsers: 3,
+    totalReviewsGotten: 10,
+    reviewsGenerated: 8,
   },
   {
-      promoCode: "FALL50",
-      users: ["user_021", "user_132", "user_243"],
-      totalUsers: 3,
-      totalReviewsGotten: 12,
-      reviewsGenerated: 9
+    promoCode: "FALL50",
+    users: ["user_021", "user_132", "user_243"],
+    totalUsers: 3,
+    totalReviewsGotten: 12,
+    reviewsGenerated: 9,
   },
   {
-      promoCode: "NEWYEAR2024",
-      users: ["user_354", "user_465", "user_576", "user_687", "user_798"],
-      totalUsers: 5,
-      totalReviewsGotten: 22,
-      reviewsGenerated: 18
+    promoCode: "NEWYEAR2024",
+    users: ["user_354", "user_465", "user_576", "user_687", "user_798"],
+    totalUsers: 5,
+    totalReviewsGotten: 22,
+    reviewsGenerated: 18,
   },
   {
-      promoCode: "FLASHSALE",
-      users: ["user_809", "user_910", "user_101"],
-      totalUsers: 3,
-      totalReviewsGotten: 8,
-      reviewsGenerated: 5
-  }
+    promoCode: "FLASHSALE",
+    users: ["user_809", "user_910", "user_101"],
+    totalUsers: 3,
+    totalReviewsGotten: 8,
+    reviewsGenerated: 5,
+  },
 ];
 
 const fraudReports = [
   {
-      userId: "user_001",
-      amount: 1500.00,
-      dateTime: "2024-06-01T10:30:00Z",
-      reason: "Multiple failed login attempts",
-      actions: "Account locked, investigate activity"
+    userId: "user_001",
+    amount: 1500.0,
+    dateTime: "2024-06-01T10:30:00Z",
+    reason: "Multiple failed login attempts",
+    actions: "Account locked, investigate activity",
   },
   {
-      userId: "user_002",
-      amount: 200.00,
-      dateTime: "2024-06-02T14:20:00Z",
-      reason: "Unusual transaction pattern",
-      actions: "Transaction flagged, monitor account"
+    userId: "user_002",
+    amount: 200.0,
+    dateTime: "2024-06-02T14:20:00Z",
+    reason: "Unusual transaction pattern",
+    actions: "Transaction flagged, monitor account",
   },
   {
-      userId: "user_003",
-      amount: 750.00,
-      dateTime: "2024-06-03T09:15:00Z",
-      reason: "Chargeback issued",
-      actions: "Contact user, review transaction"
+    userId: "user_003",
+    amount: 750.0,
+    dateTime: "2024-06-03T09:15:00Z",
+    reason: "Chargeback issued",
+    actions: "Contact user, review transaction",
   },
   {
-      userId: "user_004",
-      amount: 5000.00,
-      dateTime: "2024-06-04T18:45:00Z",
-      reason: "Large withdrawal attempt",
-      actions: "Withdrawal blocked, verify identity"
+    userId: "user_004",
+    amount: 5000.0,
+    dateTime: "2024-06-04T18:45:00Z",
+    reason: "Large withdrawal attempt",
+    actions: "Withdrawal blocked, verify identity",
   },
   {
-      userId: "user_005",
-      amount: 300.00,
-      dateTime: "2024-06-05T11:00:00Z",
-      reason: "Suspicious IP address",
-      actions: "Session terminated, reset password"
+    userId: "user_005",
+    amount: 300.0,
+    dateTime: "2024-06-05T11:00:00Z",
+    reason: "Suspicious IP address",
+    actions: "Session terminated, reset password",
   },
   {
-      userId: "user_006",
-      amount: 1200.00,
-      dateTime: "2024-06-06T13:50:00Z",
-      reason: "Unusual login location",
-      actions: "Account locked, verify user"
+    userId: "user_006",
+    amount: 1200.0,
+    dateTime: "2024-06-06T13:50:00Z",
+    reason: "Unusual login location",
+    actions: "Account locked, verify user",
   },
   {
-      userId: "user_007",
-      amount: 400.00,
-      dateTime: "2024-06-07T16:35:00Z",
-      reason: "High number of transactions",
-      actions: "Transactions flagged, review activity"
+    userId: "user_007",
+    amount: 400.0,
+    dateTime: "2024-06-07T16:35:00Z",
+    reason: "High number of transactions",
+    actions: "Transactions flagged, review activity",
   },
   {
-      userId: "user_008",
-      amount: 2300.00,
-      dateTime: "2024-06-08T08:25:00Z",
-      reason: "Stolen credit card",
-      actions: "Transaction reversed, contact issuer"
+    userId: "user_008",
+    amount: 2300.0,
+    dateTime: "2024-06-08T08:25:00Z",
+    reason: "Stolen credit card",
+    actions: "Transaction reversed, contact issuer",
   },
   {
-      userId: "user_009",
-      amount: 600.00,
-      dateTime: "2024-06-09T20:10:00Z",
-      reason: "Account takeover attempt",
-      actions: "Account locked, user notified"
+    userId: "user_009",
+    amount: 600.0,
+    dateTime: "2024-06-09T20:10:00Z",
+    reason: "Account takeover attempt",
+    actions: "Account locked, user notified",
   },
   {
-      userId: "user_010",
-      amount: 950.00,
-      dateTime: "2024-06-10T07:40:00Z",
-      reason: "Multiple accounts linked",
-      actions: "Accounts reviewed, consolidate"
-  }
+    userId: "user_010",
+    amount: 950.0,
+    dateTime: "2024-06-10T07:40:00Z",
+    reason: "Multiple accounts linked",
+    actions: "Accounts reviewed, consolidate",
+  },
 ];
-
-
-
-
-
-
 
 const table = document.getElementById("tbody");
 const tableHTML = rechargeLog
@@ -826,12 +809,12 @@ const tableHTML = rechargeLog
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.id}
           </th>
           <td class="px-6 py-4">${log.amount}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
+          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
           </td>
           <td class="px-6 py-4">${log.date}</td>
           <td class="px-6 py-4">${log.channel}</td>
@@ -853,13 +836,13 @@ const tableRechargeHTML = rechargeLog
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.amount}
           </th>
           <td class="px-6 py-4">${log.status}</td>
           <td class="px-6 py-4">${log.date}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.channel} </span>
+          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.channel} </span>
           </td>
           <td class="px-6 py-4">${log.id}</td>
           <td class="px-6 py-4">${log.txID}</td>
@@ -880,14 +863,14 @@ const tableOTPHTML = phoneOTP
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.id}
           </th>
           <td class="px-6 py-4">${log.phone}</td>
           <td class="px-6 py-4">${log.otp}</td>
           <td class="px-6 py-4">${log.channel}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
+          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
           </td>
           <td class="px-6 py-4">${log.date}</td>
         </tr>
@@ -906,7 +889,7 @@ const tableUserSettingHTML = userLogs
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.name}
           </th>
@@ -930,7 +913,7 @@ const tableLudoHTML = ludoGames
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.gameId}
           </th>
@@ -939,7 +922,7 @@ const tableLudoHTML = ludoGames
           <td class="px-6 py-4">${game.betAmount}</td>
           <td class="px-6 py-4">${game.winAmount}</td>
           <td class="px-6 py-4">${game.dateTime}</td>
-          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
           </td>
         </tr>
 
@@ -957,7 +940,7 @@ const tableSoccerHTML = soccerGames
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.gameId}
           </th>
@@ -966,7 +949,7 @@ const tableSoccerHTML = soccerGames
           <td class="px-6 py-4">${game.betAmount}</td>
           <td class="px-6 py-4">${game.winAmount}</td>
           <td class="px-6 py-4">${game.dateTime}</td>
-          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
           </td>
         </tr>
 
@@ -984,7 +967,7 @@ const tableFishHTML = fishGames
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.userId}
           </th>
@@ -1009,7 +992,7 @@ const tableSpinHTML = spinGames
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.userId}
           </th>
@@ -1032,7 +1015,7 @@ const tableAgentModelHTML = promoData
          <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
-                    <th scope="row" class="px-6 py-4">
+                    <th scope="row" class="font-normal px-6 py-4">
                      ${user.promoCode}
                     </th>
                     <td class="px-6 py-4">
@@ -1070,7 +1053,7 @@ const tableFraudHTML = fraudReports
         <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
-                    <th scope="row" class="px-6 py-4">${user.userId}</th>
+                    <th scope="row" class="font-normal px-6 py-4">${user.userId}</th>
                     <td class="px-6 py-4">${user.amount}</td>
                     <td class="px-6 py-4">${user.dateTime}</td>
                     <td class="px-6 py-4">
@@ -1119,7 +1102,7 @@ const tableCheckHTML = spinGames
         <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
-                    <th scope="row" class="px-6 py-4">${index}</th>
+                    <th scope="row" class="font-normal px-6 py-4">${index}</th>
                     <td class="px-6 py-4">${user.userId}</td>
                     <td class="px-6 py-4">${user.betAmount}</td>
                     <td class="px-6 py-4">${user.winAmount}</td>
