@@ -800,6 +800,70 @@ const fraudReports = [
   },
 ];
 
+const topGames = [
+  {
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "VIP",
+  },{
+    userId: "PG11032",
+    dailyTopup: 100000,
+    dailyWithdrawal: 60000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "Regular",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "VIP",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "VIP",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "Normal",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "VIP",
+  },{
+    userId: "PG1402",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "VIP",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "VIP",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "Regular",
+  },{
+    userId: "PG1102",
+    dailyTopup: 150000,
+    dailyWithdrawal: 50000,
+    dateTime: "2024-06-01T10:30:00Z",
+    status: "Normal",
+  },
+];
+
 const table = document.getElementById("tbody");
 const tableHTML = rechargeLog
   .map(
@@ -1116,3 +1180,81 @@ const tableCheckHTML = spinGames
   )
   .join("");
 tableCheck.innerHTML = tableCheckHTML;
+
+const tableTopUp = document.getElementById("tbodyTopUp");
+const tableTopUpHTML = spinGames
+  .map(
+    (log, index) => `
+          <tr
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
+        >
+          <th
+            scope="row"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${index + 1}
+          </th>
+          <td class="px-6 py-4">${log.userId}</td>
+          <td class="px-6 py-4">${log.betAmount}</td>
+          <td class="px-6 py-4">${log.winAmount}</td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableTopUp.innerHTML = tableTopUpHTML;
+
+const tableUnReg = document.getElementById("tbodyUnReg");
+const tableUnRegHTML = phoneOTP
+  .map(
+    (log, index) => `
+          <tr
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
+        >
+          <th
+            scope="row"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${index + 1}
+          </th>
+          <td class="px-6 py-4">${log.phone}</td>
+          <td class="px-6 py-4">${log.date}</td>
+          <td class="px-6 py-4">${log.otp}</td>
+          <td class="px-6 py-4">${log.otp}</td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableUnReg.innerHTML = tableUnRegHTML;
+
+const tableTopGames = document.getElementById("tbodyTopGames");
+const tableTopGamesHTML = topGames
+  .map(
+    (log, index) => `
+          <tr
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
+        >
+          <th
+            scope="row"
+            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${index + 1}
+          </th>
+          <td class="px-6 py-4">${log.userId}</td>
+          <td class="px-6 py-4">${log.dailyTopup}</td>
+          <td class="px-6 py-4">${log.dailyWithdrawal}</td>
+          <td class="px-6 py-4">${log.dateTime}</td>
+          <td class="px-6 py-4">${log.status}</td>
+          <td class="px-6 py-4">
+          <div class="flex items-center justify-between">
+            <button type="button" class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Yes</button>
+            <button type="button" class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">No</button>
+          </div>
+          </td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableTopGames.innerHTML = tableTopGamesHTML;
