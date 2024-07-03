@@ -627,7 +627,7 @@ const optionsOverallAnalytics = {
   series: [
     {
       name: "Active Users",
-      data: [250, 100, 250, 400, 250, 300, 500, 340, 400, 480, 450, 460,],
+      data: [250, 100, 250, 400, 250, 300, 370, 340, 400, 420, 450, 460,],
       color: "#d8b4fe",
     }
   ],
@@ -657,7 +657,7 @@ const optionsOverallAnalytics = {
       opacityFrom: 0.55,
       opacityTo: 0,
       shade: "#d8b4fe",
-      gradientToColors: ["#1C64F2"],
+      gradientToColors: ["#d8b4fe"],
     },
   },
   dataLabels: {
