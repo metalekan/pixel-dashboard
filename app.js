@@ -524,19 +524,19 @@ const optionsOverall = {
     {
       name: "Developer Edition",
       data: [250, 100, 250, 400, 250, 300, 500, 340, 100, 280, 650, 1620],
-      color: "#dc2626",
+      color: "#be123c",
     },
     {
       name: "Designer Edition",
       data: [500, 340, 100, 280, 950, 620, 250, 100, 850, 400, 250, 300],
-      color: "#166534",
+      color: "#15803d",
     },
   ],
   chart: {
     sparkline: {
       enabled: false,
     },
-    height: "100%",
+    height: "400px",
     width: "100%",
     type: "area",
     dropShadow: {
@@ -558,6 +558,105 @@ const optionsOverall = {
       opacityFrom: 0.55,
       opacityTo: 0,
       shade: "#dc2626",
+      gradientToColors: ["#1C64F2"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 2,
+  },
+  legend: {
+    show: false,
+  },
+grid: {
+  show: true,
+  strokeDashArray: 1,
+  padding: {
+    left: 2,
+    right: 2,
+    top: -46,
+  },
+},
+};
+
+const optionsOverallAnalytics = {
+  // set the labels option to true to show the labels on the X and Y axis
+  xaxis: {
+    show: true,
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    labels: {
+      show: true,
+      style: {
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: true,
+    labels: {
+      show: true,
+      style: {
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
+      formatter: function (value) {
+        return value;
+      },
+    },
+  },
+  series: [
+    {
+      name: "Active Users",
+      data: [250, 100, 250, 400, 250, 300, 500, 340, 400, 480, 450, 460,],
+      color: "#d8b4fe",
+    }
+  ],
+  chart: {
+    sparkline: {
+      enabled: false,
+    },
+    height: "400px",
+    width: "100%",
+    type: "area",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#d8b4fe",
       gradientToColors: ["#1C64F2"],
     },
   },
@@ -945,20 +1044,31 @@ if (
   chart.render();
 }
 
+if (
+  document.getElementById("labels-chart-analytics") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("labels-chart-analytics"),
+    optionsOverallAnalytics
+  );
+  chart.render();
+}
+
 
 
 const optionsColumnChart = {
   series: [
     {
-      name: "Income",
-      color: "#31C48D",
-      data: ["1420", "1620", "1820", "1420", "1650", "2120"],
+      name: "Fraud Cases",
+      color: "#d8b4fe",
+      data: ["1420", "1620", "1820", "1420", "1650", "2120", "1420", "1620", "1820", "1420", "1650", "2120"],
     },
-    {
-      name: "Expense",
-      data: ["788", "810", "866", "788", "1100", "1200"],
-      color: "#F05252",
-    }
+    // {
+    //   name: "Expense",
+    //   data: ["788", "810", "866", "788", "1100", "1200"],
+    //   color: "#F05252",
+    // }
   ],
   chart: {
     sparkline: {
@@ -996,7 +1106,7 @@ const optionsColumnChart = {
     shared: true,
     intersect: false,
     formatter: function (value) {
-      return "$" + value
+      return value
     }
   },
   xaxis: {
@@ -1006,10 +1116,10 @@ const optionsColumnChart = {
         cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
       },
       formatter: function(value) {
-        return "$" + value
+        return value
       }
     },
-    categories: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     axisTicks: {
       show: false,
     },

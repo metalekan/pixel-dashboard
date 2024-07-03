@@ -807,55 +807,64 @@ const topGames = [
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "VIP",
-  },{
+  },
+  {
     userId: "PG11032",
     dailyTopup: 100000,
     dailyWithdrawal: 60000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "Regular",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "VIP",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "VIP",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "Normal",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "VIP",
-  },{
+  },
+  {
     userId: "PG1402",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "VIP",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "VIP",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
     dateTime: "2024-06-01T10:30:00Z",
     status: "Regular",
-  },{
+  },
+  {
     userId: "PG1102",
     dailyTopup: 150000,
     dailyWithdrawal: 50000,
@@ -873,17 +882,17 @@ const tableHTML = rechargeLog
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.id}
           </th>
-          <td class="px-6 py-4">${log.amount}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.amount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status}</span>
           </td>
-          <td class="px-6 py-4">${log.date}</td>
-          <td class="px-6 py-4">${log.channel}</td>
-          <td class="px-6 py-4">${log.txID}</td>
-          <td class="px-6 py-4">${log.receipt}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.channel}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.txID}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.receipt}</td>
         </tr>
 
       `
@@ -900,17 +909,17 @@ const tableRechargeHTML = rechargeLog
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.amount}
           </th>
-          <td class="px-6 py-4">${log.status}</td>
-          <td class="px-6 py-4">${log.date}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.channel} </span>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.status}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.channel} </span>
           </td>
-          <td class="px-6 py-4">${log.id}</td>
-          <td class="px-6 py-4">${log.txID}</td>
-          <td class="px-6 py-4">${log.receipt}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.id}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.txID}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.receipt}</td>
         </tr>
 
       `
@@ -927,16 +936,16 @@ const tableOTPHTML = phoneOTP
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.id}
           </th>
-          <td class="px-6 py-4">${log.phone}</td>
-          <td class="px-6 py-4">${log.otp}</td>
-          <td class="px-6 py-4">${log.channel}</td>
-          <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.phone}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.channel}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.status} </span>
           </td>
-          <td class="px-6 py-4">${log.date}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
         </tr>
 
       `
@@ -953,14 +962,14 @@ const tableUserSettingHTML = userLogs
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${log.name}
           </th>
-          <td class="px-6 py-4">${log.lastLogin}</td>
-          <td class="px-6 py-4">${log.role}</td>
-          <td class="px-6 py-4">${log.access}</td>
-          <td class="px-6 py-4">${log.remark}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.lastLogin}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.role}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.access}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.remark}</td>
         </tr>
 
       `
@@ -977,16 +986,16 @@ const tableLudoHTML = ludoGames
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.gameId}
           </th>
-          <td class="px-6 py-4">${game.userId}</td>
-          <td class="px-6 py-4">${game.winner}</td>
-          <td class="px-6 py-4">${game.betAmount}</td>
-          <td class="px-6 py-4">${game.winAmount}</td>
-          <td class="px-6 py-4">${game.dateTime}</td>
-          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.userId}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winner}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
           </td>
         </tr>
 
@@ -1004,16 +1013,16 @@ const tableSoccerHTML = soccerGames
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.gameId}
           </th>
-          <td class="px-6 py-4">${game.userId}</td>
-          <td class="px-6 py-4">${game.winner}</td>
-          <td class="px-6 py-4">${game.betAmount}</td>
-          <td class="px-6 py-4">${game.winAmount}</td>
-          <td class="px-6 py-4">${game.dateTime}</td>
-          <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.userId}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winner}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
           </td>
         </tr>
 
@@ -1031,15 +1040,15 @@ const tableFishHTML = fishGames
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.userId}
           </th>
-          <td class="px-6 py-4">${game.gameId}</td>
-          <td class="px-6 py-4">${game.betAmount}</td>
-          <td class="px-6 py-4">${game.winAmount}</td>
-          <td class="px-6 py-4">${game.dateTime}</td>
-          <td class="px-6 py-4">${game.remark}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.gameId}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.remark}</td>
         </tr>
 
       `
@@ -1056,15 +1065,15 @@ const tableSpinHTML = spinGames
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${game.userId}
           </th>
-          <td class="px-6 py-4">${game.gameId}</td>
-          <td class="px-6 py-4">${game.betAmount}</td>
-          <td class="px-6 py-4">${game.winAmount}</td>
-          <td class="px-6 py-4">${game.dateTime}</td>
-          <td class="px-6 py-4">${game.remark}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.gameId}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.remark}</td>
         </tr>
 
       `
@@ -1079,20 +1088,20 @@ const tableAgentModelHTML = promoData
          <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
-                    <th scope="row" class="font-normal px-6 py-4">
+                    <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">
                      ${user.promoCode}
                     </th>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
                     ${user.users}
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
                     ${user.totalUsers}
-                    </td><td class="px-6 py-4">
+                    </td><td class="px-6 py-4 text-gray-900 dark:text-white">
                     ${user.totalReviewsGotten}
-                    </td><td class="px-6 py-4">
+                    </td><td class="px-6 py-4 text-gray-900 dark:text-white">
                     ${user.reviewsGenerated}
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
                       <!-- Modal toggle -->
                         <a
                           href="#"
@@ -1117,13 +1126,13 @@ const tableFraudHTML = fraudReports
         <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
-                    <th scope="row" class="font-normal px-6 py-4">${user.userId}</th>
-                    <td class="px-6 py-4">${user.amount}</td>
-                    <td class="px-6 py-4">${user.dateTime}</td>
-                    <td class="px-6 py-4">
+                    <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">${user.userId}</th>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.amount}</td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.dateTime}</td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
                     ${user.reason}
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
                       <!-- Modal toggle -->
                       <div class="flex items-center flex-wrap gap-3 lg:gap-6">
                         <a
@@ -1166,12 +1175,12 @@ const tableCheckHTML = spinGames
         <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
-                    <th scope="row" class="font-normal px-6 py-4">${index}</th>
-                    <td class="px-6 py-4">${user.userId}</td>
-                    <td class="px-6 py-4">${user.betAmount}</td>
-                    <td class="px-6 py-4">${user.winAmount}</td>
-                    <td class="px-6 py-4">${user.winAmount}</td>
-                    <td class="px-6 py-4">
+                    <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">${index}</th>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.userId}</td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.betAmount}</td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.winAmount}</td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.winAmount}</td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
                     200,000
                     </td>
                   </tr>
@@ -1190,13 +1199,17 @@ const tableTopUpHTML = spinGames
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${index + 1}
           </th>
-          <td class="px-6 py-4">${log.userId}</td>
-          <td class="px-6 py-4">${log.betAmount}</td>
-          <td class="px-6 py-4">${log.winAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.userId}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${
+            log.betAmount
+          }</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${
+            log.winAmount
+          }</td>
         </tr>
 
       `
@@ -1213,14 +1226,14 @@ const tableUnRegHTML = phoneOTP
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${index + 1}
           </th>
-          <td class="px-6 py-4">${log.phone}</td>
-          <td class="px-6 py-4">${log.date}</td>
-          <td class="px-6 py-4">${log.otp}</td>
-          <td class="px-6 py-4">${log.otp}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.phone}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
         </tr>
 
       `
@@ -1237,16 +1250,22 @@ const tableTopGamesHTML = topGames
         >
           <th
             scope="row"
-            class="font-normal px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
            ${index + 1}
           </th>
-          <td class="px-6 py-4">${log.userId}</td>
-          <td class="px-6 py-4">${log.dailyTopup}</td>
-          <td class="px-6 py-4">${log.dailyWithdrawal}</td>
-          <td class="px-6 py-4">${log.dateTime}</td>
-          <td class="px-6 py-4">${log.status}</td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.userId}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${
+            log.dailyTopup
+          }</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${
+            log.dailyWithdrawal
+          }</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${
+            log.dateTime
+          }</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.status}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
           <div class="flex items-center justify-between">
             <button type="button" class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Yes</button>
             <button type="button" class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">No</button>

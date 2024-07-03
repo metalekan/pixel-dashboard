@@ -1338,13 +1338,58 @@
         <!-- Analytics Page -->
         <main class="p-4 md:ml-64 h-auto pt-20">
           <div
-            class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen"
+            class="flex flex-col gap-4 bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen"
           >
             <h1
-              class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10"
+              class="text-xl lg:text-3xl font-medium text-primary tracking-tight"
             >
               Analytics
             </h1>
+
+            <div
+              class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4 flex justify-start"
+            >
+              <div
+                class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end"
+              >
+                2023-04-018
+              </div>
+            </div>
+
+            <div class="grid lg:grid-cols-4 grid-cols-1">
+              <div class="flex flex-col gap-4 p-4 bg-white dark:bg-dark200 max-w-sm w-full rounded-xl">
+                <div class="flex items-center justify-between">
+                  <span class="text-base font-semibold text-black dark:text-white">Ludo Game</span>
+                </div>
+
+                <div class="flex flex-col gap-2 items-center justify-center pt-4 border-t border-gray-500">
+                  <span class="font-semibold text-sm text-xl lg:text-2xl">1,059</span>
+                  <span class="font-light text-gray-500 text-xs">84% of total (1,260)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-h-40">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 h-full">
+                <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
+                    <h5
+                      class="leading-none text-lg lg:text-xl font-semibold text-gray-900 dark:text-white pb-2 capitalize"
+                    >
+                     active users per month
+                    </h5>
+                </div>
+                <div id="labels-chart-analytics" class="px-2.5 min-h-full"></div>
+              </div>
+
+                <div class="max-w-smm llg:max-w-lg w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6">
+                  <h1 class="leading-none text-lg lg:text-xl font-semibold text-gray-900 dark:text-white pb-2 capitalize mb-8">number of fraud per month</h1>
+
+                  <div id="bar-chart"></div>
+                </div>
+
+                
+
+            </div>
           </div>
         </main>
 
@@ -1832,11 +1877,13 @@
               <div class="flex items-center gap-3">
                 <p class="text-gray-500 dark:text-gray-400">
                   Total number of Agent:
-                  <span class="text-gray-900 font-medium">250</span>
+                  <span class="text-gray-900 dark:text-white font-medium"
+                    >250</span
+                  >
                 </p>
                 <button
                   type="button"
-                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2"
                 >
                   Check
                 </button>
@@ -2036,6 +2083,38 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="flex items-center flex-wrap justify-between mt-6 lg:mt-10"
+            >
+              <!-- Previous Button -->
+              <div class="flex">
+                <a
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  Previous
+                </a>
+
+                <!-- Next Button -->
+                <a
+                  href="#"
+                  class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >
+                  Next
+                </a>
+              </div>
+
+              <span class="text-sm text-gray-700 dark:text-gray-400">
+                Page
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >1</span
+                >
+                of
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >10</span
+                >
+              </span>
             </div>
           </div>
         </main>
