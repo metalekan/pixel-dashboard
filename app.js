@@ -1078,7 +1078,7 @@ const optionsColumnChart = {
     width: "100%",
     height: 400,
     toolbar: {
-      show: true,
+      show: false,
     }
   },
   fill: {
@@ -1089,7 +1089,7 @@ const optionsColumnChart = {
       horizontal: false,
       columnWidth: "100%",
       borderRadiusApplication: "end",
-      borderRadius: 6,
+      borderRadius: 8,
       dataLabels: {
         position: "top",
       },
@@ -1100,7 +1100,7 @@ const optionsColumnChart = {
     position: "bottom",
   },
   dataLabels: {
-    enabled: true,
+    enabled: false,
   },
   tooltip: {
     shared: true,
