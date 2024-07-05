@@ -1078,7 +1078,7 @@ const optionsColumnChart = {
     width: "100%",
     height: 400,
     toolbar: {
-      show: false,
+      show: true,
     }
   },
   fill: {
@@ -1100,7 +1100,7 @@ const optionsColumnChart = {
     position: "bottom",
   },
   dataLabels: {
-    enabled: false,
+    enabled: true,
   },
   tooltip: {
     shared: true,
