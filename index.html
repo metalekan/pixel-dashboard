@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="src/dark-mode.js"></script>
+  <script defer src="/js/dark-mode.js"></script>
   <script>
     tailwind.config = {
       darkMode: "class", // Enable dark mode using the class strategy
@@ -107,138 +107,47 @@
               </svg>
             </button>
 
-            <a class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
-              href="settings.html">
+            <!-- Settings -->
+            <button type="button" data-dropdown-toggle="settings-dropdown"
+              class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600">
+              <span class="sr-only">View settings</span>
+              <!-- Settings icon -->
               <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
                   clip-rule="evenodd"></path>
               </svg>
-            </a>
-
+            </button>
 
             <!-- Dropdown menu -->
             <div
-              class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:bg-dark300 dark:divide-gray-600 rounded-xl"
-              id="apps-dropdown">
+              class="hidden overflow-hidden my-4 max-w-80 lg:max-w-sm w-full w-full text-base list-none rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 rounded-xl flex flex-col"
+              id="settings-dropdown">
               <div
-                class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
-                Apps
+                class="block py-2 px-4 text-base font-medium text-gray-700 bg-white dark:bg-dark200 dark:text-gray-300">
+                Settings
               </div>
-              <div class="grid grid-cols-3 gap-4 p-4">
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Sales
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
-                    </path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Users
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Inbox
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Profile
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Settings
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path>
-                    <path fill-rule="evenodd"
-                      d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Products
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z">
-                    </path>
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Pricing
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M5 2a2 2 0 00-2 2v14l3.5-2 3.5 2 3.5-2 3.5 2V4a2 2 0 00-2-2H5zm2.5 3a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm6.207.293a1 1 0 00-1.414 0l-6 6a1 1 0 101.414 1.414l6-6a1 1 0 000-1.414zM12.5 10a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Billing
-                  </div>
-                </a>
-                <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-dark500 group">
-                  <svg aria-hidden="true"
-                    class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
-                    </path>
-                  </svg>
-                  <div class="text-sm text-gray-900 dark:text-white">
-                    Logout
-                  </div>
-                </a>
+              <div
+                class="z-50 bg-gray-50 dark:bg-dark100 flex flex-col gap-2 text-[10px] p-3 max-h-60 h-full overflow-x-auto">
+                <ul class="flex flex-col w-full">
+                  <li>
+                    <a class="text-xs hover:font-medium text-gray-500 dark:text-white hover:text-gray-900 py-4 w-full"
+                      href="/">Demo Mode</a>
+                  </li>
+                  <li>
+                    <a class="text-xs hover:font-medium text-gray-500 dark:text-white hover:text-gray-900 py-4 w-full"
+                      href="/">API Integration</a>
+                  </li>
+                  <li>
+                    <a class="text-xs hover:font-medium text-gray-500 dark:text-white hover:text-gray-900 py-4 w-full"
+                      href="/">Security</a>
+                  </li>
+                  <li>
+                    <a class="text-xs hover:font-medium text-gray-500 dark:text-white hover:text-gray-900 py-4 w-full"
+                      href="/">Bugs</a>
+                  </li>
+                </ul>
               </div>
             </div>
             <!-- Notifications -->
@@ -255,168 +164,120 @@
             </button>
             <!-- Dropdown menu -->
             <div
-              class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-dark300 rounded-xl"
+              class="hidden overflow-hidden my-4 max-w-80 lg:max-w-sm w-full text-base list-none rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-dark300 rounded-xl flex flex-col"
               id="notification-dropdown">
               <div
-                class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
+                class="block py-2 px-4 text-base font-medium text-gray-700 bg-white dark:bg-dark200 dark:text-gray-300">
                 Notifications
               </div>
-              <div>
-                <a href="#"
-                  class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-dark500 dark:border-gray-600">
-                  <div class="flex-shrink-0">
-                    <img class="w-11 h-11 rounded-full"
-                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                      alt="Bonnie Green avatar" />
-                    <div
-                      class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 dark:border-dark100">
-                      <svg aria-hidden="true" class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z">
-                        </path>
-                        <path
-                          d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z">
-                        </path>
+              <div class="z-50 bg-gray-50 dark:bg-dark100 flex flex-col gap-2 text-[10px] p-3 max-h-60 overflow-x-auto">
+                <div
+                  class="cursor-default flex items-center justify-between w-full rounded-lg px-[10px] bg-white dark:bg-dark200 py-2.5">
+                  <div class="flex gap-2">
+                    <div class="text-[#d65563] p-1 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"></path>
                       </svg>
                     </div>
-                  </div>
-                  <div class="pl-3 w-full">
-                    <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                      New message from
-                      <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span>: "Hey, what's up?
-                      All set for the presentation?"
-                    </div>
-                    <div class="text-xs font-medium text-primary-600 dark:text-primary-500">
-                      a few moments ago
+                    <div>
+                      <p class="dark:text-white text-gray-900 text-sm">Info Window</p>
+                      <p class="text-gray-500 leading-tight">A fraud issue was detected on user PG1100011
+                        account.
+                        Kindly look into
+                        it</p>
                     </div>
                   </div>
-                </a>
-                <a href="#"
-                  class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-dark500 dark:border-gray-600">
-                  <div class="flex-shrink-0">
-                    <img class="w-11 h-11 rounded-full"
-                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                      alt="Jese Leos avatar" />
-                    <div
-                      class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-dark100">
-                      <svg aria-hidden="true" class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z">
-                        </path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="pl-3 w-full">
-                    <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                      <span class="font-semibold text-gray-900 dark:text-white">Jese leos</span>
-                      and
-                      <span class="font-medium text-gray-900 dark:text-white">5 others</span>
-                      started following you.
-                    </div>
-                    <div class="text-xs font-medium text-primary-600 dark:text-primary-500">
-                      10 minutes ago
-                    </div>
-                  </div>
-                </a>
-                <a href="#"
-                  class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-dark500 dark:border-gray-600">
-                  <div class="flex-shrink-0">
-                    <img class="w-11 h-11 rounded-full"
-                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
-                      alt="Joseph McFall avatar" />
-                    <div
-                      class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-dark100">
-                      <svg aria-hidden="true" class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                          d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="pl-3 w-full">
-                    <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                      <span class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span>
-                      and
-                      <span class="font-medium text-gray-900 dark:text-white">141 others</span>
-                      love your story. See it and view more stories.
-                    </div>
-                    <div class="text-xs font-medium text-primary-600 dark:text-primary-500">
-                      44 minutes ago
-                    </div>
-                  </div>
-                </a>
-                <a href="#"
-                  class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-dark500 dark:border-gray-600">
-                  <div class="flex-shrink-0">
-                    <img class="w-11 h-11 rounded-full"
-                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
-                      alt="Roberta Casas image" />
-                    <div
-                      class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-dark100">
-                      <svg aria-hidden="true" class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                          d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="pl-3 w-full">
-                    <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                      <span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span>
-                      mentioned you in a comment:
-                      <span class="font-medium text-primary-600 dark:text-primary-500">@bonnie.green</span>
-                      what do you say?
-                    </div>
-                    <div class="text-xs font-medium text-primary-600 dark:text-primary-500">
-                      1 hour ago
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-dark500">
-                  <div class="flex-shrink-0">
-                    <img class="w-11 h-11 rounded-full"
-                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png"
-                      alt="Robert image" />
-                    <div
-                      class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-dark100">
-                      <svg aria-hidden="true" class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z">
-                        </path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="pl-3 w-full">
-                    <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                      <span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span>
-                      posted a new video: Glassmorphism - learn how to
-                      implement the new design trend.
-                    </div>
-                    <div class="text-xs font-medium text-primary-600 dark:text-primary-500">
-                      3 hours ago
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <a href="#"
-                class="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline">
-                <div class="inline-flex items-center">
-                  <svg aria-hidden="true" class="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400" fill="currentColor"
-                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                    <path fill-rule="evenodd"
-                      d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  View all
+                  <button
+                    class="text-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 p-1 rounded-md transition-colors ease-linear">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
                 </div>
-              </a>
+                <div
+                  class="cursor-default flex items-center justify-between w-full rounded-lg px-[10px] bg-white dark:bg-dark200 py-2.5">
+                  <div class="flex gap-2">
+                    <div class="text-[#d65563] p-1 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="dark:text-white text-gray-900 text-sm">Info Window</p>
+                      <p class="text-gray-500 leading-tight">A fraud issue was detected on user PG1100011
+                        account.
+                        Kindly look into
+                        it</p>
+                    </div>
+                  </div>
+                  <button
+                    class="text-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 p-1 rounded-md transition-colors ease-linear">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="cursor-default flex items-center justify-between w-full rounded-lg px-[10px] bg-white dark:bg-dark200 py-2.5">
+                  <div class="flex gap-2">
+                    <div class="text-[#d65563] p-1 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="dark:text-white text-gray-900 text-sm">Info Window</p>
+                      <p class="text-gray-500 leading-tight">A fraud issue was detected on user PG1100011
+                        account.
+                        Kindly look into
+                        it</p>
+                    </div>
+                  </div>
+                  <button
+                    class="text-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 p-1 rounded-md transition-colors ease-linear">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="cursor-default flex items-center justify-between w-full rounded-lg px-[10px] bg-white dark:bg-dark200 py-2.5">
+                  <div class="flex gap-2">
+                    <div class="text-[#d65563] p-1 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="dark:text-white text-gray-900 text-sm">Info Window</p>
+                      <p class="text-gray-500 leading-tight">A fraud issue was detected on user PG1100011
+                        account.
+                        Kindly look into
+                        it</p>
+                    </div>
+                  </div>
+                  <button
+                    class="text-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 p-1 rounded-md transition-colors ease-linear">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
+
             <button type="button"
               class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
               id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
@@ -525,7 +386,7 @@
           <div class="flex flex-col justify-between h-full">
             <ul class="space-y-2">
               <li>
-                <a href="#"
+                <a href="/index.html"
                   class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-primary hover:text-white group">
                   <svg xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -541,7 +402,7 @@
                 </a>
               </li>
               <li>
-                <a href="#"
+                <a href="/analytics.html"
                   class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
                   <svg xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -578,15 +439,35 @@
                 <ul id="dropdown-pages" class="hidden py-2 space-y-2">
                   <li>
                     <a href="#"
-                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Settings</a>
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">User
+                      Info
+                    </a>
                   </li>
                   <li>
                     <a href="#"
-                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Kanban</a>
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Recharge
+                      Log
+                    </a>
                   </li>
                   <li>
                     <a href="#"
-                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Calendar</a>
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Withdrawal
+                      Log
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Game
+                      Record
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
+                      OTP
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -691,7 +572,7 @@
               <li>
                 <button type="button"
                   class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
-                  aria-controls="dropdown-authentication" data-collapse-toggle="dropdown-authentication">
+                  aria-controls="dropdown-topUp" data-collapse-toggle="dropdown-topUp">
                   <svg xmlns="http://www.w3.org/2000/svg"
                     class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
                     viewBox="0 0 24 24">
@@ -709,7 +590,7 @@
                       clip-rule="evenodd"></path>
                   </svg>
                 </button>
-                <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
+                <ul id="dropdown-topUp" class="hidden py-2 space-y-2">
                   <li>
                     <a href="#"
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Sign
@@ -779,6 +660,46 @@
                   </li>
                 </ul>
               </li>
+
+              <li>
+                <button type="button"
+                  class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
+                  aria-controls="dropdown-customer" data-collapse-toggle="dropdown-customer">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M19.938 8H21a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1.062A8 8 0 0 1 12 23v-2a6 6 0 0 0 6-6V9A6 6 0 0 0 6 9v7H3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1.062a8.001 8.001 0 0 1 15.876 0M3 10v4h1v-4zm17 0v4h1v-4zM7.76 15.785l1.06-1.696A5.97 5.97 0 0 0 12 15a5.97 5.97 0 0 0 3.18-.911l1.06 1.696A7.96 7.96 0 0 1 12 17a7.96 7.96 0 0 1-4.24-1.215" />
+                  </svg>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Customer Mode</span>
+                  <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <ul id="dropdown-customer" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="#"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Live
+                      Chat</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Email</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
+                      Number</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
 
             <a href="/"
@@ -804,303 +725,11 @@
         </div>
       </aside>
 
-      <!-- Analytics Page -->
-      <main class="p-4 md:ml-64 h-auto pt-20">
-        <div class="flex flex-col gap-4 bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
-          <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight">
-            Analytics
-          </h1>
-
-          <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4 flex justify-start">
-            <div class="relative max-w-32">
-              <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                </svg>
-              </div>
-              <input datepicker datepicker-autohide id="default-datepicker1" type="text"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
-                placeholder="Select date">
-            </div>
-          </div>
-
-          <div class="grid lg:grid-cols-4 grid-cols-1 gap-4 lg:gap-8">
-            <div class="flex flex-col gap-4 p-4 bg-white dark:bg-dark200 max-w-sm w-full rounded-xl">
-              <div class="flex items-center justify-between">
-                <span class="text-base font-semibold text-black dark:text-white">Ludo Game</span>
-              </div>
-
-              <div class="flex flex-col gap-2 items-center justify-center pt-4 border-t border-gray-300">
-                <span class="font-semibold text-sm text-xl lg:text-2xl text-gray-900 dark:text-white">1,059</span>
-                <span class="font-light text-gray-900 dark:text-white text-xs">84% of total (1,260)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-            <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 h-full">
-              <div class="flex justify-between items-center sm:flex-wrap p-4 md:p-6 pb-0 md:pb-0">
-                <h5 class="leading-none text-md font-semibold text-gray-900 dark:text-white capitalize">
-                  active users per month
-                </h5>
-
-                <div class="flex gap-1 items-center">
-                  <p class="text-gray-900 dark:text-white">View by:</p>
-                  <div class="flex space-x-2 border border-gray-500 rounded-xl select-none">
-                    <label class="radio flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
-                      <input type="radio" name="radio" value="days" class="peer hidden" checked="" />
-                      <span
-                        class="peer-checked:bg-primary peer-checked:text-white text-gray-700 dark:text-white p-2 rounded-lg transition duration-150 ease-in-out text-sm">Days</span>
-                    </label>
-
-                    <label class="radio flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
-                      <input type="radio" name="radio" value="month" class="peer hidden" />
-                      <span
-                        class="peer-checked:bg-primary peer-checked:text-white text-gray-700 dark:text-white p-2 rounded-lg transition duration-150 ease-in-out text-sm">Month</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div id="labels-chart-analytics" class="px-2.5 min-h-full"></div>
-            </div>
-
-            <div class="max-w-smm llg:max-w-lg w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6">
-              <h1 class="leading-none text-md font-semibold text-gray-900 dark:text-white pb-2 capitalize mb-8">
-                number of fraud per month
-              </h1>
-
-              <div id="bar-chart"></div>
-            </div>
-          </div>
-
-          <div class="flex flex-col">
-            <h1 class="text-md font-semibold text-black dark:text-white">Games</h1>
-            <div class="relative overflow-x-auto shadow rounded-lg mt-4">
-              <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 text-primary">Games</th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Online Users
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Total Winning
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      New Users
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Banned Users
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">Deleted User</th>
-                  </tr>
-                </thead>
-                <tbody id="tbodyAnalyticsGames">
-                  <tr
-                    class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500">
-                    <th scope="row"
-                      class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <img class="h-8 w-8" src="/images/icons8-ludo-game-50 1.png" alt="loading">
-                        <span class="text-sm">Ludo</span>
-                      </div>
-                    </th>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span>15</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">1,550</span>
-                        <div
-                          class="flex items-center text-xs font-semibold text-green-500 dark:text-green-500 text-center">
-                          <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">1,550</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-1" viewBox="0 0 24 24">
-                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M17.928 19.634h2.138a1.165 1.165 0 0 0 1.116-1.555a6.851 6.851 0 0 0-6.117-3.95m0-2.759a3.664 3.664 0 0 0 3.665-3.664a3.664 3.664 0 0 0-3.665-3.674m-1.04 16.795a1.908 1.908 0 0 0 1.537-3.035a8.026 8.026 0 0 0-6.222-3.196a8.026 8.026 0 0 0-6.222 3.197a1.909 1.909 0 0 0 1.536 3.034zM9.34 11.485a4.16 4.16 0 0 0 4.15-4.161a4.151 4.151 0 0 0-8.302 0a4.16 4.16 0 0 0 4.151 4.16" />
-                        </svg>
-                        <div
-                          class="flex items-center text-xs font-semibold text-green-500 dark:text-green-500 text-center">
-                          <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">150</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-1" viewBox="0 0 24 24">
-                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M17.928 19.634h2.138a1.165 1.165 0 0 0 1.116-1.555a6.851 6.851 0 0 0-6.117-3.95m0-2.759a3.664 3.664 0 0 0 3.665-3.664a3.664 3.664 0 0 0-3.665-3.674m-1.04 16.795a1.908 1.908 0 0 0 1.537-3.035a8.026 8.026 0 0 0-6.222-3.196a8.026 8.026 0 0 0-6.222 3.197a1.909 1.909 0 0 0 1.536 3.034zM9.34 11.485a4.16 4.16 0 0 0 4.15-4.161a4.151 4.151 0 0 0-8.302 0a4.16 4.16 0 0 0 4.151 4.16" />
-                        </svg>
-                        <div class="flex items-center text-xs font-semibold text-center text-red-600">
-                          <svg class="w-3 h-3 ms-1 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">150</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-1" viewBox="0 0 24 24">
-                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M17.928 19.634h2.138a1.165 1.165 0 0 0 1.116-1.555a6.851 6.851 0 0 0-6.117-3.95m0-2.759a3.664 3.664 0 0 0 3.665-3.664a3.664 3.664 0 0 0-3.665-3.674m-1.04 16.795a1.908 1.908 0 0 0 1.537-3.035a8.026 8.026 0 0 0-6.222-3.196a8.026 8.026 0 0 0-6.222 3.197a1.909 1.909 0 0 0 1.536 3.034zM9.34 11.485a4.16 4.16 0 0 0 4.15-4.161a4.151 4.151 0 0 0-8.302 0a4.16 4.16 0 0 0 4.151 4.16" />
-                        </svg>
-                        <div class="flex items-center text-xs font-semibold text-center text-red-600">
-                          <svg class="w-3 h-3 ms-1 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500">
-                    <th scope="row"
-                      class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <img class="h-8 w-8" src="/images/icons8-game-controller-50 1.png" alt="loading">
-                        <span class="text-sm">Spin Game</span>
-                      </div>
-                    </th>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span>15</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">1,550</span>
-                        <div
-                          class="flex items-center text-xs font-semibold text-green-500 dark:text-green-500 text-center">
-                          <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">1,550</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-1" viewBox="0 0 24 24">
-                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M17.928 19.634h2.138a1.165 1.165 0 0 0 1.116-1.555a6.851 6.851 0 0 0-6.117-3.95m0-2.759a3.664 3.664 0 0 0 3.665-3.664a3.664 3.664 0 0 0-3.665-3.674m-1.04 16.795a1.908 1.908 0 0 0 1.537-3.035a8.026 8.026 0 0 0-6.222-3.196a8.026 8.026 0 0 0-6.222 3.197a1.909 1.909 0 0 0 1.536 3.034zM9.34 11.485a4.16 4.16 0 0 0 4.15-4.161a4.151 4.151 0 0 0-8.302 0a4.16 4.16 0 0 0 4.151 4.16" />
-                        </svg>
-                        <div
-                          class="flex items-center text-xs font-semibold text-green-500 dark:text-green-500 text-center">
-                          <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">150</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-1" viewBox="0 0 24 24">
-                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M17.928 19.634h2.138a1.165 1.165 0 0 0 1.116-1.555a6.851 6.851 0 0 0-6.117-3.95m0-2.759a3.664 3.664 0 0 0 3.665-3.664a3.664 3.664 0 0 0-3.665-3.674m-1.04 16.795a1.908 1.908 0 0 0 1.537-3.035a8.026 8.026 0 0 0-6.222-3.196a8.026 8.026 0 0 0-6.222 3.197a1.909 1.909 0 0 0 1.536 3.034zM9.34 11.485a4.16 4.16 0 0 0 4.15-4.161a4.151 4.151 0 0 0-8.302 0a4.16 4.16 0 0 0 4.151 4.16" />
-                        </svg>
-                        <div class="flex items-center text-xs font-semibold text-center text-red-600">
-                          <svg class="w-3 h-3 ms-1 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <div class="flex items-center gap-1">
-                        <span class="text-sm">150</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-1" viewBox="0 0 24 24">
-                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M17.928 19.634h2.138a1.165 1.165 0 0 0 1.116-1.555a6.851 6.851 0 0 0-6.117-3.95m0-2.759a3.664 3.664 0 0 0 3.665-3.664a3.664 3.664 0 0 0-3.665-3.674m-1.04 16.795a1.908 1.908 0 0 0 1.537-3.035a8.026 8.026 0 0 0-6.222-3.196a8.026 8.026 0 0 0-6.222 3.197a1.909 1.909 0 0 0 1.536 3.034zM9.34 11.485a4.16 4.16 0 0 0 4.15-4.161a4.151 4.151 0 0 0-8.302 0a4.16 4.16 0 0 0 4.151 4.16" />
-                        </svg>
-                        <div class="flex items-center text-xs font-semibold text-center text-red-600">
-                          <svg class="w-3 h-3 ms-1 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 10 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 13V1m0 0L1 5m4-4 4 4" />
-                          </svg>
-                          15%
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="flex items-center flex-wrap justify-between mt-6 lg:mt-10">
-              <!-- Previous Button -->
-              <div class="flex">
-                <a href="#"
-                  class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Previous
-                </a>
-
-                <!-- Next Button -->
-                <a href="#"
-                  class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Next
-                </a>
-              </div>
-
-              <span class="text-sm text-gray-700 dark:text-gray-400">
-                Page
-                <span class="font-semibold text-gray-900 dark:text-white">1</span>
-                of
-                <span class="font-semibold text-gray-900 dark:text-white">10</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </main>
-
-      <!-- Top Games Page -->
+      <!-- Top Gamers Page -->
       <main class="p-4 md:ml-64 h-auto pt-20">
         <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
           <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
-            Top Games
+            Top Gamers
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4 flex items-center">
             <div class="relative max-w-32">
@@ -1111,7 +740,7 @@
                     d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </div>
-              <input datepicker datepicker-autohide id="default-datepicker2" type="text"
+              <input datepicker datepicker-autohide id="default-datepicker-top-gamers" type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
                 placeholder="Select date">
             </div>
@@ -1122,6 +751,26 @@
             </button>
           </div>
           <div class="flex flex-col">
+            <!-- make each button have an active  -->
+            <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4 grid grid-cols-4 gap-2 lg:gap-8">
+              <button type="button"
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                ludo
+              </button>
+
+              <button type="button"
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                spin
+              </button>
+              <button type="button"
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                fish
+              </button>
+              <button type="button"
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                soccer
+              </button>
+            </div>
             <div class="relative overflow-x-auto shadow rounded-lg mt-4">
               <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
@@ -1255,9 +904,32 @@
             Highest Top-Up
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4">
-            <div
-              class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-              2023-04-018 - 2024-04-18
+            <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-top-up-start" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Start date">
+              </div>
+              <span class="mx-4 text-gray-500">-</span>
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-top-up-end" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="End date">
+              </div>
             </div>
           </div>
           <div class="flex flex-col">
@@ -1752,9 +1424,32 @@
             Spin Game
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4">
-            <div
-              class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-              2023-04-018 - 2024-04-18
+            <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-7" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Start date">
+              </div>
+              <span class="mx-4 text-gray-500">-</span>
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-datepicker7" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="End date">
+              </div>
             </div>
           </div>
           <div class="flex flex-col">
@@ -1856,9 +1551,32 @@
             Fish Game
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4">
-            <div
-              class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-              2023-04-018 - 2024-04-18
+            <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-8" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Start date">
+              </div>
+              <span class="mx-4 text-gray-500">-</span>
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-datepicker8" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="End date">
+              </div>
             </div>
           </div>
           <div class="flex flex-col">
@@ -1960,9 +1678,32 @@
             Soccer Game
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4">
-            <div
-              class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-              2023-04-018 - 2024-04-18
+            <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-9" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Start date">
+              </div>
+              <span class="mx-4 text-gray-500">-</span>
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-datepicker9" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="End date">
+              </div>
             </div>
           </div>
           <div class="flex flex-col">
@@ -2065,9 +1806,32 @@
             Ludo Game
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4">
-            <div
-              class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-              2023-04-018 - 2024-04-18
+            <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-10" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Start date">
+              </div>
+              <span class="mx-4 text-gray-500">-</span>
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-datepicker10" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="End date">
+              </div>
             </div>
           </div>
           <div class="flex flex-col">
@@ -2177,12 +1941,26 @@
         <div class="mt-3 lg:mt-4 flex flex-col lg:items-start lg:flex-row gap-4">
           <div class="lg:basis-1/7 flex flex-col jjustify-between">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="flex flex-col bg-white dark:bg-dark200 p-4 shadow-lg rounded-lg">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Recharge
                 </h3>
-                <div id="area-chart-totalRecharge"></div>
+                <div
+                  class="flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden max-h-60 h-full">
+                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute z-10 fill-[#147860] duration-500">
+                    <path transform="translate(100 100)"
+                      d="M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z">
+                    </path>
+                  </svg>
+
+                  <div class="z-20 flex flex-col justify-center items-center p-4 rounded-full h-24 w-24 bg-black">
+                    <span class="text-white font-bold text-lg ml-2">2145.91</span>
+                    <p class="font-bold text-green-600 text-xs">+27%</p>
+                  </div>
+                </div>
               </div>
+
               <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 relative max-h-60">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Registered
@@ -2213,9 +1991,7 @@
                   </svg>
                 </div>
               </div>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div
                 class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 h-60">
                 <div class="basis-1/3 flex flex-col gap-3">
@@ -2301,12 +2077,9 @@
                       alt="loading" />
                     <div class="ps-3">
                       <div class="text-base font-semibold">Neil Sims</div>
-                      <div class="font-normal text-gray-500">
-                        neil.sims@flowbite.com
-                      </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex items-center">
                       <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                       Online
@@ -2322,12 +2095,9 @@
                       alt="loading" />
                     <div class="ps-3">
                       <div class="text-base font-semibold">Bonnie Green</div>
-                      <div class="font-normal text-gray-500">
-                        bonnie@flowbite.com
-                      </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex items-center">
                       <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                       Online
@@ -2343,12 +2113,9 @@
                       alt="loading" />
                     <div class="ps-3">
                       <div class="text-base font-semibold">Jese Leos</div>
-                      <div class="font-normal text-gray-500">
-                        jese@flowbite.com
-                      </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex items-center">
                       <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                       Online
@@ -2364,12 +2131,9 @@
                       alt="loading" />
                     <div class="ps-3">
                       <div class="text-base font-semibold">Thomas Lean</div>
-                      <div class="font-normal text-gray-500">
-                        thomes@flowbite.com
-                      </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex items-center">
                       <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                       Online
@@ -2386,12 +2150,9 @@
                       <div class="text-base font-semibold">
                         Leslie Livingston
                       </div>
-                      <div class="font-normal text-gray-500">
-                        leslie@flowbite.com
-                      </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex items-center">
                       <div class="h-2.5 w-2.5 rounded-full bg-rose-800 me-2"></div>
                       Offline
@@ -2407,12 +2168,9 @@
                       alt="loading" />
                     <div class="ps-3">
                       <div class="text-base font-semibold">Bonnie Green</div>
-                      <div class="font-normal text-gray-500">
-                        bonnie@flowbite.com
-                      </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex items-center">
                       <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                       Online
@@ -2457,7 +2215,7 @@
           <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
             <div>
               <h5 class="leading-none text-lg lg:text-xl font-semibold text-gray-900 dark:text-white pb-2">
-                Overall Overview
+                Overall Statistics
               </h5>
               <div
                 class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
@@ -2475,9 +2233,32 @@
           Payment Overview
         </h1>
         <div class="p-2 bg-white dark:bg-dark200 rounded-lg">
-          <div
-            class="border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-            2023-04-018 - 2024-04-18
+          <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+            <div class="relative max-w-32">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </div>
+              <input datepicker datepicker-autohide id="default-6" type="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                placeholder="Start date">
+            </div>
+            <span class="mx-4 text-gray-500">-</span>
+            <div class="relative max-w-32">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                </svg>
+              </div>
+              <input datepicker datepicker-autohide id="default-datepicker6" type="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                placeholder="End date">
+            </div>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-8 lg:mt-4">
@@ -2538,7 +2319,8 @@
             </div>
           </div>
 
-          <div class="w-full max-w-sm mx-auto p-4 md:p-6 bg-white rounded-lg dark:bg-dark200">
+          <div
+            class="w-full max-w-sm mx-auto p-4 md:p-6 bg-white rounded-lg dark:bg-dark200 flex flex-col justify-between">
             <div class="flex items-center justify-between mb-4">
               <img class="w-20 lg:w-30 object-cover object-center"
                 src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1718445204/kuda-bank-icon-512x115-zourbsmd_oqichl.png"
@@ -2583,18 +2365,11 @@
                 <span class="font-medium text-gray-900 dark:text-white">Total Recharge Amount:</span>
                 <span class="font-semibold text-gray-900 dark:text-white">300,000</span>
               </div>
-              <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-dark300" />
-              <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
-                <span class="font-medium text-gray-900 dark:text-white">Total Withdrawal:</span>
-                <span class="font-semibold text-gray-900 dark:text-white">300</span>
-              </div>
-              <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
-                <span class="font-medium text-gray-900 dark:text-white">Total Withdrawal Amount:</span>
-                <span class="font-semibold text-gray-900 dark:text-white">800,000</span>
-              </div>
+
             </div>
           </div>
-          <div class="w-full max-w-sm mx-auto p-4 md:p-6 bg-white rounded-lg dark:bg-dark200">
+          <div
+            class="w-full max-w-sm mx-auto p-4 md:p-6 bg-white rounded-lg dark:bg-dark200 flex flex-col justify-between">
             <div class="flex items-center justify-between mb-4">
               <img class="w-20 lg:w-30 object-cover object-center"
                 src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1718445205/opay-new-2023-logo-16FBCD1DCD-se_lu6w2a.png"
@@ -2639,18 +2414,10 @@
                 <span class="font-medium text-gray-900 dark:text-white">Total Recharge Amount:</span>
                 <span class="font-semibold text-gray-900 dark:text-white">300,000</span>
               </div>
-              <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-dark300" />
-              <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
-                <span class="font-medium text-gray-900 dark:text-white">Total Withdrawal:</span>
-                <span class="font-semibold text-gray-900 dark:text-white">300</span>
-              </div>
-              <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
-                <span class="font-medium text-gray-900 dark:text-white">Total Withdrawal Amount:</span>
-                <span class="font-semibold text-gray-900 dark:text-white">800,000</span>
-              </div>
             </div>
           </div>
-          <div class="w-full max-w-sm mx-auto p-4 md:p-6 bg-white rounded-lg dark:bg-dark200">
+          <div
+            class="w-full max-w-sm mx-auto p-4 md:p-6 bg-white rounded-lg dark:bg-dark200 flex flex-col justify-between">
             <div class="flex items-center justify-between mb-4">
               <img class="w-20 lg:w-30 object-cover object-center"
                 src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1718445205/PalmPay-logo-coloured-2048x615_vziads.png"
@@ -2694,15 +2461,6 @@
               <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
                 <span class="font-medium text-gray-900 dark:text-white">Total Recharge Amount:</span>
                 <span class="font-semibold text-gray-900 dark:text-white">300,000</span>
-              </div>
-              <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-dark300" />
-              <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
-                <span class="font-medium text-gray-900 dark:text-white">Total Withdrawal:</span>
-                <span class="font-semibold text-gray-900 dark:text-white">300</span>
-              </div>
-              <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
-                <span class="font-medium text-gray-900 dark:text-white">Total Withdrawal Amount:</span>
-                <span class="font-semibold text-gray-900 dark:text-white">800,000</span>
               </div>
             </div>
           </div>
@@ -3229,9 +2987,32 @@
                   <option value="">Successful</option>
                 </select>
               </form>
-              <div
-                class="bbg-transparent border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-                2023-04-018 - 2024-04-18
+              <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+                <div class="relative max-w-32">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                    </svg>
+                  </div>
+                  <input datepicker datepicker-autohide id="default-5" type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                    placeholder="Start date">
+                </div>
+                <span class="mx-4 text-gray-500">-</span>
+                <div class="relative max-w-32">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                    </svg>
+                  </div>
+                  <input datepicker datepicker-autohide id="default-datepicker5" type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                    placeholder="End date">
+                </div>
               </div>
             </div>
             <div class="relative overflow-x-auto shadow rounded-lg">
@@ -3358,7 +3139,7 @@
                       </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex flex-col gap-1">
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Registration Time:</span>
@@ -3370,7 +3151,7 @@
                       </p>
                     </div>
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex flex-col gap-1">
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Ip:</span> 102.87.33.177
@@ -3385,7 +3166,7 @@
                       </p>
                     </div>
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <!-- Modal toggle -->
                     <div class="flex items-center flex-wrap gap-3 lg:gap-6">
                       <a href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal"
@@ -3668,7 +3449,7 @@
                       </div>
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex flex-col gap-1">
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Registration Time:</span>
@@ -3680,7 +3461,7 @@
                       </p>
                     </div>
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <div class="flex flex-col gap-1">
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Ip:</span> 102.87.33.177
@@ -3695,7 +3476,7 @@
                       </p>
                     </div>
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-2">
                     <!-- Modal toggle -->
                     <div class="flex items-center flex-wrap gap-3 lg:gap-6">
                       <a href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal"
@@ -3942,83 +3723,107 @@
             Recharge Log
           </h1>
 
-          <div class="flex flex-col">
-            <div
-              class="flex items-center flex-col-reverse lg:flex-row flex-wrap items-center lg:justify-between pb-6 gap-3">
-              <form class="lg:max-w-md flex items-center w-full">
-                <label class="block mb-2 text-base font-medium text-primary dark:text-primary flex items-center w-32">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="M15 19.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0L9.29 16.7a.99.99 0 0 1-.29-.83v-5.12L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L15 10.75zM7.04 5L11 10.06v5.52l2 2v-7.53L16.96 5z" />
+          <div
+            class="flex items-center flex-col-reverse lg:flex-row flex-wrap items-center lg:justify-between pb-6 gap-3">
+            <form class="lg:max-w-sm flex items-center w-full">
+              <label class="block mb-2 text-base font-medium text-primary dark:text-primary flex items-center w-32">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M15 19.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0L9.29 16.7a.99.99 0 0 1-.29-.83v-5.12L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L15 10.75zM7.04 5L11 10.06v5.52l2 2v-7.53L16.96 5z" />
+                </svg>
+                <span>Filter by</span>
+              </label>
+              <select id="status"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary">
+                <option selected>Status</option>
+                <option value="">Failed</option>
+                <option value="">Successful</option>
+              </select>
+            </form>
+
+            <div id="date-range-picker" date-rangepicker class="flex items-center justify-start w-full lg:w-fit">
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                   </svg>
-                  <span>Filter by</span>
-                </label>
-                <select id="status"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary">
-                  <option selected>Status</option>
-                  <option value="">Failed</option>
-                  <option value="">Successful</option>
-                </select>
-              </form>
-              <div
-                class="bbg-transparent border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg block w-fit p-2.5 self-end">
-                2023-04-018 - 2024-04-18
+                </div>
+                <input datepicker datepicker-autohide id="default-3" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Start date">
+              </div>
+              <span class="mx-4 text-gray-500">-</span>
+              <div class="relative max-w-32">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <input datepicker datepicker-autohide id="default-datepicker2" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="End date">
               </div>
             </div>
-            <div class="relative overflow-x-auto shadow rounded-lg">
-              <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 text-primary">Amount</th>
-                    <th scope="col" class="px-6 py-3 text-primary">Staus</th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Date & Time
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Channel
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">ID</th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Transaction ID
-                    </th>
-                    <th scope="col" class="px-6 py-3 text-primary">
-                      Generate Receipt
-                    </th>
-                  </tr>
-                </thead>
-                <tbody id="tbodyRecharge"></tbody>
-              </table>
+
+          </div>
+          <div class="relative overflow-x-auto shadow rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-primary">Amount</th>
+                  <th scope="col" class="px-6 py-3 text-primary">Staus</th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Date & Time
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Channel
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-primary">ID</th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Transaction ID
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Generate Receipt
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="tbodyRecharge"></tbody>
+            </table>
+          </div>
+
+          <div class="flex items-center flex-wrap justify-between mt-6 lg:mt-10">
+            <!-- Previous Button -->
+            <div class="flex">
+              <a href="#"
+                class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                Previous
+              </a>
+
+              <!-- Next Button -->
+              <a href="#"
+                class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                Next
+              </a>
             </div>
 
-            <div class="flex items-center flex-wrap justify-between mt-6 lg:mt-10">
-              <!-- Previous Button -->
-              <div class="flex">
-                <a href="#"
-                  class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Previous
-                </a>
-
-                <!-- Next Button -->
-                <a href="#"
-                  class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                  Next
-                </a>
-              </div>
-
-              <span class="text-sm text-gray-700 dark:text-gray-400">
-                Page
-                <span class="font-semibold text-gray-900 dark:text-white">1</span>
-                of
-                <span class="font-semibold text-gray-900 dark:text-white">10</span>
-              </span>
-            </div>
+            <span class="text-sm text-gray-700 dark:text-gray-400">
+              Page
+              <span class="font-semibold text-gray-900 dark:text-white">1</span>
+              of
+              <span class="font-semibold text-gray-900 dark:text-white">10</span>
+            </span>
           </div>
         </div>
-      </main>
     </div>
   </main>
-  <script src="app.js"></script>
-  <script src="src/data.js"></script>
+  </div>
+  </main>
+  <script src="/js/app.js"></script>
+  <script src="/js/data.js"></script>
 </body>
 
 </html>

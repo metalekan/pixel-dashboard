@@ -1,4 +1,3 @@
-
 const options = {
   chart: {
     height: "100%",
@@ -45,6 +44,80 @@ const options = {
     {
       name: "New users",
       data: [6500, 6418, 6456, 6526, 6356, 6456],
+      color: "#147860",
+    },
+  ],
+  xaxis: {
+    categories: [
+      "01 February",
+      "02 February",
+      "03 February",
+      "04 February",
+      "05 February",
+      "06 February",
+      "07 February",
+    ],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
+};
+
+const optionAnalytics = {
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: false,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#147860",
+      gradientToColors: ["#147860"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 2,
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 2,
+    padding: {
+      left: 2,
+      right: 2,
+      top: 0,
+    },
+  },
+  series: [
+    {
+      name: "New users",
+      data: [150, 100, 300, 150, 400, 300],
       color: "#147860",
     },
   ],
@@ -221,7 +294,6 @@ const optionsOfflineUsers = {
   },
 };
 
-
 const optionsBettingAmount = {
   chart: {
     height: "100%",
@@ -252,21 +324,24 @@ const optionsBettingAmount = {
     padding: {
       left: 2,
       right: 2,
-      top: -26
+      top: -26,
     },
   },
   series: [
     {
       name: "Betting Amount",
-      data: [1500, 2418, 3456, 4526, 5356, 6456, 7500, 8418, 9456, 11526, 12356, 13456],
+      data: [
+        1500, 2418, 3456, 4526, 5356, 6456, 7500, 8418, 9456, 11526, 12356,
+        13456,
+      ],
       color: "#a16207",
-    }
+    },
   ],
   legend: {
-    show: false
+    show: false,
   },
   stroke: {
-    curve: 'smooth'
+    curve: "smooth",
   },
   xaxis: {
     categories: [
@@ -286,8 +361,8 @@ const optionsBettingAmount = {
     labels: {
       show: true,
       style: {
-        cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
-      }
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
     },
     axisBorder: {
       show: false,
@@ -299,18 +374,18 @@ const optionsBettingAmount = {
   yaxis: {
     show: false,
   },
-}
+};
 
 const getChartOptions = () => {
   return {
     series: [60, 40],
-    labels: ["Direct", "Winnings",],
+    labels: ["Direct", "Winnings"],
     colors: ["#eff6ff", "#78350f"],
     chart: {
       height: "100%",
       width: "100%",
       type: "donut",
-      borderRadius: '35px',
+      borderRadius: "35px",
     },
     stroke: {
       colors: ["transparent"],
@@ -380,7 +455,6 @@ const getChartOptions = () => {
     //   },
     // },
   };
-  
 };
 
 const optionsOverview = {
@@ -395,7 +469,6 @@ const optionsOverview = {
       "14/04/2024",
       "15/04/2024",
       "16/04/2024",
-    
     ],
     labels: {
       show: true,
@@ -570,15 +643,15 @@ const optionsOverall = {
   legend: {
     show: false,
   },
-grid: {
-  show: true,
-  strokeDashArray: 1,
-  padding: {
-    left: 2,
-    right: 2,
-    top: -46,
+  grid: {
+    show: true,
+    strokeDashArray: 1,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -46,
+    },
   },
-},
 };
 
 const optionsOverallAnalytics = {
@@ -627,9 +700,9 @@ const optionsOverallAnalytics = {
   series: [
     {
       name: "Active Users",
-      data: [250, 100, 250, 400, 250, 300, 370, 340, 400, 420, 450, 460,],
+      data: [250, 100, 250, 400, 250, 300, 370, 340, 400, 420, 450, 460],
       color: "#d8b4fe",
-    }
+    },
   ],
   chart: {
     sparkline: {
@@ -669,39 +742,106 @@ const optionsOverallAnalytics = {
   legend: {
     show: false,
   },
-grid: {
-  show: true,
-  strokeDashArray: 1,
-  padding: {
-    left: 2,
-    right: 2,
-    top: -46,
+  grid: {
+    show: true,
+    strokeDashArray: 1,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -46,
+    },
   },
-},
 };
 
+// Analytics
+if (
+  document.getElementById("area-chart-ludo-game") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-ludo-game"),
+    optionAnalytics
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-spin-game") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-spin-game"),
+    optionAnalytics
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-fish-game") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-fish-game"),
+    optionAnalytics
+  );
+  chart.render();
+}
+
+if (
+  document.getElementById("area-chart-soccer-game") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("area-chart-soccer-game"),
+    optionAnalytics
+  );
+  chart.render();
+}
 
 // Line Chart
-if (document.getElementById("line-chart-ludo") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("line-chart-ludo"), optionsBettingAmount);
+if (
+  document.getElementById("line-chart-ludo") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("line-chart-ludo"),
+    optionsBettingAmount
+  );
   chart.render();
 }
 
-if (document.getElementById("line-chart-soccer") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("line-chart-soccer"), optionsBettingAmount);
+if (
+  document.getElementById("line-chart-soccer") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("line-chart-soccer"),
+    optionsBettingAmount
+  );
   chart.render();
 }
 
-if (document.getElementById("line-chart-spin") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("line-chart-spin"), optionsBettingAmount);
+if (
+  document.getElementById("line-chart-spin") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("line-chart-spin"),
+    optionsBettingAmount
+  );
   chart.render();
 }
 
-if (document.getElementById("line-chart-fish") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("line-chart-fish"), optionsBettingAmount);
+if (
+  document.getElementById("line-chart-fish") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(
+    document.getElementById("line-chart-fish"),
+    optionsBettingAmount
+  );
   chart.render();
 }
-
 
 // Area Chart
 if (
@@ -844,7 +984,7 @@ if (
 ) {
   const chart = new ApexCharts(
     document.getElementById("donut-chartLudo"),
-    getChartOptions(),
+    getChartOptions()
   );
   chart.render();
 
@@ -889,7 +1029,7 @@ if (
 ) {
   const chart = new ApexCharts(
     document.getElementById("donut-chartSoccer"),
-    getChartOptions(),
+    getChartOptions()
   );
   chart.render();
 
@@ -934,7 +1074,7 @@ if (
 ) {
   const chart = new ApexCharts(
     document.getElementById("donut-chartSpin"),
-    getChartOptions(),
+    getChartOptions()
   );
   chart.render();
 
@@ -979,7 +1119,7 @@ if (
 ) {
   const chart = new ApexCharts(
     document.getElementById("donut-chartFish"),
-    getChartOptions(),
+    getChartOptions()
   );
   chart.render();
 
@@ -1018,7 +1158,6 @@ if (
   });
 }
 
-
 // Graph
 
 if (
@@ -1031,7 +1170,6 @@ if (
   );
   chart.render();
 }
-
 
 if (
   document.getElementById("labels-chart-dashboard") &&
@@ -1055,14 +1193,25 @@ if (
   chart.render();
 }
 
-
-
 const optionsColumnChart = {
   series: [
     {
       name: "Fraud Cases",
       color: "#d8b4fe",
-      data: ["1420", "1620", "1820", "1420", "1650", "2120", "1420", "1620", "1820", "1420", "1650", "2120"],
+      data: [
+        "1420",
+        "1620",
+        "1820",
+        "1420",
+        "1650",
+        "2120",
+        "1420",
+        "1620",
+        "1820",
+        "1420",
+        "1650",
+        "2120",
+      ],
     },
     // {
     //   name: "Expense",
@@ -1079,7 +1228,7 @@ const optionsColumnChart = {
     height: 400,
     toolbar: {
       show: false,
-    }
+    },
   },
   fill: {
     opacity: 1,
@@ -1106,20 +1255,33 @@ const optionsColumnChart = {
     shared: true,
     intersect: false,
     formatter: function (value) {
-      return value
-    }
+      return value;
+    },
   },
   xaxis: {
     labels: {
       show: true,
       style: {
-        cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
       },
-      formatter: function(value) {
-        return value
-      }
+      formatter: function (value) {
+        return value;
+      },
     },
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
     axisTicks: {
       show: false,
     },
@@ -1131,9 +1293,9 @@ const optionsColumnChart = {
     labels: {
       show: true,
       style: {
-        cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
-      }
-    }
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
+    },
   },
   grid: {
     show: true,
@@ -1141,16 +1303,18 @@ const optionsColumnChart = {
     padding: {
       left: 2,
       right: 2,
-      top: -20
+      top: -20,
     },
   },
   fill: {
     opacity: 1,
-  }
-}
+  },
+};
 
-if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("bar-chart"), optionsColumnChart);
+if (document.getElementById("bar-chart") && typeof ApexCharts !== "undefined") {
+  const chart = new ApexCharts(
+    document.getElementById("bar-chart"),
+    optionsColumnChart
+  );
   chart.render();
 }
-
