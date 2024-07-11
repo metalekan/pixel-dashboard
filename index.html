@@ -128,9 +128,8 @@
                 class="block py-2 px-4 text-base font-medium text-gray-700 bg-white dark:bg-dark200 dark:text-gray-300">
                 Settings
               </div>
-              <div
-                class="z-50 bg-gray-50 dark:bg-dark100 flex flex-col gap-2 text-[10px] p-3 max-h-60 h-full overflow-x-auto">
-                <ul class="flex flex-col w-full">
+              <div class="z-50 bg-gray-50 dark:bg-dark100 flex flex-col gap-2 text-[10px] p-3 max-h-80 overflow-x-auto">
+                <ul class="flex flex-col w-full pb-10">
                   <li>
                     <a class="text-xs hover:font-medium text-gray-500 dark:text-white hover:text-gray-900 py-4 w-full"
                       href="/">Demo Mode</a>
@@ -170,7 +169,7 @@
                 class="block py-2 px-4 text-base font-medium text-gray-700 bg-white dark:bg-dark200 dark:text-gray-300">
                 Notifications
               </div>
-              <div class="z-50 bg-gray-50 dark:bg-dark100 flex flex-col gap-2 text-[10px] p-3 max-h-60 overflow-x-auto">
+              <div class="z-50 bg-gray-50 dark:bg-dark100 flex flex-col gap-2 text-[10px] p-3 max-h-80 overflow-x-auto">
                 <div
                   class="cursor-default flex items-center justify-between w-full rounded-lg px-[10px] bg-white dark:bg-dark200 py-2.5">
                   <div class="flex gap-2">
@@ -681,7 +680,7 @@
                 </button>
                 <ul id="dropdown-customer" class="hidden py-2 space-y-2">
                   <li>
-                    <a href="#"
+                    <a href="inbox.html"
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inbox</a>
                   </li>
                   <li>
@@ -690,11 +689,11 @@
                       Chat</a>
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="email.html"
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Email</a>
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="phone-number.html"
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
                       Number</a>
                   </li>
@@ -725,6 +724,228 @@
         </div>
       </aside>
 
+      <!-- Phone Number Page -->
+      <main class="p-4 md:ml-64 h-auto pt-20">
+        <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
+          <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
+            Phone Number
+          </h1>
+          <div class="p-4 bg-white dark:bg-dark200 rounded-lg mb-4">
+            <h2 class="mb-10 text-gray-900 dark:text-white font-semibold text-center text-xl">Add phone number to
+              dashboard
+            </h2>
+            <form class="max-w-sm mx-auto flex flex-col items-center" action="">
+              <div class="flex flex-row items-center justify-between w-full">
+                <label for="email"
+                  class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Email:</label>
+                <div class="relative w-full">
+                  <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 18">
+                      <path
+                        d="M18 13.446a3.02 3.02 0 0 0-.946-1.985l-1.4-1.4a3.054 3.054 0 0 0-4.218 0l-.7.7a.983.983 0 0 1-1.39 0l-2.1-2.1a.983.983 0 0 1 0-1.389l.7-.7a2.98 2.98 0 0 0 0-4.217l-1.4-1.4a2.824 2.824 0 0 0-4.218 0c-3.619 3.619-3 8.229 1.752 12.979C6.785 16.639 9.45 18 11.912 18a7.175 7.175 0 0 0 5.139-2.325A2.9 2.9 0 0 0 18 13.446Z" />
+                    </svg>
+                  </div>
+                  <input type="text" id="phone-input" aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+                </div>
+              </div>
+              <button type="submit"
+                class="text-white bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center me-2 w-full my-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 me-2" viewBox="0 0 32 32">
+                  <path fill="currentColor"
+                    d="M14 4c-3.854 0-7 3.146-7 7c0 2.41 1.23 4.552 3.094 5.813C6.527 18.343 4 21.88 4 26h2c0-4.43 3.57-8 8-8c1.376 0 2.654.358 3.78.97A7.993 7.993 0 0 0 16 24c0 4.406 3.594 8 8 8c4.406 0 8-3.594 8-8c0-4.406-3.594-8-8-8a7.98 7.98 0 0 0-4.688 1.53c-.442-.277-.92-.51-1.406-.718A7.018 7.018 0 0 0 21 11c0-3.854-3.146-7-7-7m0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5m10 12c3.326 0 6 2.674 6 6s-2.674 6-6 6s-6-2.674-6-6s2.674-6 6-6m-1 2v3h-3v2h3v3h2v-3h3v-2h-3v-3z" />
+                </svg>
+                Add Phone Number
+              </button>
+            </form>
+          </div>
+          <div class="relative overflow-x-auto shadow rounded-lg mt-8">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-primary">S/N</th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Email
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500">
+                  <th scope="row"
+                    class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white">
+                    1
+                  </th>
+                  <td class="px-6 py-4 text-gray-900 dark:text-white">234-904590902</td>
+                  <td class="px-6 py-4 text-gray-900 dark:text-white">
+                    <div class="flex items-center">
+                      <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Change</button>
+                      <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <!-- Email Page -->
+      <main class="p-4 md:ml-64 h-auto pt-20">
+        <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
+          <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
+            Email
+          </h1>
+          <div class="p-4 bg-white dark:bg-dark200 rounded-lg mb-4">
+            <h2 class="mb-10 text-gray-900 dark:text-white font-semibold text-center text-xl">Add email to dashboard
+            </h2>
+            <form class="max-w-sm mx-auto flex flex-col items-center" action="">
+              <div class="flex flex-row items-center justify-between w-full">
+                <label for="email"
+                  class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Email:</label>
+                <div class="relative w-full">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                      <path
+                        d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                      <path
+                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                    </svg>
+                  </div>
+                  <input type="email" id="input-group-1"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    placeholder="johndoe21@yahoo.com" />
+                </div>
+              </div>
+              <button type="submit"
+                class="text-white bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center me-2 w-full my-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 me-2" viewBox="0 0 32 32">
+                  <path fill="currentColor"
+                    d="M14 4c-3.854 0-7 3.146-7 7c0 2.41 1.23 4.552 3.094 5.813C6.527 18.343 4 21.88 4 26h2c0-4.43 3.57-8 8-8c1.376 0 2.654.358 3.78.97A7.993 7.993 0 0 0 16 24c0 4.406 3.594 8 8 8c4.406 0 8-3.594 8-8c0-4.406-3.594-8-8-8a7.98 7.98 0 0 0-4.688 1.53c-.442-.277-.92-.51-1.406-.718A7.018 7.018 0 0 0 21 11c0-3.854-3.146-7-7-7m0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5m10 12c3.326 0 6 2.674 6 6s-2.674 6-6 6s-6-2.674-6-6s2.674-6 6-6m-1 2v3h-3v2h3v3h2v-3h3v-2h-3v-3z" />
+                </svg>
+                Add Email
+              </button>
+            </form>
+          </div>
+          <div class="relative overflow-x-auto shadow rounded-lg mt-8">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-primary">S/N</th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Email
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-primary">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500">
+                  <th scope="row"
+                    class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white">
+                    1
+                  </th>
+                  <td class="px-6 py-4 text-gray-900 dark:text-white">johndoe21@yahoo.com</td>
+                  <td class="px-6 py-4 text-gray-900 dark:text-white">
+                    <div class="flex items-center">
+                      <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Add
+                        Email</button>
+                      <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <!-- Inbox Page -->
+      <main class="p-4 md:ml-64 h-auto pt-20">
+        <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
+          <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
+            Inbox
+          </h1>
+          <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4">
+            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab"
+              data-tabs-toggle="#default-styled-tab-content"
+              data-tabs-active-classes="text-white bg-primary focus:outline-none border-none"
+              data-tabs-inactive-classes="hover:bg-primary hover:text-white transition duration-300 ease-in-out dark:text-white"
+              role="tablist">
+              <li class="me-2" role="presentation">
+                <button class="inline-block p-2.5 border rounded-lg border-gray-300 hover:border-none duration-300"
+                  id="announcement-styled-tab" data-tabs-target="#styled-announcement" type="button" role="tab"
+                  aria-controls="announcement" aria-selected="false">Announcement</button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button class="inline-block p-2.5 border rounded-lg border-gray-300 hover:border-none duration-300"
+                  id="update-styled-tab" data-tabs-target="#styled-update" type="button" role="tab"
+                  aria-controls="update" aria-selected="false">Update</button>
+              </li>
+            </ul>
+          </div>
+          <div id="default-styled-tab-content">
+            <div class="hidden" id="styled-announcement" role="tabpanel" aria-labelledby="announcement-tab">
+
+              <form>
+                <label for="message" class="block mb-4 text-sm font-semibold text-gray-900 dark:text-white">Type
+                  Announcement</label>
+                <textarea id="message" rows="4"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary focus:border-primary dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Write your message here..."></textarea>
+
+                <div class="flex items-center justify-end w-full gap-3 mt-6">
+                  <button type="submit"
+                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    Send
+                  </button>
+
+                  <button type="submit"
+                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    Delete
+                  </button>
+                </div>
+              </form>
+
+            </div>
+            <div class="hidden" id="styled-update" role="tabpanel" aria-labelledby="update-tab">
+              <form>
+                <label for="message" class="block mb-4 text-sm font-semibold text-gray-900 dark:text-white">Type
+                  updated message</label>
+                <textarea id="message" rows="4"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary focus:border-primary dark:bg-dark200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                  placeholder="Write your message here..."></textarea>
+
+                <div class="flex items-center justify-end w-full gap-3 mt-6">
+                  <button type="submit"
+                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    Send
+                  </button>
+
+                  <button type="submit"
+                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-dark200 dark:border-dark100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    Delete
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
       <!-- Top Gamers Page -->
       <main class="p-4 md:ml-64 h-auto pt-20">
         <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
@@ -754,20 +975,20 @@
             <!-- make each button have an active  -->
             <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4 grid grid-cols-4 gap-2 lg:gap-8">
               <button type="button"
-                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase transition duration-300 ease-in-out">
                 ludo
               </button>
 
               <button type="button"
-                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase transition duration-300 ease-in-out">
                 spin
               </button>
               <button type="button"
-                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase transition duration-300 ease-in-out">
                 fish
               </button>
               <button type="button"
-                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase">
+                class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-primary hover:text-white hover:border-none font-medium rounded-lg text-xs px-4 py-2.5 me-2 uppercase transition duration-300 ease-in-out">
                 soccer
               </button>
             </div>
@@ -1455,7 +1676,7 @@
           <div class="flex flex-col">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-60">
+                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-80">
                 <div class="basis-1/3 flex justify-between">
                   <div class="flex flex-col gap-3">
                     <p class="text-sm font-medium text-gray-900 dark:text-white">
@@ -1478,14 +1699,14 @@
                 <div class="basis-1/7 w-full" id="area-chart-activeUsersSpin"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Betting Amount
                 </h3>
                 <div id="line-chart-spin"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Winning
                 </h3>
@@ -1582,7 +1803,7 @@
           <div class="flex flex-col">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-60">
+                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-80">
                 <div class="basis-1/3 flex justify-between">
                   <div class="flex flex-col gap-3">
                     <p class="text-sm font-medium text-gray-900 dark:text-white">
@@ -1605,14 +1826,14 @@
                 <div class="basis-1/7 w-full" id="area-chart-activeUsersFish"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Betting Amount
                 </h3>
                 <div id="line-chart-fish"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Winning
                 </h3>
@@ -1709,7 +1930,7 @@
           <div class="flex flex-col">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-60">
+                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-80">
                 <div class="basis-1/3 flex justify-between">
                   <div class="flex flex-col gap-3">
                     <p class="text-sm font-medium text-gray-900 dark:text-white">
@@ -1732,14 +1953,14 @@
                 <div class="basis-1/7 w-full" id="area-chart-activeUsersSoccer"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Betting Amount
                 </h3>
                 <div id="line-chart-soccer"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Winning
                 </h3>
@@ -1837,7 +2058,7 @@
           <div class="flex flex-col">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-60">
+                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 max-h-80">
                 <div class="basis-1/3 flex justify-between">
                   <div class="flex flex-col gap-3">
                     <p class="text-sm font-medium text-gray-900 dark:text-white">
@@ -1860,14 +2081,14 @@
                 <div class="basis-1/7 w-full" id="area-chart-activeUsersLudo"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Betting Amount
                 </h3>
                 <div id="line-chart-ludo"></div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Winning
                 </h3>
@@ -1946,7 +2167,7 @@
                   Total Recharge
                 </h3>
                 <div
-                  class="flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden max-h-60 h-full">
+                  class="flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden max-h-80 h-full">
                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
                     class="absolute z-10 fill-[#147860] duration-500">
                     <path transform="translate(100 100)"
@@ -1961,7 +2182,7 @@
                 </div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 relative max-h-60">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 relative max-h-80">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Registered
                 </h3>
@@ -1976,7 +2197,7 @@
                   </svg>
                 </div>
               </div>
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-60 relative">
+              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80 relative">
                 <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Projects
                 </h3>
