@@ -846,7 +846,124 @@
     </div>
   </main>
   <script src="/js/app.js"></script>
-  <script src="/js/data.js"></script>
+  <script>
+    const promoData = [
+      {
+        promoCode: "SAVE20",
+        users: ["user_123"],
+        totalUsers: 3,
+        totalReviewsGotten: 15,
+        reviewsGenerated: 10,
+      },
+      {
+        promoCode: "WELCOME50",
+        users: ["user_321", "user_654", "user_987", "user_001"],
+        totalUsers: 4,
+        totalReviewsGotten: 20,
+        reviewsGenerated: 15,
+      },
+      {
+        promoCode: "FREESHIP",
+        users: ["user_432", "user_543"],
+        totalUsers: 2,
+        totalReviewsGotten: 5,
+        reviewsGenerated: 3,
+      },
+      {
+        promoCode: "HOLIDAY30",
+        users: ["user_213", "user_324", "user_435", "user_546", "user_657"],
+        totalUsers: 5,
+        totalReviewsGotten: 25,
+        reviewsGenerated: 20,
+      },
+      {
+        promoCode: "SPRINGSALE",
+        users: ["user_768", "user_879", "user_980", "user_091"],
+        totalUsers: 4,
+        totalReviewsGotten: 18,
+        reviewsGenerated: 14,
+      },
+      {
+        promoCode: "SUMMERFUN",
+        users: [
+          "user_132",
+          "user_243",
+          "user_354",
+          "user_465",
+          "user_576",
+          "user_687",
+        ],
+        totalUsers: 6,
+        totalReviewsGotten: 30,
+        reviewsGenerated: 25,
+      },
+      {
+        promoCode: "WINTERWARM",
+        users: ["user_798", "user_809", "user_910"],
+        totalUsers: 3,
+        totalReviewsGotten: 10,
+        reviewsGenerated: 8,
+      },
+      {
+        promoCode: "FALL50",
+        users: ["user_021", "user_132", "user_243"],
+        totalUsers: 3,
+        totalReviewsGotten: 12,
+        reviewsGenerated: 9,
+      },
+      {
+        promoCode: "NEWYEAR2024",
+        users: ["user_354", "user_465", "user_576", "user_687", "user_798"],
+        totalUsers: 5,
+        totalReviewsGotten: 22,
+        reviewsGenerated: 18,
+      },
+      {
+        promoCode: "FLASHSALE",
+        users: ["user_809", "user_910", "user_101"],
+        totalUsers: 3,
+        totalReviewsGotten: 8,
+        reviewsGenerated: 5,
+      },
+    ];
+    const tableAgentModel = document.getElementById("tbodyAgentModel");
+    const tableAgentModelHTML = promoData
+      .map(
+        (user, index) => `
+         <tr
+                    class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
+                  >
+                    <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">
+                     ${user.promoCode}
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                    ${user.users}
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                    ${user.totalUsers}
+                    </td><td class="px-6 py-4 text-gray-900 dark:text-white">
+                    ${user.totalReviewsGotten}
+                    </td><td class="px-6 py-4 text-gray-900 dark:text-white">
+                    ${user.reviewsGenerated}
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                      <!-- Modal toggle -->
+                        <a
+                          href="#"
+                          type="button"
+                          data-modal-target="removeAgentModal"
+                          data-modal-show="removeAgentModal"
+                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-primary"
+                          >Remove Agent</a
+                        >
+                    </td>
+                  </tr>
+
+      `
+      )
+      .join("");
+    tableAgentModel.innerHTML = tableAgentModelHTML;
+  </script>
 </body>
 
 </html>
