@@ -873,6 +873,89 @@ const topGames = [
   },
 ];
 
+const gameRecord = [
+  {
+    gameId: "LG323001",
+    walletAmount: 150.0,
+    betAmount: 20.0,
+    dateTime: "2024-07-14T10:00:00",
+    status: "Win",
+    balance: 170.0,
+  },
+  {
+    gameId: "LG323002",
+    walletAmount: 200.0,
+    betAmount: 50.0,
+    dateTime: "2024-07-14T11:00:00",
+    status: "Lose",
+    balance: 150.0,
+  },
+  {
+    gameId: "LG323003",
+    walletAmount: 180.0,
+    betAmount: 30.0,
+    dateTime: "2024-07-14T12:00:00",
+    status: "Win",
+    balance: 210.0,
+  },
+  {
+    gameId: "LG323004",
+    walletAmount: 250.0,
+    betAmount: 70.0,
+    dateTime: "2024-07-14T13:00:00",
+    status: "Lose",
+    balance: 180.0,
+  },
+  {
+    gameId: "LG323005",
+    walletAmount: 300.0,
+    betAmount: 100.0,
+    dateTime: "2024-07-14T14:00:00",
+    status: "Win",
+    balance: 400.0,
+  },
+  {
+    gameId: "LG323006",
+    walletAmount: 400.0,
+    betAmount: 150.0,
+    dateTime: "2024-07-14T15:00:00",
+    status: "Lose",
+    balance: 250.0,
+  },
+  {
+    gameId: "LG323007",
+    walletAmount: 350.0,
+    betAmount: 50.0,
+    dateTime: "2024-07-14T16:00:00",
+    status: "Win",
+    balance: 400.0,
+  },
+  {
+    gameId: "LG323008",
+    walletAmount: 450.0,
+    betAmount: 100.0,
+    dateTime: "2024-07-14T17:00:00",
+    status: "Lose",
+    balance: 350.0,
+  },
+  {
+    gameId: "LG323009",
+    walletAmount: 300.0,
+    betAmount: 75.0,
+    dateTime: "2024-07-14T18:00:00",
+    status: "Win",
+    balance: 375.0,
+  },
+  {
+    gameId: "LG323010",
+    walletAmount: 380.0,
+    betAmount: 80.0,
+    dateTime: "2024-07-14T19:00:00",
+    status: "Lose",
+    balance: 300.0,
+  },
+];
+
 const table = document.getElementById("tbody");
 const tableHTML = rechargeLog
   .map(
@@ -1119,50 +1202,49 @@ const tableAgentModelHTML = promoData
   .join("");
 tableAgentModel.innerHTML = tableAgentModelHTML;
 
-const fraudModel = document.getElementById("tbodyFraud");
+const tableFraud = document.getElementById("tbodyFraud");
 const tableFraudHTML = fraudReports
   .map(
     (user, index) => `
         <tr
-                    class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
-                  >
-                    <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">${user.userId}</th>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.amount}</td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">${user.dateTime}</td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                    ${user.reason}
-                    </td>
-                    <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <!-- Modal toggle -->
-                      <div class="flex items-center flex-wrap gap-3 lg:gap-6">
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="deductAmount-modal"
-                          data-modal-show="deductAmount-modal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
-                          >Deduct Amount</a
-                        >
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="banUser-modal"
-                          data-modal-show="banUser-modal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
-                          >Ban User</a
-                        >
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="deleteUser-modal"
-                          data-modal-show="deleteUser-modal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
-                          >Delete User</a
-                        >
-                      </div>
-                    </td>
-                  </tr>
-
+          class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
+        >
+          <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">${user.userId}</th>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${user.amount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${user.dateTime}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+          ${user.reason}
+          </td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+            <!-- Modal toggle -->
+            <div class="flex items-center flex-wrap gap-3 lg:gap-6">
+              <a
+                href="#"
+                type="button"
+                data-modal-target="deductAmount-modal"
+                data-modal-show="deductAmount-modal"
+                class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
+                >Deduct Amount</a
+              >
+              <a
+                href="#"
+                type="button"
+                data-modal-target="banUser-modal"
+                data-modal-show="banUser-modal"
+                class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
+                >Ban User</a
+              >
+              <a
+                href="#"
+                type="button"
+                data-modal-target="deleteUser-modal"
+                data-modal-show="deleteUser-modal"
+                class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
+                >Delete User</a
+              >
+            </div>
+          </td>
+        </tr>
       `
   )
   .join("");
@@ -1277,3 +1359,32 @@ const tableTopGamesHTML = topGames
   )
   .join("");
 tableTopGames.innerHTML = tableTopGamesHTML;
+
+const tableGameRecord = document.getElementById("tbodyGameRecord");
+const tableGameRecordHTML = gameRecord
+  .map(
+    (game, index) => `
+          <tr
+          class="bg-white border-b dark:bg-dark200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-dark500"
+        >
+          <th
+            scope="row"
+            class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
+          >
+           ${game.gameId}
+          </th>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.walletAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.balance}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+          <span class="bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">${game.status}</span>
+
+          </td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${game.balance}</td>
+        </tr>
+
+      `
+  )
+  .join("");
+tableGameRecord.innerHTML = tableGameRecordHTML;
