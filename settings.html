@@ -318,305 +318,306 @@
         </div>
       </nav>
 
-        <!-- Sidebar -->
-        <aside
+      <!-- Sidebar -->
+      <aside
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-dark300 dark:border-dark100"
         aria-label="Sidenav" id="drawer-navigation">
         <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark300">
-            <form action="#" method="GET" class="md:hidden mb-2">
-                <label for="sidebar-search" class="sr-only">Search</label>
-                <div class="relative">
-                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
-                            </path>
-                        </svg>
-                    </div>
-                    <input type="text" name="search" id="sidebar-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary truncate focus:border-primary block w-full pl-10 p-2 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
-                        placeholder="Search" />
-                </div>
-            </form>
-            <div class="flex flex-col justify-between h-full">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="/index.html"
-                            class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-primary hover:text-white group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="1.5">
-                                    <path
-                                        d="M6.133 21C4.955 21 4 20.02 4 18.81v-8.802c0-.665.295-1.295.8-1.71l5.867-4.818a2.09 2.09 0 0 1 2.666 0l5.866 4.818c.506.415.801 1.045.801 1.71v8.802c0 1.21-.955 2.19-2.133 2.19z" />
-                                    <path d="M9.5 21v-5.5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2V21" />
-                                </g>
-                            </svg>
-                            <span class="ml-3">Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/analytics.html"
-                            class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 32 32">
-                                <path fill="currentColor" d="M4 2H2v26a2 2 0 0 0 2 2h26v-2H4Z" />
-                                <path fill="currentColor"
-                                    d="M30 9h-7v2h3.59L19 18.59l-4.29-4.3a1 1 0 0 0-1.42 0L6 21.59L7.41 23L14 16.41l4.29 4.3a1 1 0 0 0 1.42 0l8.29-8.3V16h2Z" />
-                            </svg>
-                            <span class="ml-3">Analytics</span>
-                        </a>
-                    </li>
-                    <li>
-                        <button type="button"
-                            class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
-                            aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87m-3-12a4 4 0 0 1 0 7.75" />
-                                </g>
-                            </svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">User
-                                Manager</span>
-                            <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-pages" class="hidden py-2 space-y-2">
-                            <li>
-                                <a href="user-details.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">User
-                                    Details
-                                </a>
-                            </li>
-                            <li>
-                                <a href="user-info.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">User
-                                    Info
-                                </a>
-                            </li>
-                            <li>
-                                <a href="recharge-log.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Recharge
-                                    Log
-                                </a>
-                            </li>
-                            <li>
-                                <a href="withdrawal-log.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Withdrawal
-                                    Log
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="game-record.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Game
-                                    Record
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="phone-otp.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
-                                    OTP
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button type="button"
-                            class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
-                            aria-controls="dropdown-topUp" data-collapse-toggle="dropdown-topUp">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="1.5">
-                                    <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5z" />
-                                    <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3z" />
-                                </g>
-                            </svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Highest
-                                Top-Up</span>
-                            <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-topUp" class="hidden py-2 space-y-2">
-                            <li>
-                                <a href="unreg-number.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white truncate">Unregistered
-                                    Numbers</a>
-                            </li>
-                            <li>
-                                <a href="top-gamers.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Top
-                                    Gamers</a>
-                            </li>
-                            <li>
-                                <a href="inactive-numbers.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inactice
-                                    Numbers</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button type="button"
-                            class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
-                            aria-controls="dropdown-authentication"
-                            data-collapse-toggle="dropdown-authentication">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 256 256">
-                                <path fill="currentColor"
-                                    d="M220.69 100.17a12 12 0 0 0-9.85 13.83a85 85 0 0 1 1.16 14a83.57 83.57 0 0 1-18 51.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42A83.94 83.94 0 0 1 128 44a85 85 0 0 1 14 1.16a12 12 0 0 0 4-23.67A108.1 108.1 0 0 0 20 128a108 108 0 0 0 216 0a109 109 0 0 0-1.49-18a12 12 0 0 0-13.82-9.83M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m-20.43 76.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M240.49 48.49l-32 32a12 12 0 0 1-17 0l-16-16a12 12 0 0 1 17-17L200 55l23.51-23.52a12 12 0 1 1 17 17Z" />
-                            </svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Agent
-                                Model</span>
-                            <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
-                            <li>
-                                <a href="add-agent.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Add
-                                    Agent</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button type="button"
-                            class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
-                            aria-controls="dropdown-customer" data-collapse-toggle="dropdown-customer">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M19.938 8H21a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1.062A8 8 0 0 1 12 23v-2a6 6 0 0 0 6-6V9A6 6 0 0 0 6 9v7H3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1.062a8.001 8.001 0 0 1 15.876 0M3 10v4h1v-4zm17 0v4h1v-4zM7.76 15.785l1.06-1.696A5.97 5.97 0 0 0 12 15a5.97 5.97 0 0 0 3.18-.911l1.06 1.696A7.96 7.96 0 0 1 12 17a7.96 7.96 0 0 1-4.24-1.215" />
-                            </svg>
-                            <span
-                                class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Customer
-                                Mode</span>
-                            <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown-customer" class="hidden py-2 space-y-2">
-                            <li>
-                                <a href="inbox.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Live
-                                    Chat</a>
-                            </li>
-                            <li>
-                                <a href="email.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Email</a>
-                            </li>
-                            <li>
-                                <a href="phone-number.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
-                                    Number</a>
-                            </li>
-                            <li>
-                                <a href="phone-number.html"
-                                    class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Telegram</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="receipt.html"
-                            class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 32 32">
-                                <path fill="currentColor"
-                                    d="M2 9.5A4.5 4.5 0 0 1 6.5 5h19A4.5 4.5 0 0 1 30 9.5v13a4.5 4.5 0 0 1-4.5 4.5h-19A4.5 4.5 0 0 1 2 22.5zM6.5 7A2.5 2.5 0 0 0 4 9.5V11h24V9.5A2.5 2.5 0 0 0 25.5 7zM4 22.5A2.5 2.5 0 0 0 6.5 25h19a2.5 2.5 0 0 0 2.5-2.5V13H4zM21 19h3a1 1 0 1 1 0 2h-3a1 1 0 1 1 0-2" />
-                            </svg>
-                            <span class="ml-3">Payment and Receipts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="games.html"
-                            class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M6 9h2v2h2v2H8v2H6v-2H4v-2h2zm12.5 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 18.5 9m-3 3a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5M17 5a7 7 0 0 1 7 7a7 7 0 0 1-7 7c-1.96 0-3.73-.8-5-2.1A6.96 6.96 0 0 1 7 19a7 7 0 0 1-7-7a7 7 0 0 1 7-7zM7 7a5 5 0 0 0-5 5a5 5 0 0 0 5 5c1.64 0 3.09-.79 4-2h2c.91 1.21 2.36 2 4 2a5 5 0 0 0 5-5a5 5 0 0 0-5-5z" />
-                            </svg>
-                            <span class="ml-3">Games</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="fraud.html"
-                            class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M16.475 4.935c.505-.025.962-.09 1.351-.168l1.732 1.98c-.39.82-.612 1.602-.695 2.377c-.124 1.157.089 2.143.245 2.863l.007.033c.162.744.269 1.234.253 1.809c-.015.541-.147 1.256-.657 2.277c-1.1 2.201-3.695 2.666-5.715 3.675c-.326.164-.662.35-.996.569a9.724 9.724 0 0 0-.996-.569c-2.02-1.01-4.614-1.474-5.715-3.675c-.51-1.02-.642-1.736-.657-2.277c-.016-.575.09-1.065.253-1.81l.007-.032c.156-.72.369-1.706.245-2.863a7.284 7.284 0 0 0-.695-2.377l1.732-1.98c.389.078.846.143 1.351.168C8.79 4.998 10.402 4.81 12 3.918c1.598.892 3.21 1.08 4.475 1.017m4.612 6.739c-.323-1.479-.626-2.866.913-5.174l-3.5-4S15 4 12 1.5c-3 2.5-6.5 1-6.5 1L2 6.5c1.539 2.308 1.236 3.695.913 5.174c-.306 1.404-.63 2.89.587 5.326c1.577 3.154 4.708 3.51 6.943 4.745c.6.332 1.134.726 1.557 1.255c.423-.529.958-.923 1.558-1.255C15.792 20.51 18.923 20.154 20.5 17c1.218-2.435.893-3.922.587-5.326m-6.71 1.099l.562 3.272l-2.94-1.545l-2.938 1.545l.561-3.273l-2.377-2.317l3.285-.478L12 7l1.47 2.977l3.285.478z" />
-                            </svg>
-                            <span class="ml-3">Fraud</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="user-settings.html"
-                            class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                                viewBox="0 0 24 24">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path
-                                        d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
-                                    <path fill="currentColor"
-                                        d="M18.884 14.469a1 1 0 0 1 1.784.896l-.052.104l-.335.58a3.016 3.016 0 0 1 .482.782l.066.169h.671a1 1 0 0 1 .117 1.993L21.5 19h-.671a3 3 0 0 1-.41.776l-.138.174l.335.581a1 1 0 0 1-1.668 1.098l-.064-.098l-.335-.58c-.293.054-.59.063-.88.03l-.217-.032l-.336.582a1 1 0 0 1-1.784-.896l.052-.104l.335-.581a3.026 3.026 0 0 1-.482-.78l-.066-.17H14.5a1 1 0 0 1-.117-1.993L14.5 17h.672a3 3 0 0 1 .41-.776l.137-.174l-.335-.581a1 1 0 0 1 1.668-1.098l.064.098l.335.58c.293-.054.59-.063.88-.03l.217.031zM11 13c.447 0 .887.024 1.316.07a1 1 0 0 1-.211 1.989C11.745 15.02 11.375 15 11 15c-2.023 0-3.843.59-5.136 1.379c-.647.394-1.135.822-1.45 1.222c-.324.41-.414.72-.414.899c0 .122.037.251.255.426c.249.2.682.407 1.344.582C6.917 19.858 8.811 20 11 20l.658-.005a1 1 0 0 1 .027 2L11 22c-2.229 0-4.335-.14-5.913-.558c-.785-.208-1.524-.506-2.084-.956C2.41 20.01 2 19.345 2 18.5c0-.787.358-1.523.844-2.139c.494-.625 1.177-1.2 1.978-1.69C6.425 13.695 8.605 13 11 13m7 4a1 1 0 1 0 0 2a1 1 0 0 0 0-2M11 2a5 5 0 1 1 0 10a5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6" />
-                                </g>
-                            </svg>
-                            <span class="ml-3">User Settings</span>
-                        </a>
-                    </li>
-
-                </ul>
-
-                <a href="/"
-                    class="flex items-center justify-between p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-rose-600 hover:text-white group border-t border-yellow-500 hover:border-none my-8 lg:my-0">
-                    <span class="font-semibold text-base">Logout</span>
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                        viewBox="0 0 24 24">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M20 12h-9.5m7.5 3l3-3l-3-3m-5-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-1" />
-                    </svg>
-                </a>
+          <form action="#" method="GET" class="md:hidden mb-2">
+            <label for="sidebar-search" class="sr-only">Search</label>
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
+                  </path>
+                </svg>
+              </div>
+              <input type="text" name="search" id="sidebar-search"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary truncate focus:border-primary block w-full pl-10 p-2 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+                placeholder="Search" />
             </div>
+          </form>
+          <div class="flex flex-col justify-between h-full">
+            <ul class="space-y-2">
+              <li>
+                <a href="/index.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-primary hover:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="1.5">
+                      <path
+                        d="M6.133 21C4.955 21 4 20.02 4 18.81v-8.802c0-.665.295-1.295.8-1.71l5.867-4.818a2.09 2.09 0 0 1 2.666 0l5.866 4.818c.506.415.801 1.045.801 1.71v8.802c0 1.21-.955 2.19-2.133 2.19z" />
+                      <path d="M9.5 21v-5.5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2V21" />
+                    </g>
+                  </svg>
+                  <span class="ml-3">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="/analytics.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 32 32">
+                    <path fill="currentColor" d="M4 2H2v26a2 2 0 0 0 2 2h26v-2H4Z" />
+                    <path fill="currentColor"
+                      d="M30 9h-7v2h3.59L19 18.59l-4.29-4.3a1 1 0 0 0-1.42 0L6 21.59L7.41 23L14 16.41l4.29 4.3a1 1 0 0 0 1.42 0l8.29-8.3V16h2Z" />
+                  </svg>
+                  <span class="ml-3">Analytics</span>
+                </a>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
+                  aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87m-3-12a4 4 0 0 1 0 7.75" />
+                    </g>
+                  </svg>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">User
+                    Manager</span>
+                  <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="/user-details.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">User
+                      Details
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/user-info.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">User
+                      Info
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/recharge-log.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Recharge
+                      Log
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/withdrawal-log.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Withdrawal
+                      Log
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/game-record.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Game
+                      Record
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/phone-otp.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
+                      OTP
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
+                  aria-controls="dropdown-topUp" data-collapse-toggle="dropdown-topUp">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="1.5">
+                      <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5z" />
+                      <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3z" />
+                    </g>
+                  </svg>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Performance</span>
+                  <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <ul id="dropdown-topUp" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="/highest-topup.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white truncate">Highest
+                      Top Up</a>
+                  </li>
+                  <li>
+                    <a href="/top-gamers.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Top
+                      Gamers</a>
+                  </li>
+                  <li>
+                    <a href="/unreg-number.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white truncate">Unregistered
+                      Numbers</a>
+                  </li>
+                  <li>
+                    <a href="/inactive-numbers.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inactice
+                      Numbers</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
+                  aria-controls="dropdown-authentication" data-collapse-toggle="dropdown-authentication">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 256 256">
+                    <path fill="currentColor"
+                      d="M220.69 100.17a12 12 0 0 0-9.85 13.83a85 85 0 0 1 1.16 14a83.57 83.57 0 0 1-18 51.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42A83.94 83.94 0 0 1 128 44a85 85 0 0 1 14 1.16a12 12 0 0 0 4-23.67A108.1 108.1 0 0 0 20 128a108 108 0 0 0 216 0a109 109 0 0 0-1.49-18a12 12 0 0 0-13.82-9.83M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m-20.43 76.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M240.49 48.49l-32 32a12 12 0 0 1-17 0l-16-16a12 12 0 0 1 17-17L200 55l23.51-23.52a12 12 0 1 1 17 17Z" />
+                  </svg>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Agent
+                    Model</span>
+                  <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="/add-agent.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Add
+                      Agent</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
+                  aria-controls="dropdown-customer" data-collapse-toggle="dropdown-customer">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M19.938 8H21a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1.062A8 8 0 0 1 12 23v-2a6 6 0 0 0 6-6V9A6 6 0 0 0 6 9v7H3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1.062a8.001 8.001 0 0 1 15.876 0M3 10v4h1v-4zm17 0v4h1v-4zM7.76 15.785l1.06-1.696A5.97 5.97 0 0 0 12 15a5.97 5.97 0 0 0 3.18-.911l1.06 1.696A7.96 7.96 0 0 1 12 17a7.96 7.96 0 0 1-4.24-1.215" />
+                  </svg>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Customer
+                    Mode</span>
+                  <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <ul id="dropdown-customer" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="/inbox.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="/"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Live
+                      Chat</a>
+                  </li>
+                  <li>
+                    <a href="/email.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Email</a>
+                  </li>
+                  <li>
+                    <a href="/phone-number.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
+                      Number</a>
+                  </li>
+                  <li>
+                    <a href="/phone-number.html"
+                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Telegram</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/receipt.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 32 32">
+                    <path fill="currentColor"
+                      d="M2 9.5A4.5 4.5 0 0 1 6.5 5h19A4.5 4.5 0 0 1 30 9.5v13a4.5 4.5 0 0 1-4.5 4.5h-19A4.5 4.5 0 0 1 2 22.5zM6.5 7A2.5 2.5 0 0 0 4 9.5V11h24V9.5A2.5 2.5 0 0 0 25.5 7zM4 22.5A2.5 2.5 0 0 0 6.5 25h19a2.5 2.5 0 0 0 2.5-2.5V13H4zM21 19h3a1 1 0 1 1 0 2h-3a1 1 0 1 1 0-2" />
+                  </svg>
+                  <span class="ml-3">Payment and Receipts</span>
+                </a>
+              </li>
+              <li>
+                <a href="/games.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M6 9h2v2h2v2H8v2H6v-2H4v-2h2zm12.5 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 18.5 9m-3 3a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5M17 5a7 7 0 0 1 7 7a7 7 0 0 1-7 7c-1.96 0-3.73-.8-5-2.1A6.96 6.96 0 0 1 7 19a7 7 0 0 1-7-7a7 7 0 0 1 7-7zM7 7a5 5 0 0 0-5 5a5 5 0 0 0 5 5c1.64 0 3.09-.79 4-2h2c.91 1.21 2.36 2 4 2a5 5 0 0 0 5-5a5 5 0 0 0-5-5z" />
+                  </svg>
+                  <span class="ml-3">Games</span>
+                </a>
+              </li>
+              <li>
+                <a href="/fraud.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M16.475 4.935c.505-.025.962-.09 1.351-.168l1.732 1.98c-.39.82-.612 1.602-.695 2.377c-.124 1.157.089 2.143.245 2.863l.007.033c.162.744.269 1.234.253 1.809c-.015.541-.147 1.256-.657 2.277c-1.1 2.201-3.695 2.666-5.715 3.675c-.326.164-.662.35-.996.569a9.724 9.724 0 0 0-.996-.569c-2.02-1.01-4.614-1.474-5.715-3.675c-.51-1.02-.642-1.736-.657-2.277c-.016-.575.09-1.065.253-1.81l.007-.032c.156-.72.369-1.706.245-2.863a7.284 7.284 0 0 0-.695-2.377l1.732-1.98c.389.078.846.143 1.351.168C8.79 4.998 10.402 4.81 12 3.918c1.598.892 3.21 1.08 4.475 1.017m4.612 6.739c-.323-1.479-.626-2.866.913-5.174l-3.5-4S15 4 12 1.5c-3 2.5-6.5 1-6.5 1L2 6.5c1.539 2.308 1.236 3.695.913 5.174c-.306 1.404-.63 2.89.587 5.326c1.577 3.154 4.708 3.51 6.943 4.745c.6.332 1.134.726 1.557 1.255c.423-.529.958-.923 1.558-1.255C15.792 20.51 18.923 20.154 20.5 17c1.218-2.435.893-3.922.587-5.326m-6.71 1.099l.562 3.272l-2.94-1.545l-2.938 1.545l.561-3.273l-2.377-2.317l3.285-.478L12 7l1.47 2.977l3.285.478z" />
+                  </svg>
+                  <span class="ml-3">Fraud</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="/user-settings.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                      <path
+                        d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M18.884 14.469a1 1 0 0 1 1.784.896l-.052.104l-.335.58a3.016 3.016 0 0 1 .482.782l.066.169h.671a1 1 0 0 1 .117 1.993L21.5 19h-.671a3 3 0 0 1-.41.776l-.138.174l.335.581a1 1 0 0 1-1.668 1.098l-.064-.098l-.335-.58c-.293.054-.59.063-.88.03l-.217-.032l-.336.582a1 1 0 0 1-1.784-.896l.052-.104l.335-.581a3.026 3.026 0 0 1-.482-.78l-.066-.17H14.5a1 1 0 0 1-.117-1.993L14.5 17h.672a3 3 0 0 1 .41-.776l.137-.174l-.335-.581a1 1 0 0 1 1.668-1.098l.064.098l.335.58c.293-.054.59-.063.88-.03l.217.031zM11 13c.447 0 .887.024 1.316.07a1 1 0 0 1-.211 1.989C11.745 15.02 11.375 15 11 15c-2.023 0-3.843.59-5.136 1.379c-.647.394-1.135.822-1.45 1.222c-.324.41-.414.72-.414.899c0 .122.037.251.255.426c.249.2.682.407 1.344.582C6.917 19.858 8.811 20 11 20l.658-.005a1 1 0 0 1 .027 2L11 22c-2.229 0-4.335-.14-5.913-.558c-.785-.208-1.524-.506-2.084-.956C2.41 20.01 2 19.345 2 18.5c0-.787.358-1.523.844-2.139c.494-.625 1.177-1.2 1.978-1.69C6.425 13.695 8.605 13 11 13m7 4a1 1 0 1 0 0 2a1 1 0 0 0 0-2M11 2a5 5 0 1 1 0 10a5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6" />
+                    </g>
+                  </svg>
+                  <span class="ml-3">User Settings</span>
+                </a>
+              </li>
+
+            </ul>
+
+            <a href="/"
+              class="flex items-center justify-between p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-rose-600 hover:text-white group border-t border-yellow-500 hover:border-none my-8 lg:my-0">
+              <span class="font-semibold text-base">Logout</span>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20 12h-9.5m7.5 3l3-3l-3-3m-5-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-1" />
+              </svg>
+            </a>
+          </div>
         </div>
-    </aside>
+      </aside>
 
       <!-- Settings page -->
       <main class="p-4 md:ml-64 h-auto pt-20">
