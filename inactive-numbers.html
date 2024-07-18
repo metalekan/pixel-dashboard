@@ -619,7 +619,7 @@
       <main class="p-4 md:ml-64 h-auto pt-20">
         <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
           <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
-            Unregistered Numbers
+            Inactive Numbers
           </h1>
           <div class="p-2 bg-white dark:bg-dark200 rounded-lg mb-4 flex items-center">
             <div class="relative max-w-32">
@@ -646,21 +646,22 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
                   <tr>
                     <th scope="col" class="px-6 py-3 text-primary">S/N</th>
+                    <th scope="col" class="px-6 py-3 text-primary">User ID</th>
                     <th scope="col" class="px-6 py-3 text-primary">
                       Phone No
                     </th>
                     <th scope="col" class="px-6 py-3 text-primary">
-                      Date & Time
+                      Last Login Time
                     </th>
                     <th scope="col" class="px-6 py-3 text-primary">
-                      Success Count
+                      Status
                     </th>
                     <th scope="col" class="px-6 py-3 text-primary">
-                      Fail Count
+                      Action
                     </th>
                   </tr>
                 </thead>
-                <tbody id="tbodyUnReg"></tbody>
+                <tbody id="tbodyInactive"></tbody>
               </table>
             </div>
             <div class="flex items-center flex-wrap justify-between mt-6 lg:mt-10">
@@ -697,7 +698,7 @@
       {
         id: 1,
         amount: 7000,
-        status: "failed",
+        status: "VIP",
         date: "21/4/2024, 2:30:45pm",
         channel: "Flutterwave",
         txID: "TX67890FGHIJ",
@@ -708,7 +709,7 @@
       {
         id: 2,
         amount: 4500,
-        status: "pending",
+        status: "normal",
         date: "22/4/2024, 11:50:10am",
         channel: "Stripe",
         txID: "TX11121JKLMN",
@@ -719,7 +720,7 @@
       {
         id: 3,
         amount: 6000,
-        status: "success",
+        status: "normal",
         date: "23/4/2024, 8:25:22pm",
         channel: "PayPal",
         txID: "TX31415OPQRS",
@@ -730,7 +731,7 @@
       {
         id: 4,
         amount: 5200,
-        status: "success",
+        status: "VIP",
         date: "24/4/2024, 7:15:34pm",
         channel: "Kuda",
         txID: "TX16171TUVWX",
@@ -785,7 +786,7 @@
       {
         id: 9,
         amount: 4700,
-        status: "pending",
+        status: "Normal",
         date: "29/4/2024, 9:55:35am",
         channel: "Stripe",
         txID: "TX22626TUVWX",
@@ -796,7 +797,7 @@
       {
         id: 10,
         amount: 3000,
-        status: "success",
+        status: "VIP",
         date: "20/4/2024, 10:15:32am",
         channel: "Paystack",
         txID: "TX12345ABCDE",
@@ -804,8 +805,8 @@
       },
     ];
 
-    const tableUnReg = document.getElementById("tbodyUnReg");
-    const tableUnRegHTML = phoneOTP
+    const tableInactive = document.getElementById("tbodyInactive");
+    const tableInactiveHTML = phoneOTP
       .map(
         (log, index) => `
           <tr
@@ -817,16 +818,20 @@
           >
            ${index + 1}
           </th>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.txID}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.phone}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white capitalize">${log.status}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+            <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Delete Account</button>
+          </td>
         </tr>
 
       `
       )
       .join("");
-    tableUnReg.innerHTML = tableUnRegHTML;
+    tableInactive.innerHTML = tableInactiveHTML;
   </script>
 </body>
 
