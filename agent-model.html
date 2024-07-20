@@ -478,33 +478,7 @@
                   </li>
                 </ul>
               </li>
-              <li>
-                <button type="button"
-                  class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
-                  aria-controls="dropdown-authentication" data-collapse-toggle="dropdown-authentication">
-                  <svg xmlns="http://www.w3.org/2000/svg"
-                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
-                    viewBox="0 0 256 256">
-                    <path fill="currentColor"
-                      d="M220.69 100.17a12 12 0 0 0-9.85 13.83a85 85 0 0 1 1.16 14a83.57 83.57 0 0 1-18 51.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42A83.94 83.94 0 0 1 128 44a85 85 0 0 1 14 1.16a12 12 0 0 0 4-23.67A108.1 108.1 0 0 0 20 128a108 108 0 0 0 216 0a109 109 0 0 0-1.49-18a12 12 0 0 0-13.82-9.83M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m-20.43 76.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M240.49 48.49l-32 32a12 12 0 0 1-17 0l-16-16a12 12 0 0 1 17-17L200 55l23.51-23.52a12 12 0 1 1 17 17Z" />
-                  </svg>
-                  <span class="flex-1 ml-3 text-left whitespace-nowrap group-hover:text-white">Agent
-                    Model</span>
-                  <svg aria-hidden="true" class="w-6 h-6 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </button>
-                <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
-                  <li>
-                    <a href="/add-agent.html"
-                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Add
-                      Agent</a>
-                  </li>
-                </ul>
-              </li>
+
               <li>
                 <button type="button"
                   class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white"
@@ -548,6 +522,18 @@
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Telegram</a>
                   </li>
                 </ul>
+              </li>
+              <li>
+                <a href="/agent-model.html"
+                  class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-primary hover:text-white dark:text-white group">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                    viewBox="0 0 256 256">
+                    <path fill="currentColor"
+                      d="M220.69 100.17a12 12 0 0 0-9.85 13.83a85 85 0 0 1 1.16 14a83.57 83.57 0 0 1-18 51.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42A83.94 83.94 0 0 1 128 44a85 85 0 0 1 14 1.16a12 12 0 0 0 4-23.67A108.1 108.1 0 0 0 20 128a108 108 0 0 0 216 0a109 109 0 0 0-1.49-18a12 12 0 0 0-13.82-9.83M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m-20.43 76.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M240.49 48.49l-32 32a12 12 0 0 1-17 0l-16-16a12 12 0 0 1 17-17L200 55l23.51-23.52a12 12 0 1 1 17 17Z" />
+                  </svg>
+                  <span class="ml-3">Agent Modal</span>
+                </a>
               </li>
               <li>
                 <a href="/receipt.html"
@@ -626,7 +612,7 @@
             Agent Model
           </h1>
           <div class="flex items-center justify-between flex-wrap gap-2 lg:gap-0">
-            <form class="max-w-sm w-full">
+            <form class="max-w-lg w-full">
               <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
               <div class="relative">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -638,134 +624,27 @@
                 </div>
                 <input type="search" id="default-search"
                   class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary"
-                  placeholder="Enter promo code..." required />
+                  placeholder="User ID" required />
                 <button type="submit"
                   class="text-white absolute end-2.5 bottom-2.5 bg-primary focus:outline-none font-medium rounded-lg text-sm px-4 py-2">
                   Search
                 </button>
               </div>
             </form>
-
-            <div class="flex items-center gap-3">
-              <p class="text-gray-500 dark:text-gray-400">
-                Total number of Agent:
-                <span class="text-gray-900 dark:text-white font-medium">250</span>
-              </p>
-              <a href="/check.html"
-                class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">
-                Check
-              </a>
-            </div>
-
-            <button type="button" data-modal-target="addAgentModal" data-modal-show="addAgentModal"
-              class="text-white bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 w-fit">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 me-2" viewBox="0 0 32 32">
-                <path fill="currentColor"
-                  d="M14 4c-3.854 0-7 3.146-7 7c0 2.41 1.23 4.552 3.094 5.813C6.527 18.343 4 21.88 4 26h2c0-4.43 3.57-8 8-8c1.376 0 2.654.358 3.78.97A7.993 7.993 0 0 0 16 24c0 4.406 3.594 8 8 8c4.406 0 8-3.594 8-8c0-4.406-3.594-8-8-8a7.98 7.98 0 0 0-4.688 1.53c-.442-.277-.92-.51-1.406-.718A7.018 7.018 0 0 0 21 11c0-3.854-3.146-7-7-7m0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5m10 12c3.326 0 6 2.674 6 6s-2.674 6-6 6s-6-2.674-6-6s2.674-6 6-6m-1 2v3h-3v2h3v3h2v-3h3v-2h-3v-3z" />
-              </svg>
-              Add agent
-            </button>
           </div>
 
           <div class="relative overflow-x-auto shadow rounded-lg mt-6 lg:mt-10">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead class="text-sm text-primary uppercase bg-gray-200 dark:bg-dark300">
                 <tr>
-                  <th scope="col" class="px-6 py-3">Promo code</th>
-                  <th scope="col" class="px-6 py-3">List of users</th>
-                  <th scope="col" class="px-6 py-3">No of users</th>
-                  <th scope="col" class="px-6 py-3">Review gotten</th>
-                  <th scope="col" class="px-6 py-3">Review Generated</th>
-                  <th scope="col" class="px-6 py-3">Remove Agent</th>
+                  <th scope="col" class="px-6 py-3">S/N</th>
+                  <th scope="col" class="px-6 py-3">Users ID</th>
+                  <th scope="col" class="px-6 py-3">No of Invites</th>
+                  <th scope="col" class="px-6 py-3">Details</th>
                 </tr>
               </thead>
               <tbody id="tbodyAgentModel"></tbody>
             </table>
-
-            <!-- Add agent modal -->
-            <div id="addAgentModal" tabindex="-1" aria-hidden="true"
-              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-              <div class="relative p-4 w-full max-w-md max-h-full">
-                <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-dark200">
-                  <!-- Modal header -->
-                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      Add agent
-                    </h3>
-                    <button type="button"
-                      class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                      data-modal-hide="addAgentModal">
-                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                      </svg>
-                      <span class="sr-only">Close modal</span>
-                    </button>
-                  </div>
-                  <!-- Modal body -->
-                  <div class="p-4 md:p-5">
-                    <form class="w-full flex flex-col items-center" action="#">
-                      <div class="grid gap-4 lg:gap-8 mb-4 grid-cols-2 w-full">
-                        <div class="col-span-2 flex flex-col justify-between">
-                          <label for="name" class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Add
-                            Agent:</label>
-                          <input type="text"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="PG11010" required="" />
-                        </div>
-                        <div class="col-span-2 flex flex-col justify-between">
-                          <label for="name"
-                            class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Promo
-                            Code:</label>
-                          <input type="text"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="promo code" required="" />
-                        </div>
-                      </div>
-                      <button type="submit"
-                        class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center my-10 w-full">
-                        Create User Acccount
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Remove agent modal -->
-
-            <div id="removeAgentModal" tabindex="-1"
-              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-              <div class="relative p-4 w-full max-w-md max-h-full">
-                <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
-                  <button type="button"
-                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                    data-modal-hide="removeAgentModal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                      viewBox="0 0 14 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                  </button>
-                  <div class="p-4 md:p-5 text-center">
-                    <svg class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500" aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-                    <h3 class="mb-3 text-lg font-semibold text-gray-700 dark:text-white">
-                      Remove Agent
-                    </h3>
-                    <p class="text-gray-700 dark:text-white">
-                      This agent has been removed
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="flex items-center flex-wrap justify-between mt-6 lg:mt-10">
             <!-- Previous Button -->
@@ -796,115 +675,38 @@
   </main>
   <script src="/js/app.js"></script>
   <script>
-    const promoData = [
-      {
-        promoCode: "SAVE20",
-        users: ["user_123"],
-        totalUsers: 3,
-        totalReviewsGotten: 15,
-        reviewsGenerated: 10,
-      },
-      {
-        promoCode: "WELCOME50",
-        users: ["user_321", "user_654", "user_987", "user_001"],
-        totalUsers: 4,
-        totalReviewsGotten: 20,
-        reviewsGenerated: 15,
-      },
-      {
-        promoCode: "FREESHIP",
-        users: ["user_432", "user_543"],
-        totalUsers: 2,
-        totalReviewsGotten: 5,
-        reviewsGenerated: 3,
-      },
-      {
-        promoCode: "HOLIDAY30",
-        users: ["user_213", "user_324", "user_435", "user_546", "user_657"],
-        totalUsers: 5,
-        totalReviewsGotten: 25,
-        reviewsGenerated: 20,
-      },
-      {
-        promoCode: "SPRINGSALE",
-        users: ["user_768", "user_879", "user_980", "user_091"],
-        totalUsers: 4,
-        totalReviewsGotten: 18,
-        reviewsGenerated: 14,
-      },
-      {
-        promoCode: "SUMMERFUN",
-        users: [
-          "user_132",
-          "user_243",
-          "user_354",
-          "user_465",
-          "user_576",
-          "user_687",
-        ],
-        totalUsers: 6,
-        totalReviewsGotten: 30,
-        reviewsGenerated: 25,
-      },
-      {
-        promoCode: "WINTERWARM",
-        users: ["user_798", "user_809", "user_910"],
-        totalUsers: 3,
-        totalReviewsGotten: 10,
-        reviewsGenerated: 8,
-      },
-      {
-        promoCode: "FALL50",
-        users: ["user_021", "user_132", "user_243"],
-        totalUsers: 3,
-        totalReviewsGotten: 12,
-        reviewsGenerated: 9,
-      },
-      {
-        promoCode: "NEWYEAR2024",
-        users: ["user_354", "user_465", "user_576", "user_687", "user_798"],
-        totalUsers: 5,
-        totalReviewsGotten: 22,
-        reviewsGenerated: 18,
-      },
-      {
-        promoCode: "FLASHSALE",
-        users: ["user_809", "user_910", "user_101"],
-        totalUsers: 3,
-        totalReviewsGotten: 8,
-        reviewsGenerated: 5,
-      },
-    ];
+    const agentModel = [
+      { "id": 1, "userid": "PG14534", "number_of_invites": 5 },
+      { "id": 2, "userid": "PG14535", "number_of_invites": 3 },
+      { "id": 3, "userid": "PG14536", "number_of_invites": 7 },
+      { "id": 4, "userid": "PG14537", "number_of_invites": 2 },
+      { "id": 5, "userid": "PG14538", "number_of_invites": 6 },
+      { "id": 6, "userid": "PG14539", "number_of_invites": 1 },
+      { "id": 7, "userid": "PG14540", "number_of_invites": 4 },
+      { "id": 8, "userid": "PG14541", "number_of_invites": 8 },
+      { "id": 9, "userid": "PG14542", "number_of_invites": 9 },
+      { "id": 10, "userid": "PG14543", "number_of_invites": 0 }
+    ]
+
     const tableAgentModel = document.getElementById("tbodyAgentModel");
-    const tableAgentModelHTML = promoData
+    const tableAgentModelHTML = agentModel
       .map(
         (user, index) => `
          <tr
                     class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500"
                   >
                     <th scope="row" class="font-normal px-6 py-4 text-gray-900 dark:text-white">
-                     ${user.promoCode}
+                     ${user.id}
                     </th>
                     <td class="px-6 py-4 text-gray-900 dark:text-white">
-                    ${user.users}
+                    ${user.userid}
                     </td>
                     <td class="px-6 py-4 text-gray-900 dark:text-white">
-                    ${user.totalUsers}
-                    </td><td class="px-6 py-4 text-gray-900 dark:text-white">
-                    ${user.totalReviewsGotten}
-                    </td><td class="px-6 py-4 text-gray-900 dark:text-white">
-                    ${user.reviewsGenerated}
+                    ${user.number_of_invites}
                     </td>
                     <td class="px-6 py-4 text-gray-900 dark:text-white">
-                      <!-- Modal toggle -->
-                        <a
-                          href="#"
-                          type="button"
-                          data-modal-target="removeAgentModal"
-                          data-modal-show="removeAgentModal"
-                          class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-primary"
-                          >Remove Agent</a
-                        >
+                    <a href="/check-agent-model.html"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Check</a>
                     </td>
                   </tr>
 
