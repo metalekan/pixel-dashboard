@@ -660,13 +660,13 @@
 
             <!-- Deduct amount modal -->
 
-            <div id="deductAmount-modal" tabindex="-1"
+            <div id="deductAmountModal" tabindex="-1"
               class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
               <div class="relative p-4 w-full max-w-md max-h-full">
                 <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
                   <button type="button"
                     class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                    data-modal-hide="deductAmount-modal">
+                    data-modal-hide="deductAmountModal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 14 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -674,26 +674,33 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                   </button>
-                  <div class="p-4 md:p-5 text-center">
+                  <div class="p-4 md:p-5 text-start">
                     <svg class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500" aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <h3 class="mb-3 text-lg font-semibold text-gray-700 dark:text-white">
-                      Amount Deducted
+                      Deduct Amount
                     </h3>
                     <p class="text-gray-700 dark:text-white">
-                      5,000 was deducted from your account
+                      Enter the amount you want to deduct
                     </p>
-                  </div>
-                  <!-- Modal footer -->
-                  <div
-                    class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="deductAmount-modal" type="button"
-                      class="text-white bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary dark:focus:ring-primary w-full">
-                      Okay
-                    </button>
+                    <form class="w-full flex flex-col items-center" action="#">
+                      <div class="grid gap-4 lg:gap-8 my-4 grid-cols-2 w-full">
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name"
+                            class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Amount:</label>
+                          <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="5,000" required="" />
+                        </div>
+                      </div>
+                      <button type="submit"
+                        class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 w-full">
+                        Ok
+                      </button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -701,13 +708,13 @@
 
             <!-- Ban User modal -->
 
-            <div id="banUser-modal" tabindex="-1"
+            <div id="banUserModal" tabindex="-1"
               class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
               <div class="relative p-4 w-full max-w-md max-h-full">
                 <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
                   <button type="button"
                     class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                    data-modal-hide="banUser-modal">
+                    data-modal-hide="banUserModal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 14 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -715,7 +722,7 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                   </button>
-                  <div class="p-4 md:p-5 text-center">
+                  <div class="p-4 md:p-5 text-start">
                     <svg class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500" aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -727,25 +734,28 @@
                     <p class="text-gray-800 dark:text-white">
                       A ban was placed on user's account
                     </p>
-                  </div>
-                  <!-- Modal footer -->
-                  <div
-                    class="flex items-center justify-between p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <div class="flex flex-col gap-1">
-                      <p class="text-gray-500 dark:text-white">
-                        <span class="font-semibold">Start Date:</span>
-                        2/28/2024
-                      </p>
-                      <p class="text-gray-500 dark:text-white">
-                        <span class="font-semibold">End Date:</span>
-                        2/28/2024
-                      </p>
-                    </div>
-
-                    <button data-modal-hide="banUser-modal" type="button"
-                      class="ms-3 text-white bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary dark:focus:ring-primary w-fit">
-                      Okay
-                    </button>
+                    <form class="w-full flex flex-col items-center" action="#">
+                      <div class="grid gap-4 lg:gap-8 my-4 grid-cols-2 w-full">
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name"
+                            class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Start Date:</label>
+                          <input type="date"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="24/01/2024" required="" />
+                        </div>
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name" class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">End
+                            Date:</label>
+                          <input type="date"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="24/01/2024" required="" />
+                        </div>
+                      </div>
+                      <button type="submit"
+                        class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 w-full">
+                        Ok
+                      </button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -868,20 +878,20 @@
                     </td>
                     <td class="px-6 py-4 text-gray-900 dark:text-white">
                       <!-- Modal toggle -->
-                      <div class="flex items-center flex-wrap gap-3 lg:gap-6">
+                      <div class="flex items-center flex-wrap gap-2">
                         <a
                           href="#"
                           type="button"
-                          data-modal-target="deductAmount-modal"
-                          data-modal-show="deductAmount-modal"
+                          data-modal-target="deductAmountModal"
+                          data-modal-show="deductAmountModal"
                           class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
                           >Deduct Amount</a
                         >
                         <a
                           href="#"
                           type="button"
-                          data-modal-target="banUser-modal"
-                          data-modal-show="banUser-modal"
+                          data-modal-target="banUserModal"
+                          data-modal-show="banUserModal"
                           class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800"
                           >Ban User</a
                         >
