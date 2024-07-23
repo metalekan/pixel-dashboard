@@ -884,10 +884,13 @@
                                             class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
                                             <tr>
                                                 <th scope="col" class="px-6 py-3 text-primary">
+                                                    Game ID
+                                                </th>
+                                                <th scope="col" class="px-6 py-3 text-primary">
                                                     User ID
                                                 </th>
                                                 <th scope="col" class="px-6 py-3 text-primary">
-                                                    Game ID
+                                                    Winner
                                                 </th>
                                                 <th scope="col" class="px-6 py-3 text-primary">
                                                     Bet Amount
@@ -1157,10 +1160,13 @@
                                             class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
                                             <tr>
                                                 <th scope="col" class="px-6 py-3 text-primary">
+                                                    Game ID
+                                                </th>
+                                                <th scope="col" class="px-6 py-3 text-primary">
                                                     User ID
                                                 </th>
                                                 <th scope="col" class="px-6 py-3 text-primary">
-                                                    Game ID
+                                                    Winner
                                                 </th>
                                                 <th scope="col" class="px-6 py-3 text-primary">
                                                     Bet Amount
@@ -1212,8 +1218,8 @@
         const fishGames = [
             {
                 gameId: "SG98001",
-                userId: "user_123",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T12:00:00Z",
@@ -1221,8 +1227,8 @@
             },
             {
                 gameId: "SG98002",
-                userId: "user_456",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 75,
                 winAmount: 150,
                 dateTime: "2024-06-15T12:30:00Z",
@@ -1230,8 +1236,8 @@
             },
             {
                 gameId: "SG98003",
-                userId: "user_789",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 100,
                 winAmount: 200,
                 dateTime: "2024-06-15T13:00:00Z",
@@ -1239,8 +1245,8 @@
             },
             {
                 gameId: "SG98004",
-                userId: "user_321",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 20,
                 winAmount: 40,
                 dateTime: "2024-06-15T13:30:00Z",
@@ -1248,8 +1254,8 @@
             },
             {
                 gameId: "SG98005",
-                userId: "user_654",
-                winner: "user_321",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG311020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T14:00:00Z",
@@ -1257,8 +1263,8 @@
             },
             {
                 gameId: "SG98006",
-                userId: "user_987",
-                winner: "user_654",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG611020",
                 betAmount: 30,
                 winAmount: 60,
                 dateTime: "2024-06-15T14:30:00Z",
@@ -1266,8 +1272,8 @@
             },
             {
                 gameId: "SG98007",
-                userId: "user_123",
-                winner: "user_987",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG911020",
                 betAmount: 40,
                 winAmount: 80,
                 dateTime: "2024-06-15T15:00:00Z",
@@ -1275,8 +1281,8 @@
             },
             {
                 gameId: "SG98008",
-                userId: "user_456",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 25,
                 winAmount: 50,
                 dateTime: "2024-06-15T15:30:00Z",
@@ -1284,8 +1290,8 @@
             },
             {
                 gameId: "SG98009",
-                userId: "user_789",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 60,
                 winAmount: 120,
                 dateTime: "2024-06-15T16:00:00Z",
@@ -1293,8 +1299,8 @@
             },
             {
                 gameId: "SG98010",
-                userId: "user_321",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 80,
                 winAmount: 160,
                 dateTime: "2024-06-15T16:30:00Z",
@@ -1323,9 +1329,10 @@
               scope="row"
               class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
             >
-             ${game.userId}
+             ${game.gameId}
             </th>
-            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.gameId}</td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.userId}</td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winner}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
@@ -1341,8 +1348,8 @@
         const spinGames = [
             {
                 gameId: "SG98001",
-                userId: "user_123",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T12:00:00Z",
@@ -1350,8 +1357,8 @@
             },
             {
                 gameId: "SG98002",
-                userId: "user_456",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 75,
                 winAmount: 150,
                 dateTime: "2024-06-15T12:30:00Z",
@@ -1359,8 +1366,8 @@
             },
             {
                 gameId: "SG98003",
-                userId: "user_789",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 100,
                 winAmount: 200,
                 dateTime: "2024-06-15T13:00:00Z",
@@ -1368,8 +1375,8 @@
             },
             {
                 gameId: "SG98004",
-                userId: "user_321",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 20,
                 winAmount: 40,
                 dateTime: "2024-06-15T13:30:00Z",
@@ -1377,8 +1384,8 @@
             },
             {
                 gameId: "SG98005",
-                userId: "user_654",
-                winner: "user_321",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG311020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T14:00:00Z",
@@ -1386,8 +1393,8 @@
             },
             {
                 gameId: "SG98006",
-                userId: "user_987",
-                winner: "user_654",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG611020",
                 betAmount: 30,
                 winAmount: 60,
                 dateTime: "2024-06-15T14:30:00Z",
@@ -1395,8 +1402,8 @@
             },
             {
                 gameId: "SG98007",
-                userId: "user_123",
-                winner: "user_987",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG911020",
                 betAmount: 40,
                 winAmount: 80,
                 dateTime: "2024-06-15T15:00:00Z",
@@ -1404,8 +1411,8 @@
             },
             {
                 gameId: "SG98008",
-                userId: "user_456",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 25,
                 winAmount: 50,
                 dateTime: "2024-06-15T15:30:00Z",
@@ -1413,8 +1420,8 @@
             },
             {
                 gameId: "SG98009",
-                userId: "user_789",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 60,
                 winAmount: 120,
                 dateTime: "2024-06-15T16:00:00Z",
@@ -1422,8 +1429,8 @@
             },
             {
                 gameId: "SG98010",
-                userId: "user_321",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 80,
                 winAmount: 160,
                 dateTime: "2024-06-15T16:30:00Z",
@@ -1441,9 +1448,10 @@
               scope="row"
               class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
             >
-             ${game.userId}
+             ${game.gameId}
             </th>
-            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.gameId}</td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.userId}</td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winner}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
@@ -1459,8 +1467,8 @@
         const ludoGames = [
             {
                 gameId: "game_001",
-                userId: "user_123",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T12:00:00Z",
@@ -1468,8 +1476,8 @@
             },
             {
                 gameId: "game_002",
-                userId: "user_456",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 75,
                 winAmount: 150,
                 dateTime: "2024-06-15T12:30:00Z",
@@ -1477,8 +1485,8 @@
             },
             {
                 gameId: "game_003",
-                userId: "user_789",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 100,
                 winAmount: 200,
                 dateTime: "2024-06-15T13:00:00Z",
@@ -1486,8 +1494,8 @@
             },
             {
                 gameId: "game_004",
-                userId: "user_321",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 20,
                 winAmount: 40,
                 dateTime: "2024-06-15T13:30:00Z",
@@ -1495,8 +1503,8 @@
             },
             {
                 gameId: "game_005",
-                userId: "user_654",
-                winner: "user_321",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG311020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T14:00:00Z",
@@ -1504,8 +1512,8 @@
             },
             {
                 gameId: "game_006",
-                userId: "user_987",
-                winner: "user_654",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG611020",
                 betAmount: 30,
                 winAmount: 60,
                 dateTime: "2024-06-15T14:30:00Z",
@@ -1513,8 +1521,8 @@
             },
             {
                 gameId: "game_007",
-                userId: "user_123",
-                winner: "user_987",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG911020",
                 betAmount: 40,
                 winAmount: 80,
                 dateTime: "2024-06-15T15:00:00Z",
@@ -1522,8 +1530,8 @@
             },
             {
                 gameId: "game_008",
-                userId: "user_456",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 25,
                 winAmount: 50,
                 dateTime: "2024-06-15T15:30:00Z",
@@ -1531,8 +1539,8 @@
             },
             {
                 gameId: "game_009",
-                userId: "user_789",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 60,
                 winAmount: 120,
                 dateTime: "2024-06-15T16:00:00Z",
@@ -1540,8 +1548,8 @@
             },
             {
                 gameId: "game_010",
-                userId: "user_321",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 80,
                 winAmount: 160,
                 dateTime: "2024-06-15T16:30:00Z",
@@ -1579,8 +1587,8 @@
         const soccerGames = [
             {
                 gameId: "SG98001",
-                userId: "user_123",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T12:00:00Z",
@@ -1588,8 +1596,8 @@
             },
             {
                 gameId: "SG98002",
-                userId: "user_456",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 75,
                 winAmount: 150,
                 dateTime: "2024-06-15T12:30:00Z",
@@ -1597,8 +1605,8 @@
             },
             {
                 gameId: "SG98003",
-                userId: "user_789",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 100,
                 winAmount: 200,
                 dateTime: "2024-06-15T13:00:00Z",
@@ -1606,8 +1614,8 @@
             },
             {
                 gameId: "SG98004",
-                userId: "user_321",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 20,
                 winAmount: 40,
                 dateTime: "2024-06-15T13:30:00Z",
@@ -1615,8 +1623,8 @@
             },
             {
                 gameId: "SG98005",
-                userId: "user_654",
-                winner: "user_321",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG311020",
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T14:00:00Z",
@@ -1624,8 +1632,8 @@
             },
             {
                 gameId: "SG98006",
-                userId: "user_987",
-                winner: "user_654",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG611020",
                 betAmount: 30,
                 winAmount: 60,
                 dateTime: "2024-06-15T14:30:00Z",
@@ -1633,8 +1641,8 @@
             },
             {
                 gameId: "SG98007",
-                userId: "user_123",
-                winner: "user_987",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG911020",
                 betAmount: 40,
                 winAmount: 80,
                 dateTime: "2024-06-15T15:00:00Z",
@@ -1642,8 +1650,8 @@
             },
             {
                 gameId: "SG98008",
-                userId: "user_456",
-                winner: "user_123",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG111020",
                 betAmount: 25,
                 winAmount: 50,
                 dateTime: "2024-06-15T15:30:00Z",
@@ -1651,8 +1659,8 @@
             },
             {
                 gameId: "SG98009",
-                userId: "user_789",
-                winner: "user_456",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG411020",
                 betAmount: 60,
                 winAmount: 120,
                 dateTime: "2024-06-15T16:00:00Z",
@@ -1660,8 +1668,8 @@
             },
             {
                 gameId: "SG98010",
-                userId: "user_321, user_123, user_321",
-                winner: "user_789",
+                userId: ["PG111001", "PG11002", "PG1105", "PG20203"],
+                winner: "PG711020",
                 betAmount: 80,
                 winAmount: 160,
                 dateTime: "2024-06-15T16:30:00Z",
@@ -1687,8 +1695,8 @@
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
-            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="text-sm me-2 px-2.5 py-0.5 rounded ${getStatusClass(game.status)}">${game.status}</span>
-          </td
+            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
+            </td>
           </tr>
   
         `
