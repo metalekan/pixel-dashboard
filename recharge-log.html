@@ -662,20 +662,18 @@
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-dark300 dark:text-gray-400 p-2">
                 <tr>
+                  <th scope="col" class="px-6 py-3 text-primary">ID</th>
                   <th scope="col" class="px-6 py-3 text-primary">Amount</th>
-                  <th scope="col" class="px-6 py-3 text-primary">Staus</th>
+                  <th scope="col" class="px-6 py-3 text-primary">Status</th>
                   <th scope="col" class="px-6 py-3 text-primary">
                     Date & Time
                   </th>
                   <th scope="col" class="px-6 py-3 text-primary">
                     Channel
                   </th>
-                  <th scope="col" class="px-6 py-3 text-primary">ID</th>
-                  <th scope="col" class="px-6 py-3 text-primary">
-                    Transaction ID
-                  </th>
-                  <th scope="col" class="px-6 py-3 text-primary">
-                    Check
+                  <th scope="col" class="px-6 py-3 text-primary">Transaction ID</th>
+                  <th scope="col" class="px-6 py-3 text-primary truncate">
+                    Generate receipt
                   </th>
                 </tr>
               </thead>
@@ -803,7 +801,18 @@
         receipt: "pending",
       },
     ];
-
+    const getStatusClass = (status) => {
+      switch (status) {
+        case 'success':
+          return 'bg-green-100 text-green-80 dark:bg-green-900 dark:text-green-300';
+        case 'pending':
+          return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300';
+        case 'failed':
+          return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+        default:
+          return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+      }
+    }
     const tableRecharge = document.getElementById("tbodyRecharge");
     const tableRechargeHTML = rechargeLog
       .map(
@@ -815,15 +824,18 @@
             scope="row"
             class="font-normal px-6 py-4 text-gray-900 dark:text-white text-gray-900 whitespace-nowrap dark:text-white"
           >
-           ${log.amount}
+           ${log.id}
           </th>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.status}</td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-red-100 text-red-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">${log.channel} </span>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.amount}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="text-sm me-2 px-2.5 py-0.5 rounded ${getStatusClass(log.status)}">${log.status}</span>
           </td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.id}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.channel}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.txID}</td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.receipt}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+            <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Check</button>
+          </td>
         </tr>
 
       `

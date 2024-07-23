@@ -670,9 +670,9 @@
                     <th scope="col" class="px-6 py-3 text-primary">
                       Channel
                     </th>
-                    <th scope="col" class="px-6 py-3 text-primary">ID</th>
+                    <th scope="col" class="px-6 py-3 text-primary">Transaction ID</th>
                     <th scope="col" class="px-6 py-3 text-primary truncate">
-                      Transaction ID
+                      Generate Receipt
                     </th>
                   </tr>
                 </thead>
@@ -835,7 +835,10 @@
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.channel}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.txID}</td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">${log.receipt}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+            <button type="button"
+                        class="text-gray-600 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 me-2">Check</button>
+          </td>
         </tr>
 
       `
