@@ -1208,6 +1208,7 @@
     </main>
     <script src="/js/app.js"></script>
     <script>
+
         const fishGames = [
             {
                 gameId: "SG98001",
@@ -1216,7 +1217,7 @@
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T12:00:00Z",
-                remark: "Payment processed",
+                status: "paid",
             },
             {
                 gameId: "SG98002",
@@ -1225,7 +1226,7 @@
                 betAmount: 75,
                 winAmount: 150,
                 dateTime: "2024-06-15T12:30:00Z",
-                remark: "Bet settled",
+                status: "unpaid",
             },
             {
                 gameId: "SG98003",
@@ -1234,7 +1235,7 @@
                 betAmount: 100,
                 winAmount: 200,
                 dateTime: "2024-06-15T13:00:00Z",
-                remark: "Winner paid",
+                status: "paid",
             },
             {
                 gameId: "SG98004",
@@ -1243,7 +1244,7 @@
                 betAmount: 20,
                 winAmount: 40,
                 dateTime: "2024-06-15T13:30:00Z",
-                remark: "Funds transferred",
+                status: "unpaid",
             },
             {
                 gameId: "SG98005",
@@ -1252,7 +1253,7 @@
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T14:00:00Z",
-                remark: "Bet cleared",
+                status: "paid",
             },
             {
                 gameId: "SG98006",
@@ -1261,7 +1262,7 @@
                 betAmount: 30,
                 winAmount: 60,
                 dateTime: "2024-06-15T14:30:00Z",
-                remark: "Winnings paid",
+                status: "paid",
             },
             {
                 gameId: "SG98007",
@@ -1270,7 +1271,7 @@
                 betAmount: 40,
                 winAmount: 80,
                 dateTime: "2024-06-15T15:00:00Z",
-                remark: "Payment complete",
+                status: "paid",
             },
             {
                 gameId: "SG98008",
@@ -1279,7 +1280,7 @@
                 betAmount: 25,
                 winAmount: 50,
                 dateTime: "2024-06-15T15:30:00Z",
-                remark: "Bet paid",
+                status: "unpaid",
             },
             {
                 gameId: "SG98009",
@@ -1288,7 +1289,7 @@
                 betAmount: 60,
                 winAmount: 120,
                 dateTime: "2024-06-15T16:00:00Z",
-                remark: "Funds settled",
+                status: "paid",
             },
             {
                 gameId: "SG98010",
@@ -1297,10 +1298,19 @@
                 betAmount: 80,
                 winAmount: 160,
                 dateTime: "2024-06-15T16:30:00Z",
-                remark: "Payment processed",
+                status: "paid",
             },
         ];
-
+        const getStatusClass = (status) => {
+            switch (status) {
+                case 'paid':
+                    return 'bg-green-100 text-green-80 dark:bg-green-900 dark:text-green-300';
+                case 'unpaid':
+                    return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+                default:
+                    return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+            }
+        }
 
         const tableFish = document.getElementById("tbodyFish");
         const tableFishHTML = fishGames
@@ -1319,7 +1329,8 @@
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
-            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.remark}</td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="text-sm me-2 px-2.5 py-0.5 rounded ${getStatusClass(game.status)}">${game.status}</span>
+            </td
           </tr>
   
         `
@@ -1335,7 +1346,7 @@
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T12:00:00Z",
-                remark: "Payment processed",
+                status: "paid",
             },
             {
                 gameId: "SG98002",
@@ -1344,7 +1355,7 @@
                 betAmount: 75,
                 winAmount: 150,
                 dateTime: "2024-06-15T12:30:00Z",
-                remark: "Bet settled",
+                status: "unpaid",
             },
             {
                 gameId: "SG98003",
@@ -1353,7 +1364,7 @@
                 betAmount: 100,
                 winAmount: 200,
                 dateTime: "2024-06-15T13:00:00Z",
-                remark: "Winner paid",
+                status: "paid",
             },
             {
                 gameId: "SG98004",
@@ -1362,7 +1373,7 @@
                 betAmount: 20,
                 winAmount: 40,
                 dateTime: "2024-06-15T13:30:00Z",
-                remark: "Funds transferred",
+                status: "unpaid",
             },
             {
                 gameId: "SG98005",
@@ -1371,7 +1382,7 @@
                 betAmount: 50,
                 winAmount: 100,
                 dateTime: "2024-06-15T14:00:00Z",
-                remark: "Bet cleared",
+                status: "paid",
             },
             {
                 gameId: "SG98006",
@@ -1380,7 +1391,7 @@
                 betAmount: 30,
                 winAmount: 60,
                 dateTime: "2024-06-15T14:30:00Z",
-                remark: "Winnings paid",
+                status: "paid",
             },
             {
                 gameId: "SG98007",
@@ -1389,7 +1400,7 @@
                 betAmount: 40,
                 winAmount: 80,
                 dateTime: "2024-06-15T15:00:00Z",
-                remark: "Payment complete",
+                status: "paid",
             },
             {
                 gameId: "SG98008",
@@ -1398,7 +1409,7 @@
                 betAmount: 25,
                 winAmount: 50,
                 dateTime: "2024-06-15T15:30:00Z",
-                remark: "Bet paid",
+                status: "unpaid",
             },
             {
                 gameId: "SG98009",
@@ -1407,7 +1418,7 @@
                 betAmount: 60,
                 winAmount: 120,
                 dateTime: "2024-06-15T16:00:00Z",
-                remark: "Funds settled",
+                status: "paid",
             },
             {
                 gameId: "SG98010",
@@ -1416,7 +1427,7 @@
                 betAmount: 80,
                 winAmount: 160,
                 dateTime: "2024-06-15T16:30:00Z",
-                remark: "Payment processed",
+                status: "paid",
             },
         ];
         const tableSpin = document.getElementById("tbodySpin");
@@ -1436,7 +1447,8 @@
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
-            <td class="px-6 py-4 text-gray-900 dark:text-white">${game.remark}</td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="text-sm me-2 px-2.5 py-0.5 rounded ${getStatusClass(game.status)}">${game.status}</span>
+          </td
           </tr>
   
         `
@@ -1555,8 +1567,8 @@
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
-            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
-            </td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="text-sm me-2 px-2.5 py-0.5 rounded ${getStatusClass(game.status)}">${game.status}</span>
+          </td
           </tr>
   
         `
@@ -1675,8 +1687,8 @@
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.betAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.winAmount}</td>
             <td class="px-6 py-4 text-gray-900 dark:text-white">${game.dateTime}</td>
-            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="bg-green-100 text-green-800 text-sm me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">${game.status}</span>
-            </td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white"><span class="text-sm me-2 px-2.5 py-0.5 rounded ${getStatusClass(game.status)}">${game.status}</span>
+          </td
           </tr>
   
         `
