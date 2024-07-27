@@ -65,24 +65,9 @@
             <img src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1717864716/pnl-logo_at49qu.png"
               class="mr-3 h-8 lg:h-10" alt="loading" />
             <span class="-ms-2 self-center text-2xl font-medium whitespace-nowrap text-primary">PNL</span>
-            <form action="#" method="GET" class="hidden md:block md:pl-2">
-              <label for="topbar-search" class="sr-only">Search</label>
-              <div class="relative md:w-64 md:w-96">
-                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
-                    </path>
-                  </svg>
-                </div>
-                <input type="text" name="email" id="topbar-search"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary truncate focus:border-primary block w-full pl-10 p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
-                  placeholder="Search" />
-              </div>
-            </form>
           </div>
           <div class="flex items-center lg:order-2">
+            <!-- theme toggle -->
             <button id="theme-toggle" type="button"
               class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
               <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -96,6 +81,26 @@
                   fill-rule="evenodd" clip-rule="evenodd"></path>
               </svg>
             </button>
+
+            <!-- Desktop search -->
+            <form action="#" method="GET" class="hidden md:block">
+              <div
+                class="p-4 overflow-hidden w-[40px] h-[40px] hover:w-[270px] hover:cursor-pointer rounded-full flex group justify-start items-center hover:duration-300 duration-300">
+                <div class="flex items-center justify-center">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-500 me-2" fill="currentColor" id="Isolation_Mode"
+                    data-name="Isolation Mode" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path clip-rule="evenodd" fill-rule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
+                    </path>
+                  </svg>
+                </div>
+                <input type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary truncate focus:border-primary block w-full pl-2 p-2 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary" />
+              </div>
+
+            </form>
+            <!-- Mobile dearch -->
             <button type="button" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation"
               class="p-2 mr-1 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
               <span class="sr-only">Toggle search</span>
@@ -122,7 +127,7 @@
 
             <!-- Dropdown menu -->
             <div
-              class="hidden overflow-hidden my-4 max-w-80 lg:max-w-sm w-full w-full text-base list-none rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 rounded-xl flex flex-col"
+              class="hidden overflow-hidden my-4 max-w-80 lg:max-w-sm w-full w-full text-base list-none rounded divide-y divide-gray-100 -lg dark:divide-gray-600 rounded-xl flex flex-col"
               id="settings-dropdown">
               <div
                 class="block py-2 px-4 text-base font-medium text-gray-700 bg-white dark:bg-dark200 dark:text-gray-300">
@@ -164,7 +169,7 @@
             </button>
             <!-- Dropdown menu -->
             <div
-              class="hidden overflow-hidden my-4 max-w-80 lg:max-w-sm w-full text-base list-none rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-dark300 rounded-xl flex flex-col"
+              class="hidden overflow-hidden my-4 max-w-80 lg:max-w-sm w-full text-base list-none rounded divide-y divide-gray-100 -lg dark:divide-gray-600 dark:bg-dark300 rounded-xl flex flex-col"
               id="notification-dropdown">
               <div
                 class="block py-2 px-4 text-base font-medium text-gray-700 bg-white dark:bg-dark200 dark:text-gray-300">
@@ -296,7 +301,7 @@
             </button>
             <!-- Dropdown menu -->
             <div
-              class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-dark300 dark:divide-gray-600 rounded-xl"
+              class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100  dark:bg-dark300 dark:divide-gray-600 rounded-xl"
               id="dropdown">
               <div class="py-3 px-4">
                 <span class="block text-sm font-semibold text-gray-900 dark:text-white">John Doe</span>
@@ -512,11 +517,6 @@
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Inbox</a>
                   </li>
                   <li>
-                    <a href="/"
-                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Live
-                      Chat</a>
-                  </li>
-                  <li>
                     <a href="/email.html"
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Email</a>
                   </li>
@@ -614,7 +614,7 @@
       </aside>
 
       <!-- Dashboard -->
-      <main class="p-4 md:ml-64 min-h-screen pt-20">
+      <section class="p-4 md:ml-64 min-h-screen pt-20">
         <div class="pb-2">
           <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-5">
             Welcome back, John!
@@ -625,10 +625,10 @@
         </div>
 
         <div class="mt-5 lg:mt-4 flex flex-col lg:items-start lg:flex-row gap-4">
-          <div class="lg:basis-1/7 flex flex-col jjustify-between">
+          <div class="lg:basis-1/7">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-              <div class="flex flex-col bg-white dark:bg-dark200 p-4 shadow-lg rounded-lg max-h-80 h-full">
-                <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-4">
+              <div class="flex flex-col bg-white dark:bg-dark200 p-4 -lg rounded-lg max-h-80 h-full">
+                <h3 class="leading-none text-sm lg:text-base font-semibold text-gray-900 dark:text-white pb-4">
                   Total Recharge
                 </h3>
                 <div
@@ -647,8 +647,8 @@
                 </div>
               </div>
 
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 relative max-h-80">
-                <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
+              <div class="w-full bg-white rounded-lg  dark:bg-dark200 p-4 md:p-6 relative max-h-80">
+                <h3 class="leading-none text-sm lg:text-base font-semibold text-gray-900 dark:text-white pb-2">
                   Total Registered
                 </h3>
                 <div id="area-chart-totalRegistered"></div>
@@ -662,9 +662,10 @@
                   </svg>
                 </div>
               </div>
-              <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 max-h-80 relative">
-                <h3 class="leading-none text-base font-semibold text-gray-900 dark:text-white pb-2">
-                  Total Projects
+
+              <div class="w-full bg-white rounded-lg  dark:bg-dark200 p-4 md:p-6 max-h-80 relative">
+                <h3 class="leading-none text-sm lg:text-base font-semibold text-gray-900 dark:text-white pb-2">
+                  Total Games Played
                 </h3>
                 <div id="area-chart-totalProjects"></div>
                 <div
@@ -678,75 +679,87 @@
                 </div>
               </div>
 
-              <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 h-60">
-                <div class="basis-1/3 flex flex-col gap-3">
-                  <p class="text-sm font-medium text-gray-900 dark:text-white">
-                    Users
-                  </p>
-                  <h5 class="leading-none text-3xl font-semibold text-gray-900 dark:text-white pb-2">
-                    3,000
-                  </h5>
-                  <div class="flex items-center text-base font-semibold text-green-500 dark:text-green-500 text-center">
-                    12%
-                    <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                      viewBox="0 0 10 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 13V1m0 0L1 5m4-4 4 4" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="basis-1/7 w-full" id="area-chart-users"></div>
-              </div>
-              <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 h-60">
-                <div class="basis-1/3 flex justify-between">
-                  <div class="flex flex-col gap-3">
-                    <p class="text-sm font-medium text-gray-900 dark:text-white">
-                      Active Users
-                    </p>
-                    <h5 class="leading-none text-3xl font-semibold text-gray-900 dark:text-white pb-2">
-                      30
-                    </h5>
-                    <div
-                      class="flex items-center text-base font-semibold text-green-500 dark:text-green-500 text-center">
-                      10%
-                      <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 10 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M5 13V1m0 0L1 5m4-4 4 4" />
-                      </svg>
+              <div class="w-full bg-white rounded-lg  dark:bg-dark200 p-4 md:p-6 h-60">
+                <p class="text-sm lg:text-base font-semibold text-gray-900 dark:text-white mb-3">
+                  Users
+                </p>
+                <div class="flex items-center max-w-sm">
+                  <div class="basis-1/3 flex justify-between">
+                    <div class="space-y-3">
+                      <span
+                        class="leading-none text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white pb-2 truncate">
+                        3,000
+                      </span>
+                      <div
+                        class="flex items-center text-base font-semibold text-green-500 dark:text-green-500 text-center">
+                        10%
+                        <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                          viewBox="0 0 10 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13V1m0 0L1 5m4-4 4 4" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
+                  <div class="basis-1/7 ms-3 w-full max-w-sm" id="area-chart-users"></div>
                 </div>
-                <div class="basis-1/7 w-full" id="area-chart-activeUsers"></div>
               </div>
-              <div
-                class="w-full bg-white rounded-lg shadow dark:bg-dark200 p-4 md:p-6 flex items-center gap-2 lg:gap-6 h-60">
-                <div class="basis-1/3 flex justify-between">
-                  <div class="flex flex-col gap-3">
-                    <p class="text-sm font-medium text-gray-900 dark:text-white">
-                      Offline Users
-                    </p>
-                    <h5 class="leading-none text-3xl font-semibold text-gray-900 dark:text-white pb-2">
-                      25
-                    </h5>
-                    <div class="flex items-center text-base font-semibold text-red-500 dark:text-red-500 text-center">
-                      10%
-                      <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 10 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M5 13V1m0 0L1 5m4-4 4 4" />
-                      </svg>
+              <div class="w-full bg-white rounded-lg  dark:bg-dark200 p-4 md:p-6 h-60">
+                <p class="text-sm lg:text-base font-semibold text-gray-900 dark:text-white mb-3">
+                  Active Users
+                </p>
+                <div class="flex items-center">
+                  <div class="basis-1/3 flex justify-between">
+                    <div class="space-y-3">
+                      <h5
+                        class="leading-none text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white pb-2 truncate">
+                        30
+                      </h5>
+                      <div
+                        class="flex items-center text-base font-semibold text-green-500 dark:text-green-500 text-center">
+                        10%
+                        <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                          viewBox="0 0 10 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13V1m0 0L1 5m4-4 4 4" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
+                  <div class="basis-1/7 w-full" id="area-chart-activeUsers"></div>
                 </div>
-                <div class="basis-1/7 w-full" id="area-chart-offlineUsers"></div>
+              </div>
+
+              <div class="w-full bg-white rounded-lg  dark:bg-dark200 p-4 md:p-6 h-60">
+                <p class="text-sm lg:text-base font-semibold text-gray-900 dark:text-white mb-3">
+                  Offline Users
+                </p>
+
+                <div class="flex items-center">
+                  <div class="basis-1/3 flex justify-between">
+                    <div class="space-y-3">
+                      <h5
+                        class="leading-none text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white pb-2 truncate">
+                        25
+                      </h5>
+                      <div class="flex items-center text-base font-semibold text-red-500 dark:text-red-500 text-center">
+                        10%
+                        <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                          viewBox="0 0 10 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13V1m0 0L1 5m4-4 4 4" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="basis-1/7 w-full" id="area-chart-offlineUsers"></div>
+
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="lg:basis-1/3 relative overflow-y-auto shadow rounded-lg">
+          <div class="lg:basis-1/3 relative overflow-y-auto  rounded-lg h-[35rem]">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-white dark:bg-dark300 dark:text-gray-400">
                 <tr>
@@ -757,7 +770,7 @@
               <tbody>
                 <tr
                   class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
-                  <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                  <th scope="row" class="flex items-center px-6 py-3 text-gray-900 whitespace-nowrap dark:text-white">
                     <img class="w-10 h-10 rounded-full object-cover object-center"
                       src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                       alt="loading" />
@@ -775,7 +788,7 @@
                 <tr
                   class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
                   <th scope="row"
-                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    class="flex items-center px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <img class="w-10 h-10 rounded-full object-cover object-center"
                       src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                       alt="loading" />
@@ -793,7 +806,7 @@
                 <tr
                   class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
                   <th scope="row"
-                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    class="flex items-center px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <img class="w-10 h-10 rounded-full object-cover object-center"
                       src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                       alt="loading" />
@@ -811,7 +824,7 @@
                 <tr
                   class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
                   <th scope="row"
-                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    class="flex items-center px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <img class="w-10 h-10 rounded-full object-cover object-center"
                       src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                       alt="loading" />
@@ -826,34 +839,51 @@
                     </div>
                   </td>
                 </tr>
-                <tr class="bg-white dark:bg-dark200 hover:bg-gray-50 dark:hover:bg-dark500">
+                <tr
+                  class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
                   <th scope="row"
-                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    class="flex items-center px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <img class="w-10 h-10 rounded-full object-cover object-center"
                       src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                       alt="loading" />
                     <div class="ps-3">
-                      <div class="text-sm font-medium">
-                        Leslie Livingston
-                      </div>
+                      <div class="text-sm font-medium">Jese Leos</div>
                     </div>
                   </th>
                   <td class="px-6 py-2">
                     <div class="flex items-center">
-                      <div class="h-2.5 w-2.5 rounded-full bg-rose-800 me-2"></div>
-                      Offline
+                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                      Online
                     </div>
                   </td>
                 </tr>
                 <tr
                   class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
                   <th scope="row"
-                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    class="flex items-center px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <img class="w-10 h-10 rounded-full object-cover object-center"
                       src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                       alt="loading" />
                     <div class="ps-3">
-                      <div class="text-sm font-medium">Bonnie Green</div>
+                      <div class="text-sm font-medium">Jese Leos</div>
+                    </div>
+                  </th>
+                  <td class="px-6 py-2">
+                    <div class="flex items-center">
+                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                      Online
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
+                  <th scope="row"
+                    class="flex items-center px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full object-cover object-center"
+                      src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
+                      alt="loading" />
+                    <div class="ps-3">
+                      <div class="text-sm font-medium">Jese Leos</div>
                     </div>
                   </th>
                   <td class="px-6 py-2">
@@ -866,7 +896,7 @@
               </tbody>
             </table>
 
-            <div class="flex items-center justify-between max-w-sm mx-auto my-4 px-4">
+            <div class="flex items-center justify-between py-4 px-4 bg-transparent">
               <button type="button"
                 class="text-white bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-primary dark:hover:bg-primary dark:focus:ring-primary">
                 <svg class="w-4 h-4 font-bold" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -897,7 +927,7 @@
           </div>
         </div>
 
-        <div class="w-full bg-white rounded-lg shadow dark:bg-dark200 mt-4">
+        <div class="w-full bg-white rounded-lg  dark:bg-dark200 mt-4">
           <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
             <div>
               <h5 class="leading-none text-lg lg:text-xl font-semibold text-gray-900 dark:text-white pb-2">
@@ -911,7 +941,7 @@
           </div>
           <div id="labels-chart-dashboard" class="px-2.5"></div>
         </div>
-      </main>
+      </section>
 
   </main>
   <script src="/js/app.js"></script>

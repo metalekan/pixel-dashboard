@@ -606,7 +606,7 @@
       </aside>
 
       <!-- Unregistered Numbers Page -->
-      <main class="p-4 md:ml-64 h-auto pt-20">
+      <section class="p-4 md:ml-64 h-auto pt-20">
         <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
           <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
             Unregistered Numbers
@@ -648,6 +648,9 @@
                     <th scope="col" class="px-6 py-3 text-primary">
                       Fail Count
                     </th>
+                    <th scope="col" class="px-6 py-3 text-primary">
+                      Action
+                    </th>
                   </tr>
                 </thead>
                 <tbody id="tbodyUnReg"></tbody>
@@ -677,7 +680,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
     </div>
   </main>
@@ -811,6 +814,10 @@
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.date}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
           <td class="px-6 py-4 text-gray-900 dark:text-white">${log.otp}</td>
+          <td class="px-6 py-4 text-gray-900 dark:text-white">
+            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800 me-2">Delete</button>
+          </td>
         </tr>
 
       `
