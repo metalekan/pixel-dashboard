@@ -654,105 +654,6 @@ const optionsOverall = {
   },
 };
 
-const optionsOverallAnalytics = {
-  // set the labels option to true to show the labels on the X and Y axis
-  xaxis: {
-    show: true,
-    categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    labels: {
-      show: true,
-      style: {
-        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
-      },
-    },
-    axisBorder: {
-      show: false,
-    },
-    axisTicks: {
-      show: false,
-    },
-  },
-  yaxis: {
-    show: true,
-    labels: {
-      show: true,
-      style: {
-        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
-      },
-      formatter: function (value) {
-        return value;
-      },
-    },
-  },
-  series: [
-    {
-      name: "Active Users",
-      data: [250, 100, 250, 400, 250, 300, 370, 340, 400, 420, 450, 460],
-      color: "#d8b4fe",
-    },
-  ],
-  chart: {
-    sparkline: {
-      enabled: false,
-    },
-    height: "400px",
-    width: "100%",
-    type: "area",
-    dropShadow: {
-      enabled: false,
-    },
-    toolbar: {
-      show: false,
-    },
-  },
-  tooltip: {
-    enabled: false,
-    x: {
-      show: false,
-    },
-  },
-  fill: {
-    type: "gradient",
-    gradient: {
-      opacityFrom: 0.55,
-      opacityTo: 0,
-      shade: "#d8b4fe",
-      gradientToColors: ["#d8b4fe"],
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    width: 2,
-  },
-  legend: {
-    show: false,
-  },
-  grid: {
-    show: true,
-    strokeDashArray: 1,
-    padding: {
-      left: 2,
-      right: 2,
-      top: -46,
-    },
-  },
-};
-
 // Analytics
 if (
   document.getElementById("area-chart-ludo-game") &&
@@ -1178,17 +1079,6 @@ if (
   const chart = new ApexCharts(
     document.getElementById("labels-chart-dashboard"),
     optionsOverall
-  );
-  chart.render();
-}
-
-if (
-  document.getElementById("labels-chart-analytics") &&
-  typeof ApexCharts !== "undefined"
-) {
-  const chart = new ApexCharts(
-    document.getElementById("labels-chart-analytics"),
-    optionsOverallAnalytics
   );
   chart.render();
 }
