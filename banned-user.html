@@ -433,13 +433,6 @@
                   </li>
 
                   <li>
-                    <a href="/game-record.html"
-                      class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Game
-                      Log
-                    </a>
-                  </li>
-
-                  <li>
                     <a href="/phone-otp.html"
                       class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-primary dark:text-white hover:text-white">Phone
                       OTP
@@ -618,7 +611,7 @@
       <section class="p-4 md:ml-64 min-h-screen pt-20">
         <div class="flex flex-col bg-gray-50 dark:bg-dark100 rounded-lg min-h-screen">
           <h1 class="text-xl lg:text-3xl font-medium text-primary tracking-tight mb-10">
-            User Info
+            User Details
           </h1>
           <form class="max-w-lg">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
@@ -652,7 +645,7 @@
               </thead>
               <tbody>
                 <tr
-                  class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500">
+                  class="bg-white border-b dark:bg-dark200 dark:border-dark100 hover:bg-gray-50 dark:hover:bg-dark500 text-xs lg:text-sm">
                   <th scope="row" class="px-6 py-4">
                     <div class="flex items-start gap-2">
                       <div class="flex flex-col gap-1 items-start justify-center">
@@ -660,7 +653,7 @@
                           src="https://res.cloudinary.com/dyvmtgjer/image/upload/v1715243152/image1_r7ytfh.png"
                           alt="loading" />
                         <span
-                          class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Banned</span>
+                          class="bg-red-100 text-red-800 text-xs lg:text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Banned</span>
                       </div>
                       <div class="ps-3 flex flex-col gap-2">
                         <p class="text-gray-500 dark:text-gray-400 font-normal">
@@ -693,11 +686,11 @@
                     <div class="flex flex-col gap-1">
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Registration Time:</span>
-                        2/28/2024, 12:!2pm
+                        2/28/2024, 12:12pm
                       </p>
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Last Login Time:</span>
-                        2/28/2024, 12:!2pm
+                        2/28/2024, 12:12pm
                       </p>
                     </div>
                   </td>
@@ -708,41 +701,48 @@
                       </p>
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">Dev Model:</span>
-                        102.87.33.177
+                        Galaxy Note 10
                       </p>
                       <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-semibold">System Version:</span>
-                        102.87.33.177
+                        Android 14
                       </p>
                     </div>
                   </td>
-                  <td class="px-6 py-2">
+                  <td class="px-6 py-2 max-w-sm">
                     <!-- Modal toggle -->
-                    <div class="flex items-center flex-wrap gap-3 lg:gap-6">
-                      <a href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-purple-500">Details</a><a
-                        href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-purple-500">Gamelog</a><a
-                        href="#" type="button" data-modal-target="banUser-modal" data-modal-show="banUser-modal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800">Ban
-                        User</a><a href="#" type="button" data-modal-target="deleteUser-modal"
-                        data-modal-show="deleteUser-modal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800">Delete
-                        Account</a>
-                      <a href="#" type="button" data-modal-target="deduct-modal" data-modal-show="deduct-modal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-rose-800">Deduct
-                        Cash</a><a href="#" type="button" data-modal-target="editUserModal"
-                        data-modal-show="editUserModal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-primary">Recharge
-                        Log</a><a href="#" type="button" data-modal-target="editCashModal"
-                        data-modal-show="editCashModal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-green-500">Add
-                        Cash</a><a href="#" type="button" data-modal-target="deleteAmount-modal"
-                        data-modal-show="deleteAmount-modal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-green-500">Withdrawal
-                        Log</a><a href="#" type="button" data-modal-target="editUserModal"
-                        data-modal-show="editUserModal"
-                        class="w-fit truncate text-white font-bold shadow hover:scale-[1.2] rounded-full px-5 py-2 bg-green-500">Add
+                    <div class="flex items-center flex-wrap gap-1 lg:gap-2">
+                      <a href="#" type="button" data-modal-target="detailsModal" data-modal-show="detailsModal"
+                        class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-purple-500">Details</a>
+
+                      <a href="/game-record.html"
+                        class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-purple-500">Gamelog</a>
+
+                      <a href="#" type="button" data-modal-target="banUserModal" data-modal-show="banUserModal" class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-rose-800">Ban
+                        User</a>
+                      <a href="#" type="button" data-modal-target="deductCoinModal" data-modal-show="deductCoinModal"
+                        class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-rose-800">Deduct
+                        Coin</a>
+                      <a href="#" type="button" data-modal-target="deductCashModal" data-modal-show="deductCashModal"
+                        class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-rose-800">Deduct
+                        Cash</a>
+                      <a href="/recharge-log.html" class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-blue-500">Recharge
+                        Log</a>
+
+                      <a href="#" type="button" data-modal-target="addCashModal" data-modal-show="addCashModal" class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-green-500">Add
+                        Cash</a>
+
+                      <a href="/withdrawal-log.html" class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-green-500">Withdrawal
+                        Log</a>
+
+                      <a href="#" type="button" data-modal-target="addCoinModal" data-modal-show="addCoinModal" class="w-fit truncate text-white font-medium lg:font-bold text-xs lg:text-sm
+font-medium lg:font-bold text-xs lg:text-sm shadow hover:scale-[1.1] rounded-full px-5 py-2 bg-green-500">Add
                         Coin</a>
                     </div>
                   </td>
@@ -750,8 +750,74 @@
               </tbody>
             </table>
 
-            <!-- Edit user modal -->
-            <div id="editCashModal" tabindex="-1" aria-hidden="true"
+            <!-- Details modal -->
+
+            <div id="detailsModal" tabindex="-1"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+              <div class="relative p-4 w-full max-w-md max-h-full">
+                <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
+                  <button type="button"
+                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
+                    data-modal-hide="detailsModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                  <div class="p-4 md:p-5">
+                    <h3 class="mb-3 text-lg font-semibold text-primary">
+                      Details
+                    </h3>
+                    <div class="flex flex-col gap-1">
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Total Number of Top-up:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">20</span>
+                      </div>
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Amount of Top-up:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">230, 500</span>
+                      </div>
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Total Number of Withdraw:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">20</span>
+                      </div>
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Amount of Withdraw:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">20</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Total Number of Winnings:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">20</span>
+                      </div>
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Total Number of Losses:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">20</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Most Game Played:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">Ludo</span>
+                      </div>
+
+                      <div class="flex items-center justify-between text-gray-900 dark:text-white text-sm">
+                        <span class="font-medium text-gray-900 dark:text-white">Last Game Played:</span>
+                        <span class="font-semibold text-gray-900 dark:text-white">Ludo</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Cash modal -->
+            <div id="addCashModal" tabindex="-1" aria-hidden="true"
               class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
               <div class="relative w-full max-w-sm">
                 <!-- Modal content -->
@@ -760,7 +826,7 @@
                   <div class="flex items-start justify-end p-4 border-b rounded-t dark:border-gray-600">
                     <button type="button"
                       class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                      data-modal-hide="editCashModal">
+                      data-modal-hide="addCashModal">
                       <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -802,15 +868,67 @@
               </div>
             </div>
 
+            <!-- Add Coin modal -->
+            <div id="addCoinModal" tabindex="-1" aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+              <div class="relative w-full max-w-sm">
+                <!-- Modal content -->
+                <form class="relative bg-white rounded-lg shadow dark:bg-dark300">
+                  <!-- Modal header -->
+                  <div class="flex items-start justify-end p-4 border-b rounded-t dark:border-gray-600">
+                    <button type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
+                      data-modal-hide="addCoinModal">
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                      <div class="col-span-2">
+                        <label for="user-id"
+                          class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Enter User
+                          ID</label>
+                        <input type="text" name="first-name" id="first-name"
+                          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                          placeholder="PG1100011" required="" />
+                      </div>
+                      <div class="col-span-2">
+                        <label for="last-name"
+                          class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Amount</label>
+                        <input type="text" name="last-name" id="last-name"
+                          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                          placeholder="5,000" required="" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal footer -->
+                  <div
+                    class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button type="submit"
+                      class="text-white bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary dark:focus:ring-primary w-full">
+                      Add Coin
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
             <!-- Delete user modal -->
 
-            <div id="deleteUser-modal" tabindex="-1"
+            <!-- <div id="delectUserModal" tabindex="-1"
               class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
               <div class="relative p-4 w-full max-w-md max-h-full">
                 <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
                   <button type="button"
                     class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                    data-modal-hide="deleteUser-modal">
+                    data-modal-hide="delectUserModal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 14 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -833,17 +951,17 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <!-- Delete amount modal -->
+            <!-- Deduct coin modal -->
 
-            <div id="deleteAmount-modal" tabindex="-1"
+            <div id="deductCoinModal" tabindex="-1"
               class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
               <div class="relative p-4 w-full max-w-md max-h-full">
                 <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
                   <button type="button"
                     class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                    data-modal-hide="deleteAmount-modal">
+                    data-modal-hide="deductCoinModal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 14 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -851,26 +969,81 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                   </button>
-                  <div class="p-4 md:p-5 text-center">
+                  <div class="p-4 md:p-5 text-start">
                     <svg class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500" aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <h3 class="mb-3 text-lg font-semibold text-gray-700 dark:text-white">
-                      Amount Deleted
+                      Deduct Coin
                     </h3>
                     <p class="text-gray-700 dark:text-white">
-                      5,000 was deducted from your account
+                      Enter the amount you want to deduct
                     </p>
+                    <form class="w-full flex flex-col items-center" action="#">
+                      <div class="grid gap-4 lg:gap-8 my-4 grid-cols-2 w-full">
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name"
+                            class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Amount:</label>
+                          <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="5,000" required="" />
+                        </div>
+                      </div>
+                      <button type="submit"
+                        class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 w-full">
+                        Ok
+                      </button>
+                    </form>
                   </div>
-                  <!-- Modal footer -->
-                  <div
-                    class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="deleteAmount-modal" type="button"
-                      class="text-white bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary dark:focus:ring-primary w-full">
-                      Okay
-                    </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deduct cash modal -->
+
+            <div id="deductCashModal" tabindex="-1"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+              <div class="relative p-4 w-full max-w-md max-h-full">
+                <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
+                  <button type="button"
+                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
+                    data-modal-hide="deductCashModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                  <div class="p-4 md:p-5 text-start">
+                    <svg class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h3 class="mb-3 text-lg font-semibold text-gray-700 dark:text-white">
+                      Deduct Cash
+                    </h3>
+                    <p class="text-gray-700 dark:text-white">
+                      Enter the amount you want to deduct
+                    </p>
+                    <form class="w-full flex flex-col items-center" action="#">
+                      <div class="grid gap-4 lg:gap-8 my-4 grid-cols-2 w-full">
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name"
+                            class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Amount:</label>
+                          <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="5,000" required="" />
+                        </div>
+                      </div>
+                      <button type="submit"
+                        class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 w-full">
+                        Ok
+                      </button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -878,13 +1051,13 @@
 
             <!-- Ban User modal -->
 
-            <div id="banUser-modal" tabindex="-1"
+            <div id="banUserModal" tabindex="-1"
               class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
               <div class="relative p-4 w-full max-w-md max-h-full">
                 <div class="relative bg-white rounded-lg shadow dark:bg-dark300">
                   <button type="button"
                     class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-dark500 dark:hover:text-white"
-                    data-modal-hide="banUser-modal">
+                    data-modal-hide="banUserModal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 14 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -892,7 +1065,7 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                   </button>
-                  <div class="p-4 md:p-5 text-center">
+                  <div class="p-4 md:p-5 text-start">
                     <svg class="mx-auto mb-4 text-red-400 w-12 h-12 dark:text-red-500" aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -904,25 +1077,28 @@
                     <p class="text-gray-800 dark:text-white">
                       A ban was placed on user's account
                     </p>
-                  </div>
-                  <!-- Modal footer -->
-                  <div
-                    class="flex items-center justify-between p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <div class="flex flex-col gap-1">
-                      <p class="text-gray-500 dark:text-white">
-                        <span class="font-semibold">Start Date:</span>
-                        2/28/2024
-                      </p>
-                      <p class="text-gray-500 dark:text-white">
-                        <span class="font-semibold">End Date:</span>
-                        2/28/2024
-                      </p>
-                    </div>
-
-                    <button data-modal-hide="banUser-modal" type="button"
-                      class="ms-3 text-white bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary dark:focus:ring-primary w-fit">
-                      Okay
-                    </button>
+                    <form class="w-full flex flex-col items-center" action="#">
+                      <div class="grid gap-4 lg:gap-8 my-4 grid-cols-2 w-full">
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name"
+                            class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">Start Date:</label>
+                          <input type="date"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="24/01/2024" required="" />
+                        </div>
+                        <div class="col-span-2 flex flex-col justify-between">
+                          <label for="name" class="basis-1/4 block mb-2 text-sm font- text-gray-900 dark:text-white">End
+                            Date:</label>
+                          <input type="date"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-dark300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="24/01/2024" required="" />
+                        </div>
+                      </div>
+                      <button type="submit"
+                        class="text-white inline-flex items-center justify-center bg-primary hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 w-full">
+                        Ok
+                      </button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -933,8 +1109,6 @@
 
     </div>
   </main>
-  <script src="/js/app.js"></script>
-  <script src="/js/data.js"></script>
 </body>
 
 </html>
